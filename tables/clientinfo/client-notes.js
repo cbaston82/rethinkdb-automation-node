@@ -1,7 +1,7 @@
 const faker = require('faker')
 
 // Custom imports
-const timeFormat = require('../../helpers/timeFormats')
+const timeFormat = require('../../helpers/timeFormats/index')
 
 // Create note part - to generate notes
 const notes = [], number = 10, ID = 1

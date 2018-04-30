@@ -1,11 +1,6 @@
 const settings = {
   "directories" : [
     {
-      "directory" : "./tables/othertables",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
       "directory" : "./tables/billing",
       "automate" :  false,
       "exclude" : []
@@ -47,16 +42,6 @@ const settings = {
     },
     {
       "directory" : "./tables/program",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
-      "directory" : "./tables/recoveree",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
-      "directory" : "./tables/reporting",
       "automate" :  false,
       "exclude" : []
     },
