@@ -12,13 +12,13 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "AS_OF": random.isoRandomDateFormatTimeCreate(),
+    "AS_OF": random.date(),
     "COLLEGE": Math.floor(Math.random()),
-    "DATE_ADD": random.isoRandomDateFormatTimeCreate(),
-    "DATE_UPD": random.isoRandomDateFormatTimeCreate(),
-    "END_DATE": random.isoRandomDateFormatTimeCreate(),
-    "RECOVEREE_EDUCATION": Math.floor(Math.random() * 16) + 1 ,
-    "RECOVEREE_EFF_DATE": random.isoRandomDateFormatTimeCreate(),
+    "DATE_ADD": random.date(),
+    "DATE_UPD": random.date(),
+    "END_DATE": random.date(),
+    "RECOVEREE_EDUCATION": random.number(16), // Todo pull number from tables-config.
+    "RECOVEREE_EFF_DATE": random.date(),
     "RECOVEREE_ID": recId,
     "USERNAME_ADD":  "Tetra",
     "USERNAME_UPD":  "Tetra"

@@ -15,7 +15,7 @@ for(let i = 1; i <= tables.client_notes.total; i++){
   seeder.push({
     "ID":  recId,
     "NOTE":  faker.random.words(10),
-    "STAMP":  random.isoRandomDateFormatTimeCreate()
+    "STAMP":  random.date()
   })
   recId++
 }

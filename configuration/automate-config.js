@@ -2,7 +2,7 @@ const settings = {
   "directories" : [
     {
       "directory" : "./tables/billing",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {

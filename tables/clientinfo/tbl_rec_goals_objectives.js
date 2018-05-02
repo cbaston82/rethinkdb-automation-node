@@ -15,12 +15,12 @@ for(let i = 1; i <= tables.tbl_rec_goals_objectives.total; i++){
   if(goalId > tables.tbl_rec_goals.total) goalId = 1
 
   seeder.push({
-    "DATE_ADD": random.isoRandomDateFormatTimeCreate(),
+    "DATE_ADD": random.date(),
     "DATE_OBJ_ANTICIPATED":  "",
     "DATE_OBJ_CANCELLED":  "",
     "DATE_OBJ_MET":  "",
-    "DATE_OBJ_SET": random.isoRandomDateFormatTimeCreate(),
-    "DATE_UPD": random.isoRandomDateFormatTimeCreate(),
+    "DATE_OBJ_SET": random.date(),
+    "DATE_UPD": random.date(),
     "FK_GOAL_ID": goalId,
     "OBJECTIVE":  faker.lorem.sentence(),
     "OBJECTIVE_ID": i,

@@ -14,10 +14,10 @@ for(let i = 1; i <= tables.tbl_recoveree_attributes.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "Attributes": random.generateRandomNumberArray(30), // 1...30 possibility
-    "DATE_ADD": random.isoRandomDateFormatTimeCreate(),
-    "DATE_UPD": random.isoRandomDateFormatTimeCreate(),
-    "RCCID": 0, // ?? depends on programs
+    "Attributes": random.arrayOfNumbers(16), // Todo: pull number from tables-config tbl_attributes_master
+    "DATE_ADD": random.date(),
+    "DATE_UPD": random.date(),
+    "RCCID": 0, // Todo: Tie to a program
     "RECOVEREE_ID": recId,
     "SERVICES_INITIATED":  faker.random.words(5)
   })

@@ -15,15 +15,15 @@ for(let i = 1; i <= tables.tbl_rec_goals.total; i++){
 
   seeder.push({
     "BARRIERS":  faker.lorem.words(5),
-    "DATE_ADD": random.isoRandomDateFormatTimeCreate(),
-    "DATE_GOAL_ANTICIPATED":  random.isoRandomDateFormatTimeCreate(),
-    "DATE_GOAL_CANCELLED":  random.isoRandomDateFormatTimeCreate(),
-    "DATE_GOAL_MET":  random.isoRandomDateFormatTimeCreate(),
-    "DATE_GOAL_SET":  random.isoRandomDateFormatTimeCreate(),
-    "DATE_UPD": random.isoRandomDateFormatTimeCreate(),
+    "DATE_ADD": random.date(),
+    "DATE_GOAL_ANTICIPATED":  random.date(),
+    "DATE_GOAL_CANCELLED":  random.date(),
+    "DATE_GOAL_MET":  random.date(),
+    "DATE_GOAL_SET":  random.date(),
+    "DATE_UPD": random.date(),
     "GOAL": faker.lorem.sentences(3),
     "GOAL_ID": i,
-    "INTAKE_DATE": random.isoRandomDateFormatTimeCreate(),
+    "INTAKE_DATE": random.date(),
     "RECOVEREE_ID": recId,
     "RECOVERY_COACH": 2, // seed
     "RNUM": 2, // seed depends on reports generated
@@ -31,7 +31,7 @@ for(let i = 1; i <= tables.tbl_rec_goals.total; i++){
     "USERNAME_ADD":  "jrbuser",
     "USERNAME_UPD":  "jrbuser",
     "WANTS_TO_PASS": 0, // seed
-    "WELLNESS_AREA": Math.floor(Math.random() * 11) + 1
+    "WELLNESS_AREA": random.number(11) // Todo: pull number from tables-config tbl_wellness_area
   })
   recId++
 }

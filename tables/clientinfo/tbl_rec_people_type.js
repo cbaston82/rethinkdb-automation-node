@@ -1,4 +1,5 @@
 const tables = require('../../configuration/tables-config')
+const random = require('../../helpers/random')
 
 // Seed data.
 const seeder = []
@@ -13,7 +14,7 @@ for(let i = 1; i <= tables.tbl_rec_people_types.total; i++){
 
   seeder.push({
     "RecovereeAttributeID": 4,
-    "fk_AttributeID": Math.floor(Math.random() * 9) + 1,
+    "fk_AttributeID": random.number(9), // Todo: pull number from tables-config tbl_ethnicity
     "fk_RecovereeID": recId
   })
   recId++

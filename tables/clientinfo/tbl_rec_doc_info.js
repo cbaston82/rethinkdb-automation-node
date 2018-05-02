@@ -12,12 +12,12 @@ for(let i = 1; i <= tables.tbl_rec_doc_info.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "DATE_ADD": random.isoRandomDateFormatTimeCreate(),
-    "DATE_ADDED": random.isoRandomDateFormatTimeCreate(),
-    "DATE_UPD": random.isoRandomDateFormatTimeCreate(),
-    "DRUG_COURT": Math.floor(Math.random()),
-    "EFF_DATE": random.isoRandomDateFormatTimeCreate(),
-    "END_DATE": random.isoRandomDateFormatTimeCreate(),
+    "DATE_ADD": random.date(),
+    "DATE_ADDED": random.date(),
+    "DATE_UPD": random.date(),
+    "DRUG_COURT": random.number(),
+    "EFF_DATE": random.date(),
+    "END_DATE": random.date(),
     "EVER_ARRESTED": Math.floor(Math.random()),
     "EVER_INCARCERATED": Math.floor(Math.random()),
     "EVER_ON_PAROLE": Math.floor(Math.random()),

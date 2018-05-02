@@ -15,7 +15,7 @@ for(let i = 1; i <= tables.client_info.total; i++){
   seeder.push({
     "ID":  recId,
     "FILENAME":  "/" + faker.system.fileName(),
-    "STAMP":  random.isoRandomDateFormatTimeCreate()
+    "STAMP":  random.date()
   })
   recId++
 }
