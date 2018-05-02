@@ -12,5 +12,14 @@ module.exports = {
   },
   randomPhoneNubmer(){
     return Math.floor(Math.random() * 9000000000) + 1000000000
+  },
+  generateRandomNumberArray(number){
+    let array = []
+    let randomNumber = Math.floor(Math.random() * number) + 1
+    for(let i = 0; i < randomNumber; i++){
+      array.push( Math.floor(Math.random() * number) + 1)
+    }
+    let numbersArray = Array.from(new Set(array));
+    return numbersArray
   }
 }

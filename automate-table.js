@@ -91,7 +91,7 @@ var automate = function(data) {
               process.exit(1);
               return;
             }
-            // Do something else if no error (Optional)
+            console.log('Index added')
           })
         })
       }
@@ -123,7 +123,7 @@ var automate = function(data) {
               process.exit(1);
               return;
             }
-            // Do something else if no error (Optional)
+            console.log('Compound Index added')
           })
         })
       }
