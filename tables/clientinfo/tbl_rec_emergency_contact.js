@@ -20,7 +20,7 @@ for(let i = 1; i <= tables.tbl_rec_emergency_contact.total; i++){
     "EMER_CONTACT":  faker.name.firstName() + ' ' + faker.name.lastName(),
     "EMER_DATE": random.date(),
     "EMER_PHONE":  random.phoneNumber(),
-    "EMER_REL_CD":random.number(5), // Todo: pull number from tables-config
+    "EMER_REL_CD":random.number(tables.tbl_relationship_cd.types.length),
     "EMER_ST":  faker.address.state(),
     "EMER_ZIP": faker.address.zipCode(),
     "END_DATE": random.date(),

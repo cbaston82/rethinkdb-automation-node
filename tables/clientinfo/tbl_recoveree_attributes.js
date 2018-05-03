@@ -14,7 +14,7 @@ for(let i = 1; i <= tables.tbl_recoveree_attributes.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "Attributes": random.arrayOfNumbers(16), // Todo: pull number from tables-config tbl_attributes_master
+    "Attributes": random.arrayOfNumbers(tables.tbl_attributes_master.types.length),
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "RCCID": 0, // Todo: Tie to a program

@@ -1,26 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_language.types.forEach((type, i) => {
+  seeder.push({
+    "ID": i + 1,
+    "LANGUAGE":  type,
+    "SORT_SEQUENCE": null // Todo: remove if not needed
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "ID": 4,
-      "LANGUAGE":  "Other",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 3,
-      "LANGUAGE":  "Spanish",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 1,
-      "LANGUAGE":  "English",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 2,
-      "LANGUAGE":  "French",
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_LANGUAGE"

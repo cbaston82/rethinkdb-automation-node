@@ -1,36 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_marital_status.types.forEach((type, i) => {
+  seeder.push({
+    "ID": i + 1,
+    "SORT_SEQUENCE": 0, // Todo: remove if not needed.
+    "STATUS":  type
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "ID": 5,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Divorced"
-    },
-    {
-      "ID": 2,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Married"
-    },
-    {
-      "ID": 1,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Single"
-    },
-    {
-      "ID": 3,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Living as married"
-    },
-    {
-      "ID": 6,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Widowed"
-    },
-    {
-      "ID": 4,
-      "SORT_SEQUENCE": 0,
-      "STATUS":  "Separated"
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_MARITAL_STATUS"

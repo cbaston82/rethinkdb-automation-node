@@ -16,7 +16,7 @@ for(let i = 1; i <= tables.tbl_rec_family.total; i++){
     "DATE_UPD": random.date(),
     "EFF_DATE": random.date(),
     "END_DATE": random.date(),
-    "RECOVEREE_FAMILY": random.number(), // Todo: pull number from tables-config tbl_family
+    "RECOVEREE_FAMILY": random.number(tables.tbl_family.types.length),
     "RECOVEREE_ID": recId,
     "TOTAL_CHILDREN": random.number(5),
     "TOTAL_CHILDREN_CUSTOD": random.number(5),

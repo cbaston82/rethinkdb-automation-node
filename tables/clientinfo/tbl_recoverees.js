@@ -8,8 +8,7 @@ const seeder = []
 const profileImages = ['businessman.jpg', 'businesswoman.jpg']
 
 // create seed data - total is set in tables-config
-// Todo: Continue to implement fake data where ever necessary
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < tables.tbl_recoverees.total; i++) {
   let randomSSN = new RandomSSN()
   let id = '0ed70a4b-682d-446d-bf88-7640359b07'
   id = (i.toString().length < 2) ? id += '0' + i : id += i
@@ -18,8 +17,8 @@ for (let i = 0; i < 5; i++) {
     'ALTERNATE_ID': '',
     'DATE_ADD': random.date(),
     'DATE_UPD': random.date(),
-    'FIRST_DRUG': random.number(4), // Todo: pull number from tables-config tbl_drugs
-    'FirstDrugUsed': random.number(4), // Todo: pull number from tables-config tbl_drugs
+    'FIRST_DRUG': random.number(tables.tbl_drugs.types.length),
+    'FirstDrugUsed': random.number(tables.tbl_drugs.types.length),
     'PICTURE': profileImages[Math.floor(Math.random() * profileImages.length)],
     'RECOVEREE_ARC_DATE': '',
     'RECOVEREE_ARC_SCORE': 0,
@@ -33,20 +32,20 @@ for (let i = 0; i < 5; i++) {
     'RECOVEREE_DATE_ADDED': random.date(),
     'RECOVEREE_DATE_UPDATED': random.date(),
     'RECOVEREE_EMAIL': faker.internet.email(),
-    'RECOVEREE_GENDER': random.number(4), // Todo: pull number from tables-config tbl_gender
-    'RECOVEREE_HOW_THEY_HEARD': random.number(12), // Todo: pull number from tables-config tbl_how_they_head
+    'RECOVEREE_GENDER': random.number(tables.tbl_gender.types.length),
+    'RECOVEREE_HOW_THEY_HEARD': random.number(tables.tbl_how_they_heard.types.length),
     'RECOVEREE_ID': i + 1,
     'RECOVEREE_INACTIVE': false,
-    'RECOVEREE_LANGUAGES': random.number(4), // Todo: pull number from tables-config tbl_language
+    'RECOVEREE_LANGUAGES': random.arrayOfNumbers(tables.tbl_language.types.length),
     'RECOVEREE_LOCATION': 0,
-    'RECOVEREE_MARITAL_STATUS': random.number(6), // Todo: pull number from tables-config tbl_marital_status
+    'RECOVEREE_MARITAL_STATUS': random.number(tables.tbl_marital_status.types.length),
     'RECOVEREE_NAME': faker.name.firstName() + ' ' + faker.name.lastName(),
     'RECOVEREE_NOTES': faker.lorem.sentences(2),
-    'RECOVEREE_PREFERRED_LANGUAGE': random.number(4), // Todo: pull number from tables-config tbl_language
+    'RECOVEREE_PREFERRED_LANGUAGE': random.number(tables.tbl_language.types.length),
     'RECOVEREE_QOL_DATE': '',
-    'RECOVEREE_RACE': random.number(9), // Todo: pull number from tables-config tbl_race
+    'RECOVEREE_RACE': random.number(tables.tbl_race.types.length),
     'RECOVEREE_REFERRED_BY_DATE': '',
-    'RECOVEREE_REFERRED_BY_source': random.number(12), // Todo: pull number from tables-config tbl_referral_source
+    'RECOVEREE_REFERRED_BY_source': random.number(tables.tbl_referral_source.types.length),
     'RECOVEREE_SCI_DATE': '',
     'RECOVEREE_SCI_SCORE': 0,
     'RECOVEREE_SEX_ORIENT': '',

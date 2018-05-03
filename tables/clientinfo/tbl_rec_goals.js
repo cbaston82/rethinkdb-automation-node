@@ -25,13 +25,13 @@ for(let i = 1; i <= tables.tbl_rec_goals.total; i++){
     "GOAL_ID": i,
     "INTAKE_DATE": random.date(),
     "RECOVEREE_ID": recId,
-    "RECOVERY_COACH": 2, // seed
-    "RNUM": 2, // seed depends on reports generated
+    "RECOVERY_COACH": 2, // Todo: Assign rcoveree with coatch attribute.
+    "RNUM": 2, // Todo: dependon on reporting.
     "STRENGTHS": faker.lorem.words(4),
     "USERNAME_ADD":  "jrbuser",
     "USERNAME_UPD":  "jrbuser",
-    "WANTS_TO_PASS": 0, // seed
-    "WELLNESS_AREA": random.number(11) // Todo: pull number from tables-config tbl_wellness_area
+    "WANTS_TO_PASS": 0, // Question: what is this.
+    "WELLNESS_AREA": random.number(tables.tbl_wellness_areas.types.length)
   })
   recId++
 }

@@ -1,17 +1,20 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_transportation_type.types.forEach((type, i) => {
+  seeder.push({
+    "DESC":  type,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "DESC":  "Car",
-      "ID": 2,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "DESC":  "Bus",
-      "ID": 1,
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
-   "compoundIndexes" : [],
+  "compoundIndexes" : [],
   "table" : "TBL_TRANSPORTATION_TYPE"
 }

@@ -4,7 +4,7 @@ const tables = require('../../configuration/tables-config')
 const seeder = []
 
 // create seed data.
-tables.tbl_medical_ins.insurance_types.forEach((type, i) => {
+tables.tbl_medical_ins.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
     "INSURANCE_CARRIER":  type,

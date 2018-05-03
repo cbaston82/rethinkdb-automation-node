@@ -21,7 +21,7 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
     "END_DATE":  "",
     "HAVE": 0, // Question: what is this?
     "RECOVEREE_ID": recId,
-    "RECOVEREE_INS":random.number(tables.tbl_medical_ins.insurance_types.length),
+    "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
     "SIGNUP": 0, // Question: what is this?
     "USERNAME_ADD":  "jrbuser",
     "USERNAME_UPD":  "jrbuser"

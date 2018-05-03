@@ -1,16 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_family.types.forEach((type, i) => {
+  seeder.push( {
+    "FAMILY":  type,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "FAMILY":  "Have children",
-      "ID": 1,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "FAMILY":  "With DCF",
-      "ID": 2,
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_FAMILY"

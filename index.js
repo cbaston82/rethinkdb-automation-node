@@ -26,7 +26,7 @@ function gatherTableFiles(directory, exclude){
       // Creates the db, tables, seeds data, creates indexes etc from filename.js
       if (exclude.indexOf(file) === -1 && file.includes('.js')){
         automateTable.automate(require(`${directory}/${file}`))
-    }
+      }
     });
   })
 }

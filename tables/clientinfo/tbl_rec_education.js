@@ -17,7 +17,7 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "END_DATE": random.date(),
-    "RECOVEREE_EDUCATION": random.number(16), // Todo pull number from tables-config.
+    "RECOVEREE_EDUCATION": random.number(tables.tbl_education.types.length),
     "RECOVEREE_EFF_DATE": random.date(),
     "RECOVEREE_ID": recId,
     "USERNAME_ADD":  "Tetra",

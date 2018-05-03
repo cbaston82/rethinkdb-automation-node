@@ -1,31 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_sexual_orientation.types.forEach((type, i) => {
+  seeder.push(    {
+    "ID": i + 1,
+    "ORIENTATION":  type,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "ID": 2,
-      "ORIENTATION":  "Homosexual (Gay/Lesbian)",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 5,
-      "ORIENTATION":  "No Response",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 4,
-      "ORIENTATION":  "Other",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 1,
-      "ORIENTATION":  "Heterosexual (Straight)",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 3,
-      "ORIENTATION":  "Bisexual",
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_SEXUAL_ORIENTATION"

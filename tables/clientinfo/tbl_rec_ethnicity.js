@@ -12,8 +12,8 @@ for(let i = 1; i <= tables.tbl_rec_ethnicity.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "RecovereeAttributeID": 4, // Todo: Rip out RecovereeAttributeID if not needed anymore.
-    "fk_AttributeID": random.number(9), // Todo: pull number from tables-config tbl_ethnicity
+    "RecovereeAttributeID": 4, // Todo: remove if not needed.
+    "fk_AttributeID": random.number(tables.tbl_ethnicity.types.length),
     "fk_RecovereeID": recId
   })
   recId++
