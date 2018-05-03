@@ -1,5 +1,15 @@
 module.exports = {
   //==================================================
+  // tables/tblrole
+  //==================================================
+  "tblrole": {
+    "types": [
+      "Admin",
+      "Employee",
+      "volunteer"
+    ]
+  },
+  //==================================================
   // tables/clientinfo
   //==================================================
   "tbl_recoverees": {
@@ -51,6 +61,49 @@ module.exports = {
     "total": 0
   },
   //==================================================
+  // tables/person
+  //==================================================
+  "tbl_person": {
+    "total": 8
+  },
+  "tbl_person_demographics": {
+    "total": 8
+  },
+  "tbl_clean_time_ranges": {
+    "types": [
+      {
+        "description" : "01. <= 6 Months",
+        "low" : 0,
+        "high": 180
+      },
+      {
+        "description" : "02. >6 and <= 12 Months",
+        "low" : 181,
+        "high": 365
+      },
+      {
+        "description" : "03. >12 and <= 24 Months",
+        "low" : 366,
+        "high": 730
+      },
+      {
+        "description" : "04. >2 and  <= 3 Years",
+        "low" : 731,
+        "high": 1095
+      },
+      {
+        "description" : "05. >3 and <= 5 Years",
+        "low" : 1096,
+        "high": 1825
+      },
+      {
+        "description" : "06. >5 Years",
+        "low" : 999999999,
+        "high": 180
+      }
+    ]
+  },
+  //==================================================
   // tables/billing
   //==================================================
   "tbl_billto": {
@@ -75,6 +128,22 @@ module.exports = {
   },
   "tbl_rec_primary_funder": {
     "total": 0
+  },
+  //==================================================
+  // tables/employment
+  //==================================================
+  "tbl_employment": {
+    "types": [
+      "Full Time",
+      "Part-Time",
+      "Looking for Work",
+      "SSI/SSDI",
+      "Retired",
+      "Not Looking for Work"
+    ]
+  },
+  "tbl_rec_employment": {
+    "total": 8
   },
   //==================================================
   // tables/demographics
@@ -370,4 +439,7 @@ module.exports = {
       "Benzos"
     ]
   },
+  "tbl_rec_drugs": {
+    "total": 8
+  }
 }
