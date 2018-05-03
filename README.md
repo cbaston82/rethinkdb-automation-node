@@ -33,7 +33,7 @@ This is a automation application for the FFR Backend System.
   const random = require('../../helpers/random/index')
   const tables = require('../../configuration/tables-config')
 
-  // Seed data.
+
   const seeder = []
   let recId = 1
 
