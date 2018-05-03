@@ -2,7 +2,7 @@
 
 This is a automation application for the FFR Backend System.
 
-## Current dependencies
+## Current dependencies - package.json
 
 ```json
 {
