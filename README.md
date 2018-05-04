@@ -74,7 +74,9 @@ module.exports = {
 
 ### Create a basic options table
 
--- Lets look at the tbl_family.js file in **tables/demographics/tbl_family.js**
+- Lets look at the tbl_family.js file in **tables/demographics/tbl_family.js**
+- We are looping through tbl_family types in **configuration/tables-config.js tbl_family**
+- Types are being set in **configuration/tables-config.js tbl_family** so that we use the data throughout the automation process.
 
 ```javascript
 const tables = require('../../configuration/tables-config')
@@ -100,8 +102,7 @@ module.exports = {
 
 ```
 
-- Notice that **configuration/tables-config.js** has an tbl_family object with an array of types of family members.
-- Option types are being set here so that we use the data throughout the automation process.
+- **configuration/tables-config.js tbl_family**
 
 ```json 
   "tbl_family": {
