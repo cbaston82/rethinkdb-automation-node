@@ -25,7 +25,7 @@
 ### Create a basic table
 
 - Lets look at the `client_notes.js` file in **tables/clientinfo/client_ntoes.sj**
-- We are creating `8*` documents. This number is set in **configuration/tables-config.js client_notes**"
+- We are creating `8` documents. This number is set in **configuration/tables-config.js client_notes**"
 - There can be many notes to one recoveree. So we make sure the max ID does not exceed the number of recoverees. This apply's to all many to ones.
 
 ```javascript
