@@ -21,22 +21,26 @@
 ### Creating and seeding a table - ** Lets use client_notes as an example **
 
 - Lets look at the client_notes.js file in ** tables/clientinfo/client_ntoes.sj **
-
+- 
 ```javascript
-const faker = require('faker')
+const faker = require('faker') // https://github.com/Marak/Faker.js.
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+const tables = require('../../configuration/tables-config') 
 
 // Seed data.
 const seeder = []
+
+// Since this table has a relation of many notes to one recovery
+// we need to set recId to 1
 let recId = 1
 
 // create seed data - total is set in tables-config.
 for(let i = 1; i <= tables.client_notes.total; i++){
 
-  // Many to one ids.
+  // Many to one ids. Making sure that ID does not go pass the number of recoverees.
   if(recId > tables.tbl_recoverees.total) recId = 1
 
+  // Loop and create data to seed.
   seeder.push({
     "ID":  recId,
     "NOTE":  faker.random.words(10),
