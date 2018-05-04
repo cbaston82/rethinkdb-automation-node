@@ -1,4 +1,8 @@
 # FFR BE AUTOMATION
+This project is meant to automate the process of creating the database, tables, indexes, compound indexes and generating fake data to work with.
+
+## Getting Started
+- Install dependencies `npm install or yarn install`
 
 ### Current dependencies - package.json
 ```json
@@ -17,10 +21,7 @@
   }
 }
 ```
-
 ---
-
-
 
 ### Adding a new tables directory
 - Create new directory in `tables/DIRECTORY_NAME`
@@ -35,7 +36,6 @@
   "exclude" : []
 }
 ```
-
 
 ### Create a basic table
 
@@ -88,7 +88,6 @@ module.exports = {
 ```
 
 ---
-
 
 ### Create a basic options table
 
