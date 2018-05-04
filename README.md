@@ -101,11 +101,14 @@ module.exports = {
 
 ```
 
-- Notice that **configuration/tables-config.js** has a tbl_family object with a types of family members.
+- Notice that **configuration/tables-config.js** has an tbl_family object with an array of types of family members.
 
 ```json 
-  "client_notes": {
-    "total" 8
+  "tbl_family": {
+      "types": [
+        "Have children",
+        "With DCF"
+      ]
   }
 ```
 
