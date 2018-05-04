@@ -21,7 +21,7 @@
 ### Creating and seeding a table - ** Lets use client_notes as an example **
 
 - Lets look at the client_notes.js file in ** tables/clientinfo/client_ntoes.sj **
-- 
+
 ```javascript
 const faker = require('faker') // https://github.com/Marak/Faker.js.
 const random = require('../../helpers/random/index')
