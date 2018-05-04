@@ -1,3 +1,5 @@
+# FFR BE AUTOMATION
+
 ## Current dependencies - package.json
 ```json
 {
