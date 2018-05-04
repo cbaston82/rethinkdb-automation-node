@@ -1,27 +1,20 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_volunteer_category.types.forEach((type, i) => {
+  seeder.push({
+    "CATEGORY":  type,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "CATEGORY":  "Giving Back",
-      "ID": 1,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "CATEGORY":  "Stipended Position",
-      "ID": 3,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "CATEGORY":  "Community Service",
-      "ID": 2,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "CATEGORY":  "Intern",
-      "ID": 4,
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
-   "compoundIndexes" : [],
+  "compoundIndexes" : [],
   "table" : "TBL_VOLUNTEER_CATEGORY"
 }

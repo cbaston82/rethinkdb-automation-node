@@ -1,35 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_wellness_self_assessment_groups.types.forEach((type, i) => {
+  seeder.push({
+    "DESCRIPTION":  type,
+    "ID": i + 1
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "DESCRIPTION":  "Intellectual Wellness",
-      "ID": 5
-    },
-    {
-      "DESCRIPTION":  "Environmental Wellness",
-      "ID": 2
-    },
-    {
-      "DESCRIPTION":  "Occupational Wellness",
-      "ID": 6
-    },
-    {
-      "DESCRIPTION":  "Emotional/Psychological Wellness",
-      "ID": 4
-    },
-    {
-      "DESCRIPTION":  "Physical Wellness",
-      "ID": 1
-    },
-    {
-      "DESCRIPTION":  "Spiritual Wellness",
-      "ID": 3
-    },
-    {
-      "DESCRIPTION":  "Social Wellness",
-      "ID": 7
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : [],
-   "compoundIndexes" : [],
+  "compoundIndexes" : [],
   "table" : "TBL_WELLNESS_SELF_ASSESSMENT_GROUPS"
 }

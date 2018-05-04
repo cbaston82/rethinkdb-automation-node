@@ -1,6 +1,67 @@
 module.exports = {
   //==================================================
-  // tables/tblrole
+  // tables/coaching
+  //==================================================
+  "tbl_wellness_survey_responses": {
+    "types": [
+      {
+        "description":  "Never",
+        "visual":  "|||||"
+      },
+      {
+        "description":  "Almost never",
+        "visual":  "||||||||||"
+      },
+      {
+        "description":  "Occasionally",
+        "visual":  "|||||||||||||||"
+      },
+      {
+        "description":  "Almost always",
+        "visual":  "||||||||||||||||||||"
+      },
+      {
+        "description":  "Always",
+        "visual":  "|||||||||||||||||||||||||"
+      }
+    ]
+  },
+  "tbl_volunteer_category": {
+    "types": [
+      'Giving Back',
+      'Community Service',
+      'Stipended Position',
+      'Intern'
+    ]
+  },
+  "tbl_wellness_self_assessment_groups": {
+    "types": [
+      'Physical Wellness',
+      'Environmental Wellness',
+      'Spiritual Wellness',
+      'Emotional/Psychological Wellness',
+      'Intellectual Wellness',
+      'Occupational Wellness',
+      'Social Wellness'
+    ]
+  },
+  "tbl_wellness_areas": {
+    "types": [
+      "All (non-employees)",
+      "Interests and Activities",
+      "Living Environment",
+      "Employment",
+      "Learning",
+      "Financial",
+      "Lifestyles and Health",
+      "Faith and Spirituality",
+      "Relationships",
+      "Mental Health",
+      "Legal Issues"
+    ]
+  },
+  //==================================================
+  // tables/coaching
   //==================================================
   "tblrole": {
     "types": [
@@ -408,24 +469,6 @@ module.exports = {
         "start" : 75,
         "end": 100
       }
-    ]
-  },
-  //==================================================
-  // tables/coaching
-  //==================================================
-  "tbl_wellness_areas": {
-    "types": [
-      "All (non-employees)",
-      "Interests and Activities",
-      "Living Environment",
-      "Employment",
-      "Learning",
-      "Financial",
-      "Lifestyles and Health",
-      "Faith and Spirituality",
-      "Relationships",
-      "Mental Health",
-      "Legal Issues"
     ]
   },
   //==================================================
