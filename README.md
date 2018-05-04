@@ -105,7 +105,7 @@ module.exports = {
 
 ```
 
-- Notice that  **configuration/tables-config.js tbl_family** has a types array.
+- Notice that  **configuration/tables-config.js `tbl_family`** has a types array.
 
 ```json 
   "tbl_family": {
