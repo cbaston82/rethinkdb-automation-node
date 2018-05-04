@@ -32,7 +32,7 @@
 {
   "directory" : "./tables/DIRECTORY_NAME",
   "automate" :  true, 
-  "exclude" : [] // Exclude and files from being automate ['table1.js', 'table2.js']
+  "exclude" : []
 }
 ```
 
