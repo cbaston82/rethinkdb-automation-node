@@ -34,6 +34,7 @@ This is a automation application for the FFR Backend System.
   const tables = require('../../configuration/tables-config')
   const seeder = []
   let recId = 1
+  
   for(let i = 1; i <= tables.client_notes.total; i++){
     if(recId > tables.tbl_recoverees.total) recId = 1
       seeder.push({
@@ -43,6 +44,7 @@ This is a automation application for the FFR Backend System.
     })
     recId++
   }
+  
   module.exports = {
     "seeder" : seeder,
     "indexes" : ['ID', 'STAMP'],
