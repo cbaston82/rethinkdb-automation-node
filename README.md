@@ -25,11 +25,12 @@
 ### Adding a new tables directory
 - Create new directory in `tables/DIRECTORY_NAME`
 - Update **configuration/automate-config.js `directories`**
-
+- Set `"automate": false` to skip automation of that directory
+- Prevent automation on any file `"exclude": ['file1.js', 'file2.js']`
 ```json
 {
   "directory" : "./tables/DIRECTORY_NAME",
-  "automate" :  true, // if false any tables in directory will not get automated
+  "automate" :  true, 
   "exclude" : [] // Exclude and files from being automate ['table1.js', 'table2.js']
 }
 ```
