@@ -4,6 +4,8 @@ This project is meant to automate the process of creating the database, tables, 
 ## Getting Started
 - Install dependencies `npm install or yarn install`
 
+---
+
 ### Current dependencies - package.json
 ```json
 {
@@ -21,6 +23,7 @@ This project is meant to automate the process of creating the database, tables, 
   }
 }
 ```
+
 ---
 
 ### Adding a new tables directory
