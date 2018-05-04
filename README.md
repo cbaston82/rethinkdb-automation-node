@@ -65,6 +65,7 @@ module.exports = {
 ```
 
 - Notice that **configuration/tables-config.js** has a client_notes object with a total of client notes.
+
 ```json 
   "client_notes": {
     "total" 8
