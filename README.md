@@ -22,7 +22,7 @@
 
 
 
-### Creating and seeding a table
+### Create a basic table
 
 - Lets look at the client_notes.js file in **tables/clientinfo/client_ntoes.sj**
 
@@ -62,7 +62,7 @@ module.exports = {
 
 ```
 
-- Notice that **configuration/tables-config.js** has some configuration for client_notes
+- Notice that **configuration/tables-config.js** has a client_notes object with a total of client notes.
 
 ```json 
   "client_notes": {
@@ -73,3 +73,40 @@ module.exports = {
 ---
 
 
+### Create a basic options table
+
+-- Lets look at the tbl_family.js file in **tables/demographics/tbl_family.js**
+
+```javascript
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_family.types.forEach((type, i) => {
+  seeder.push( {
+    "FAMILY":  type,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
+module.exports = {
+  "seeder" :seeder,
+  "indexes" : ['ID'],
+  "compoundIndexes" : [],
+  "table" : "TBL_FAMILY"
+}
+
+```
+
+- Notice that **configuration/tables-config.js** has a tbl_family object with a types of family members.
+
+```json 
+  "client_notes": {
+    "total" 8
+  }
+```
+
+---
