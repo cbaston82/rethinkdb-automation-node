@@ -18,7 +18,9 @@
 }
 ```
 
-### Creating and seeding a table - ** Lets use client_notes as an example **
+---
+
+### Creating and seeding a table
 
 - Lets look at the client_notes.js file in **tables/clientinfo/client_ntoes.sj**
 
@@ -58,10 +60,12 @@ module.exports = {
 
 ```
 
-- Edit **tables-config.js** with client_notes.js configurations
+- Notice that **configuration/tables-config.js** has some configuration for client_notes
 
 ```json 
   "client_notes": {
     "total" 8
-  },
+  }
 ```
+
+---
