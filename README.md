@@ -22,6 +22,19 @@
 
 
 
+### Adding a new tables directory
+- Create new directory in `tables/DIRECTORY_NAME`
+- Update **configuration/automate-config.js `directories`**
+
+```json
+{
+  "directory" : "./tables/DIRECTORY_NAME",
+  "automate" :  true, // if false any tables in directory will not get automated
+  "exclude" : [] // Exclude and files from being automate ['table1.js', 'table2.js']
+}
+```
+
+
 ### Create a basic table
 
 - Lets look at the `client_notes.js` file in **tables/clientinfo/client_notes.sj**
