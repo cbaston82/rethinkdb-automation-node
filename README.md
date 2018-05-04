@@ -24,9 +24,10 @@ This project is meant to automate the process of creating the database, tables, 
 }
 ```
 
+### Adding a new tables directory
+
 ---
 
-### Adding a new tables directory
 - Create new directory in `tables/DIRECTORY_NAME`
 - Update **configuration/automate-config.js `directories[]`**
 - Set `"automate": true` automate that directory or `"automate": false` to skip it
@@ -41,6 +42,8 @@ This project is meant to automate the process of creating the database, tables, 
 ```
 
 ### Create a basic table
+
+---
 
 - Lets look at the `client_notes.js` file in **tables/clientinfo/client_notes.sj**
 - We are creating `8` documents. This number is set in **configuration/tables-config.js `client_notes{}`**"
@@ -90,9 +93,9 @@ module.exports = {
   }
 ```
 
----
-
 ### Create a basic options table
+
+---
 
 - Lets look at the `tbl_family.js` file in **tables/demographics/tbl_family.js**
 - We are looping through **configuration/tables-config.js `tbl_family.types[]`**
@@ -132,5 +135,3 @@ module.exports = {
       ]
   }
 ```
-
----
