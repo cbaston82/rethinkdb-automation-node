@@ -63,7 +63,6 @@ module.exports = {
 ```
 
 - Notice that **configuration/tables-config.js** has a client_notes object with a total of client notes.
-
 ```json 
   "client_notes": {
     "total" 8
@@ -102,6 +101,7 @@ module.exports = {
 ```
 
 - Notice that **configuration/tables-config.js** has an tbl_family object with an array of types of family members.
+- Option values are being set here so that we use the data throughout the automation process.
 
 ```json 
   "tbl_family": {
