@@ -17,6 +17,3 @@
   }
 }
 ```
-
-## Lets add a new table ** We will use CLIENT_NOTES as an example **
-1. Create table file tables/clientinfo/client_notes.js
