@@ -24,9 +24,9 @@
 
 ### Create a basic table
 
-- Lets look at the client_notes.js file in **tables/clientinfo/client_ntoes.sj**
-- We are creating **8** documents. This number is set in **configuration/tables-config.js client_notes**"
-- There can be many notes to one recoveree. So we make sure the max ID does not exceed the number of recoverees.
+- Lets look at the `client_notes.js` file in **tables/clientinfo/client_ntoes.sj**
+- We are creating `8*` documents. This number is set in **configuration/tables-config.js client_notes**"
+- There can be many notes to one recoveree. So we make sure the max ID does not exceed the number of recoverees. This apply's to all many to ones.
 
 ```javascript
 const faker = require('faker') // https://github.com/Marak/Faker.js.
@@ -64,7 +64,7 @@ module.exports = {
 
 ```
 
-- Notice that **configuration/tables-config.js** has a client_notes object with a total of client notes.
+- Notice that **configuration/tables-config.js client_notes** has a total.
 
 ```json 
   "client_notes": {
@@ -77,9 +77,9 @@ module.exports = {
 
 ### Create a basic options table
 
-- Lets look at the tbl_family.js file in **tables/demographics/tbl_family.js**
-- We are looping through tbl_family types in **configuration/tables-config.js tbl_family**
-- Types are being set in **configuration/tables-config.js tbl_family** so that we use the data throughout the automation process.
+- Lets look at the `tbl_family.js` file in **tables/demographics/tbl_family.js**
+- We are looping through **configuration/tables-config.js tbl_family**
+- Types are set in **configuration/tables-config.js tbl_family** so that we use the data throughout the automation process.
 
 ```javascript
 const tables = require('../../configuration/tables-config')
@@ -105,7 +105,7 @@ module.exports = {
 
 ```
 
-- **configuration/tables-config.js tbl_family**
+- Notice that  **configuration/tables-config.js tbl_family** has a types array.
 
 ```json 
   "tbl_family": {
