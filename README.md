@@ -1,8 +1,6 @@
 # FFR BE AUTOMATION
 
-### Current dependencies
-
-- package.json
+### Current dependencies - package.json
 ```json
 {
   "dependencies": {
@@ -23,6 +21,7 @@
 ### Creating and seeding a table - ** Lets use client_notes as an example **
 
 - Lets look at the client_notes.js file in ** tables/clientinfo/client_ntoes.sj **
+
 ```javascript
 const faker = require('faker')
 const random = require('../../helpers/random/index')
