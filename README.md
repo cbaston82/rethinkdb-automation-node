@@ -101,7 +101,7 @@ module.exports = {
 ```
 
 - Notice that **configuration/tables-config.js** has an tbl_family object with an array of types of family members.
-- Option values are being set here so that we use the data throughout the automation process.
+- Option types are being set here so that we use the data throughout the automation process.
 
 ```json 
   "tbl_family": {
