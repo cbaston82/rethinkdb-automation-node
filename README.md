@@ -20,6 +20,8 @@
 
 ---
 
+
+
 ### Creating and seeding a table
 
 - Lets look at the client_notes.js file in **tables/clientinfo/client_ntoes.sj**
@@ -69,3 +71,5 @@ module.exports = {
 ```
 
 ---
+
+
