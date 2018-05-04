@@ -27,6 +27,7 @@
 - Update **configuration/automate-config.js `directories`**
 - Set `"automate": false` to skip automation of that directory
 - Prevent automation on any file `"exclude": ['file1.js', 'file2.js']`
+
 ```json
 {
   "directory" : "./tables/DIRECTORY_NAME",
