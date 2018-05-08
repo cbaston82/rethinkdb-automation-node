@@ -12,7 +12,7 @@ const config = require(__dirname + '/configuration/config.js');
  * TODO: Need to eventually refactor the flow of this process
  * * @param data
  */
-var automate = function(data) {
+let automate = function(data) {
   async.waterfall([
       function connect(callback) {
         r.connect(config.rethinkdb, callback)
