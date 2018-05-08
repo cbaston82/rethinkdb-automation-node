@@ -6,9 +6,9 @@ const seeder = []
 // create seed data.
 tables.tbl_wellness_survey_responses.types.forEach((type, i) => {
   seeder.push({
-    "DESCRIPTION":  type.description,
+    "DESCRIPTION":  type.DESCRIPTION,
     "ID": i + 1,
-    "VISUAL":  type.visual
+    "VISUAL":  type.VISUAL
   })
 })
 

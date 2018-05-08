@@ -2,47 +2,215 @@ module.exports = {
   //==================================================
   // tables/coaching
   //==================================================
+  "tbl_rec_coaching_units": {
+      "total": 8
+  },
+  "tbl_rec_coach_assign": {
+    "total": 8
+  },
+  "tbl_coaching_units_conversion": {
+    "types": [
+      {
+        "MINUTES_PER_UNIT": 4,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 9,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 15,
+        "PROGRAM": 3
+      },
+      {
+        "MINUTES_PER_UNIT": 3,
+        "PROGRAM": 2,
+      },
+      {
+        "MINUTES_PER_UNIT": 3,
+        "PROGRAM": 1
+      },
+      {
+        "MINUTES_PER_UNIT": 26,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 22,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 1,
+        "PROGRAM": 3
+      },
+      {
+        "MINUTES_PER_UNIT": 16,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 60,
+        "PROGRAM": 3
+      }
+    ]
+  },
+  "tbl_coach_certifications": {
+    "types": [
+      "PRC 46 Hour Training Completed",
+      "PRC Specialist Designation",
+      "PRC Specialist Certification",
+      "PRC Trainer",
+      "PRC Trainer of Trainers",
+      "Co-Occurring",
+      "Certified Peer Specialist",
+      "TAY Module Completed",
+      "WRAP"
+    ]
+  },
+  "tbl_coaching_session_type": {
+    "types": [
+      "Individual Face-to-Face Recovery Coaching",
+      "Telephone Recovery Coaching",
+      "Internet Recovery Coaching",
+      "Travelling Companion Recovery Coaching",
+      "Missed Appointment"
+    ]
+  },
+  "tbl_coaching_status": {
+    "types": [
+      {
+        "DESC": "Status 1: New to Peer Recovery Coaching during the reporting period",
+        "DESC_SHORT": "New to Coaching in Rpt Period"
+      },
+      {
+        "DESC": "Status 1 & 2: New to Peer Recovery Coaching during the reporting period and Received Peer Recovery Coaching both before and during the reporting period",
+        "DESC_SHORT": ""
+      },
+      {
+        "DESC":  "Status 2: Received Peer Recovery Coaching both before and during the reporting period",
+        "DESC_SHORT":  "Coached Before and During Rpt Period."
+      },
+      {
+        "DESC":  "Status 3: Received Peer Recovery Coaching before the reporting period but not during the reporting period",
+        "DESC_SHORT":  "Coached Before, not During Rpt Period."
+      },
+      {
+        "DESC":  "Status 4: Never received Peer Recovery Coaching.",
+        "DESC_SHORT":  "Never Coached."
+      },
+      {
+        "DESC":  "Status 5: Received Peer Recovery Coaching after the reporting period",
+        "DESC_SHORT":  "Coached After not During Rpt Period."
+      }
+    ]
+  },
+  "tbl_coaching_activities": {
+    "types": [
+      "Substance Use & Sobriety",
+      "Global Health Psychological",
+      "Global Health Physical",
+      "Citizenship & Community Involvement",
+      "Social Support",
+      "Meaningful Activities",
+      "Housing & Safety",
+      "Risk Taking",
+      "Coping & Life Functioning",
+      "Recovery Experience",
+      "Review Recovery Plan",
+      "Weekly Mini Goal Review and Follow up",
+      "Reviewed URICA",
+      "DSHS 9 Month Interview",
+      "Review Wellness Self-Assessment",
+      "ID Card",
+      "Take GPRA - 6 month",
+      "DSHS Enrollment Interview",
+      "Take Recovery Capital Survey",
+      "Set-up Primary Care Doctor",
+      "Take Quality of Life Survey",
+      "Budgeting/Financial Planning",
+      "Legal Issues",
+      "Mutual Support Meetings",
+      "Volunteer Opportunities",
+      "Locate Housing",
+      "Education Opportunities",
+      "Take Wellness Self-Assessment",
+      "DSHS 6 Month Interview",
+      "Recreation/Leisure",
+      "Take GPRA - Initial",
+      "Review Quality of Life Survey",
+      "Worked with family/natural support/service provider",
+      "Employability",
+      "Worked on Strength Based Assessment",
+      "Set-up Outpatient Treatment",
+      "Develop Recovery Plan",
+      "DSHS 12 Month Interview",
+      "Set-up Mental Health Treatment",
+      "Set-up Inpatient Treatment",
+     "DSHS 3 Month Interview",
+      "Take URICA",
+      "Review Recovery Capital Survey",
+      "Take GPRA- Discharge"
+    ]
+  },
   "tbl_wellness_survey_responses": {
     "types": [
       {
-        "description":  "Never",
-        "visual":  "|||||"
+        "DESCRIPTION":  "Never",
+        "VISUAL":  "|||||"
       },
       {
-        "description":  "Almost never",
-        "visual":  "||||||||||"
+        "DESCRIPTION":  "Almost never",
+        "VISUAL":  "||||||||||"
       },
       {
-        "description":  "Occasionally",
-        "visual":  "|||||||||||||||"
+        "DESCRIPTION":  "Occasionally",
+        "VISUAL":  "|||||||||||||||"
       },
       {
-        "description":  "Almost always",
-        "visual":  "||||||||||||||||||||"
+        "DESCRIPTION":  "Almost always",
+        "VISUAL":  "||||||||||||||||||||"
       },
       {
-        "description":  "Always",
-        "visual":  "|||||||||||||||||||||||||"
+        "DESCRIPTION":  "Always",
+        "VISUAL":  "|||||||||||||||||||||||||"
       }
     ]
   },
   "tbl_volunteer_category": {
     "types": [
-      'Giving Back',
-      'Community Service',
-      'Stipended Position',
-      'Intern'
+      "Giving Back",
+      "Community Service",
+      "Stipended Position",
+      "Intern"
+    ]
+  },
+  "tbl_volunteer_activities": {
+    "types": [
+      "Recovery Group Facilitation",
+      "Educational Instruction",
+      "Board Member",
+      "Educational Instruction",
+      "Front Desk / Reception",
+      "Administrative / Clerical",
+      "Administration",
+      "Health and Wellness Instructor",
+      "Peer Leader",
+      "Community Based Event",
+      "Community Service",
+      "Other Volunteer Services",
+      "Peer Recovery Coach",
+      "Cleaning / Housekeeping",
+      "Resource Volunteer",
+      "Event Planning and Coordination"
     ]
   },
   "tbl_wellness_self_assessment_groups": {
     "types": [
-      'Physical Wellness',
-      'Environmental Wellness',
-      'Spiritual Wellness',
-      'Emotional/Psychological Wellness',
-      'Intellectual Wellness',
-      'Occupational Wellness',
-      'Social Wellness'
+      "Physical Wellness",
+      "Environmental Wellness",
+      "Spiritual Wellness",
+      "Emotional/Psychological Wellness",
+      "Intellectual Wellness",
+      "Occupational Wellness",
+      "Social Wellness"
     ]
   },
   "tbl_wellness_areas": {
@@ -61,7 +229,7 @@ module.exports = {
     ]
   },
   //==================================================
-  // tables/coaching
+  // tables/system
   //==================================================
   "tblrole": {
     "types": [
@@ -122,6 +290,78 @@ module.exports = {
     "total": 0
   },
   //==================================================
+  // tables/contacts
+  //==================================================
+  "tbl_checkup__referral_source": {
+    "total": 8
+  },
+  "tbl_rec_recovery_checkup_services": {
+    "total": 8
+  },
+  "tbl_call_times": {
+    "types": ['AM', '8am - 10am', '10am - 12pm', 'Afternoon', 'PM']
+  },
+  "tbl_rec_recovery_checkup": {
+    "total": 3
+  },
+  "tbl_cell_provider": {
+    "types": [
+      {
+        "CELLULAR_PROVIDER":  "AT&T",
+        "EMAIL_TEXT_SUFFIX":  "@txt.att.net"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "Verizon",
+        "EMAIL_TEXT_SUFFIX":  "@vtext.com"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "Sprint",
+        "EMAIL_TEXT_SUFFIX":  "@messaging.sprintpcs.com"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "T-Mobile",
+        "EMAIL_TEXT_SUFFIX":  "@tmomail.net"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "US Cellular",
+        "EMAIL_TEXT_SUFFIX":  "@email.uscc.net"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "Nextel",
+        "EMAIL_TEXT_SUFFIX":  "@messaging.nextel.com"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "Virgin Mobile",
+        "EMAIL_TEXT_SUFFIX":  "@vmobl.com"
+      } ,
+      {
+        "CELLULAR_PROVIDER":  "Metro PCS",
+        "EMAIL_TEXT_SUFFIX":  "@mymetropcs.com"
+      }
+    ]
+  },
+  "tbl_checkup_discharge_reasons": {
+    "types": [
+      {
+        "ATTEMPTS": 10,
+        "DISCHARGE_REASON":  "D10"
+      } ,
+      {
+        "ATTEMPTS": 15,
+        "DISCHARGE_REASON":  "LOST CONTACT"
+      }
+    ]
+  },
+  "tbl_checkup_services": {
+    "types": ['Text', 'Phone']
+  },
+  "tbl_phone_types": {
+    "types": ['Mobile', 'Home', 'Office']
+  },
+  "tbl_rec_calls": {
+    "total": 8
+  },
+  //==================================================
   // tables/person
   //==================================================
   "tbl_person": {
@@ -133,34 +373,34 @@ module.exports = {
   "tbl_clean_time_ranges": {
     "types": [
       {
-        "description" : "01. <= 6 Months",
-        "low" : 0,
-        "high": 180
+        "DESC" : "01. <= 6 Months",
+        "LOW_NBR_OFDAYS" : 0,
+        "HIGH_NBR_OFDAYS": 180
       },
       {
-        "description" : "02. >6 and <= 12 Months",
-        "low" : 181,
-        "high": 365
+        "DESC" : "02. >6 and <= 12 Months",
+        "LOW_NBR_OFDAYS" : 181,
+        "HIGH_NBR_OFDAYS": 365
       },
       {
-        "description" : "03. >12 and <= 24 Months",
-        "low" : 366,
-        "high": 730
+        "DESC" : "03. >12 and <= 24 Months",
+        "LOW_NBR_OFDAYS" : 366,
+        "HIGH_NBR_OFDAYS": 730
       },
       {
-        "description" : "04. >2 and  <= 3 Years",
-        "low" : 731,
-        "high": 1095
+        "DESC" : "04. >2 and  <= 3 Years",
+        "LOW_NBR_OFDAYS" : 731,
+        "HIGH_NBR_OFDAYS": 1095
       },
       {
-        "description" : "05. >3 and <= 5 Years",
-        "low" : 1096,
-        "high": 1825
+        "DESC" : "05. >3 and <= 5 Years",
+        "LOW_NBR_OFDAYS" : 1096,
+        "HIGH_NBR_OFDAYS": 1825
       },
       {
-        "description" : "06. >5 Years",
-        "low" : 999999999,
-        "high": 180
+        "DESC" : "06. >5 Years",
+        "LOW_NBR_OFDAYS" : 999999999,
+        "HIGH_NBR_OFDAYS": 180
       }
     ]
   },
@@ -169,19 +409,19 @@ module.exports = {
   //==================================================
   "tbl_billto": {
     "types": [
-      'Medicare',
-      'Medicaid'
+      "Medicare",
+      "Medicaid"
     ]
   },
   "tbl_medical_ins": {
     "types": [
-      'None',
-      'Medicare',
-      'Medicaid',
-      'Private',
-      'MAP/County Program',
-      'VA',
-      'Other'
+      "None",
+      "Medicare",
+      "Medicaid",
+      "Private",
+      "MAP/County Program",
+      "VA",
+      "Other"
     ]
   },
   "tbl_rec_medical_ins": { // many to a tbl_recoveree.
@@ -425,49 +665,49 @@ module.exports = {
   "tbl_age_cohort": {
     types: [
       {
-        "description" : "0 to 11 Years Old",
-        "start" : 0,
-        "end": 11
+        "DESCRIPTION" : "0 to 11 Years Old",
+        "START_AGE" : 0,
+        "END_AGE": 11
       },
       {
-        "description" : "11 to 17 Years Old",
-        "start" : 11,
-        "end": 17
+        "DESCRIPTION" : "11 to 17 Years Old",
+        "START_AGE" : 11,
+        "END_AGE": 17
       },
       {
-        "description" : "18 to 24 Years Old",
-        "start" : 18,
-        "end": 24
+        "DESCRIPTION" : "18 to 24 Years Old",
+        "START_AGE" : 18,
+        "END_AGE": 24
       },
       {
-        "description" : "25 to 35 Years Old",
-        "start" : 25,
-        "end": 34
+        "DESCRIPTION" : "25 to 35 Years Old",
+        "START_AGE" : 25,
+        "END_AGE": 34
       },
       {
-        "description" : "35 to 44 Years Old",
-        "start" : 35,
-        "end": 44
+        "DESCRIPTION" : "35 to 44 Years Old",
+        "START_AGE" : 35,
+        "END_AGE": 44
       },
       {
-        "description" : "45 to 54 Years Old",
-        "start" : 45,
-        "end": 54
+        "DESCRIPTION" : "45 to 54 Years Old",
+        "START_AGE" : 45,
+        "END_AGE": 54
       },
       {
-        "description" : "55 to 64 Years Old",
-        "start" : 55,
-        "end": 64
+        "DESCRIPTION" : "55 to 64 Years Old",
+        "START_AGE" : 55,
+        "END_AGE": 64
       },
       {
-        "description" : "65 to 74 Years Old",
-        "start" : 65,
-        "end": 74
+        "DESCRIPTION" : "65 to 74 Years Old",
+        "START_AGE" : 65,
+        "END_AGE": 74
       },
       {
-        "description" : "75 or Older",
-        "start" : 75,
-        "end": 100
+        "DESCRIPTION" : "75 or Older",
+        "START_AGE" : 75,
+        "END_AGE": 100
       }
     ]
   },

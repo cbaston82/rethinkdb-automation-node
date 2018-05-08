@@ -6,10 +6,10 @@ const seeder = []
 // create seed data.
 tables.tbl_age_cohort.types.forEach((type, i) => {
   seeder.push({
-    "DESCRIPTION":  type.description,
-    "END_AGE": type.end,
+    "DESCRIPTION":  type.DESCRIPTION,
+    "END_AGE": type.END_AGE,
     "ID": i + 1,
-    "START_AGE": type.start,
+    "START_AGE": type.START_AGE,
     "USERNAME": "Curtiss" // Todo: remove if not needed
   })
 })

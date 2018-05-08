@@ -1,21 +1,19 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_phone_types.types.forEach((type, i) => {
+  seeder.push({
+    "ID": i + 1,
+    "PHONE_TYPE":  type,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "ID": 2,
-      "PHONE_TYPE":  "Home",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 3,
-      "PHONE_TYPE":  "Office",
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ID": 1,
-      "PHONE_TYPE":  "Mobile",
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_PHONE_TYPES"

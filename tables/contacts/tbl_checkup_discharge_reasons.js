@@ -1,18 +1,20 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
+  seeder.push({
+    "ATTEMPTS": type.ATTEMPTS,
+    "DISCHARGE_REASON":  type.DISCHARGE_REASON,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "ATTEMPTS": 15,
-      "DISCHARGE_REASON":  "LOST CONTACT",
-      "ID": 2,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ATTEMPTS": 10,
-      "DISCHARGE_REASON":  "D10",
-      "ID": 1,
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : "TBL_CHECKUP_DISCHARGE_REASONS"

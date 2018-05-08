@@ -1,31 +1,29 @@
+const random = require('../../helpers/random/index')
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+let recId = 1
+let recoverycheckupid = 1
+
+// create seed data - total is set in tables-config.
+for(let i = 1; i <= tables.tbl_rec_recovery_checkup_services.total; i++){
+
+  // Many to one ids.
+  if(recId > tables.tbl_recoverees.total) recId = 1
+  if(recoverycheckupid > tables.tbl_rec_recovery_checkup.total) recoverycheckupid = 1
+
+  seeder.push( {
+    "Itemserviceid": i,
+    "fk_recoverycheckupid": recoverycheckupid,
+    "fk_serviceid": random.number(tables.tbl_checkup_services.types.length)
+  })
+  recId++
+  recoverycheckupid++
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "Itemserviceid": 14,
-      "fk_recoverycheckupid": 16,
-      "fk_serviceid": 1
-    },
-    {
-      "Itemserviceid": 13,
-      "fk_recoverycheckupid": 15,
-      "fk_serviceid": 1
-    },
-    {
-      "Itemserviceid": 17,
-      "fk_recoverycheckupid": 15,
-      "fk_serviceid": 2
-    },
-    {
-      "Itemserviceid": 15,
-      "fk_recoverycheckupid": 16,
-      "fk_serviceid": 2
-    },
-    {
-      "Itemserviceid": 16,
-      "fk_recoverycheckupid": 17,
-      "fk_serviceid": 1
-    }
-  ],
+  "seeder" : seeder,
   "indexes" : ['Itemserviceid', 'fk_recoverycheckupid', 'fk_serviceid'],
   "compoundIndexes" : [],
   "table" : "tbl_rec_recovery_checkup_services"
