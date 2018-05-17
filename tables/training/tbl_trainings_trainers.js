@@ -1,61 +1,25 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+let recId = 2
+
+// create seed data.
+for(let i = 1; i <= tables.tbl_trainings_trainers.total; i++){
+
+  // Many to one ids.
+  if(recId > tables.tbl_recoverees.total) recId = 2
+
+  seeder.push({
+    "Trainer": recId,
+    "TrainingID": 5, // Question: get the training id?
+    "TrainingsFacilID": i
+  })
+  recId += 2 // by default only trainers with even id are assigned the trainer attribute.
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "Trainer": 2,
-      "TrainingID": 5,
-      "TrainingsFacilID": 13
-    },
-    {
-      "Trainer": 3,
-      "TrainingID": 2,
-      "TrainingsFacilID": 8
-    },
-    {
-      "Trainer": 1,
-      "TrainingID": 1,
-      "TrainingsFacilID": 1
-    },
-    {
-      "Trainer": 1,
-      "TrainingID": 5,
-      "TrainingsFacilID": 12
-    },
-    {
-      "Trainer": 3,
-      "TrainingID": 3,
-      "TrainingsFacilID": 6
-    },
-    {
-      "Trainer": 2,
-      "TrainingID": 2,
-      "TrainingsFacilID": 9
-    },
-    {
-      "Trainer": 2,
-      "TrainingID": 3,
-      "TrainingsFacilID": 7
-    },
-    {
-      "Trainer": 2,
-      "TrainingID": 4,
-      "TrainingsFacilID": 11
-    },
-    {
-      "Trainer": 1,
-      "TrainingID": 4,
-      "TrainingsFacilID": 10
-    },
-    {
-      "Trainer": 1,
-      "TrainingID": 3,
-      "TrainingsFacilID": 5
-    },
-    {
-      "Trainer": 4,
-      "TrainingID": 1,
-      "TrainingsFacilID": 2
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['Trainer', 'TrainingID', 'TrainingsFacilID'],
   "compoundIndexes" : [],
   "table" : "tbl_trainings_trainers"

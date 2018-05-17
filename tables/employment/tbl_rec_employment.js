@@ -1,4 +1,3 @@
-const faker = require('faker')
 const random = require('../../helpers/random/index')
 const tables = require('../../configuration/tables-config')
 

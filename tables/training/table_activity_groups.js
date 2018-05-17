@@ -1,32 +1,21 @@
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+
+// create seed data.
+tables.tbl_activity_groups.types.forEach((type, i) => {
+  seeder.push({
+    "ACTIVITY_GROUP": type,
+    "ID": i + 1,
+    "SORT_SEQUENCE": null // Todo: remove if not needed.
+  })
+})
+
 module.exports = {
-  "seeder" :[
-    {
-      "ACTIVITY_GROUP":  "Educational",
-      "ID": 3,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ACTIVITY_GROUP":  "Referral",
-      "ID": 4,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ACTIVITY_GROUP":  "Activity",
-      "ID": 5,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ACTIVITY_GROUP":  "Events",
-      "ID": 1,
-      "SORT_SEQUENCE": null
-    },
-    {
-      "ACTIVITY_GROUP":  "Ancillary",
-      "ID": 2,
-      "SORT_SEQUENCE": null
-    }
-  ],
+  "seeder" :seeder,
   "indexes" : ['ID'],
   "compoundIndexes" : [],
   "table" : 'TBL_ACTIVITY_GROUPS'
 }
+

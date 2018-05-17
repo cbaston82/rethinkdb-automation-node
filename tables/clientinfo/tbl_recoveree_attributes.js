@@ -4,24 +4,28 @@ const faker = require('faker')
 
 // Seed data.
 const seeder = []
-let recId = 1
+let attributesArray = []
 
-// create seed data - total is set in tables-config.
-// Todo: Finish Seeding "// ??"
-for(let i = 1; i <= tables.tbl_recoveree_attributes.total; i++){
+// create seed data - create one record for each recoveree.
+for(let i = 1; i <= tables.tbl_recoverees.total; i++){
 
-  // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  // 1. Create a random array of attributes.
+  let Attributes = random.arrayOfNumbers(tables.tbl_attributes_master.types.length);
+
+  // 2. Make sure even number recoverees has trainer attribute (8).
+  if((i % 2) === 0) Attributes.push(8)
+
+  // 3. Remove any duplicates.
+  attributesArray = Array.from(new Set(Attributes));
 
   seeder.push({
-    "Attributes": random.arrayOfNumbers(tables.tbl_attributes_master.types.length),
+    "Attributes": attributesArray,
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "RCCID": 0, // Todo: Tie to a program
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_ID": i,
     "SERVICES_INITIATED":  faker.random.words(5)
   })
-  recId++
 }
 
 module.exports = {

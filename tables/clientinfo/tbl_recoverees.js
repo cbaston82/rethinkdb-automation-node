@@ -10,7 +10,7 @@ const profileImages = ['businessman.jpg', 'businesswoman.jpg']
 // create seed data - total is set in tables-config
 for (let i = 0; i < tables.tbl_recoverees.total; i++) {
   let randomSSN = new RandomSSN()
-  let id = '0ed70a4b-682d-446d-bf88-7640359b07'
+  let id = tables.tbl_recoverees.id
   id = (i.toString().length < 2) ? id += '0' + i : id += i
 
   seeder.push({

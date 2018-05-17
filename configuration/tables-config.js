@@ -229,6 +229,47 @@ module.exports = {
     ]
   },
   //==================================================
+  // tables/training
+  //=================================================
+  "tbl_activity_groups": {
+    "types": ['Events', 'Ancillary', 'Educational', 'Referral', 'Activity']
+  },
+  "tbl_activity": {
+    "total": 20
+  },
+  "tbl_events": {
+    "total": 0
+  },
+  "tbl_rec_te_activity": {
+    "total": 8
+  },
+  "tbl_trainings_trainers": {
+    "total": 5
+  },
+  "tbl_trainings_events_groups": {
+    "types": ['Events', 'Educational', 'Ancillary', 'Referrals']
+  },
+  "tbl_trainings_events": {
+    "total": 5
+  },
+  "tbl_training_event_locations": {
+    "types" : [
+      'Communities For Recovery',
+      'Austin Recovery',
+      'Trinity Center',
+      'Texas Star Recovery',
+      'Austin State Hospital - CAP',
+      'Austin State Hospital - Adult',
+      'Seton Shoal Creek',
+      'Community Drug Court',
+      'Travis County Drug Court - The Short Program',
+      'Family Drug Court'
+    ]
+  },
+  "tbl_rec_trainings_events": {
+    "total": 10
+  },
+  //==================================================
   // tables/system
   //==================================================
   "tblrole": {
@@ -242,7 +283,8 @@ module.exports = {
   // tables/clientinfo
   //==================================================
   "tbl_recoverees": {
-    "total": 8
+    "total": 8,
+    "id": "0ed70a4b-682d-446d-bf88-7640359b07"
   },
   "tbl_rec_people_types": { // many to a recoveree.
     "total": 8
@@ -268,7 +310,7 @@ module.exports = {
   "tbl_rec_address" : {
     "total": 8
   },
-  "tbl_activities": {
+  "tbl_rec_activities": {
     "total": 0
   },
   "tbl_rec_doc_info": {

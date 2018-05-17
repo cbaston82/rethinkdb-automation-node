@@ -1,28 +1,32 @@
+const tables = require('../../configuration/tables-config')
+const random = require('../../helpers/random')
+
+// Seed data.
+const seeder = []
+let recId = 1
+
+// create seed data.
+for(let i = 1; i <= tables.tbl_rec_trainings_events.total; i++){
+
+  // Many to one ids.
+  if(recId > tables.tbl_recoverees.total) recId = 1
+
+  seeder.push({
+    "DATE_ADD": random.date(),
+    "DATE_UPD": random.date(),
+    "RECOVEREE_ID": recId,
+    "TERecID": i,
+    "TE_DATE": random.date(),
+    "TE_LOCATION": random.number(tables.tbl_training_event_locations.types.length),
+    "USERNAME_ADD":  "jrbuser",
+    "USERNAME_UPD":  "jrbuser",
+    "training_event":  ""
+  })
+  recId++
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "DATE_ADD": "Mon Jan 15 2018 08:00:00 GMT+00:00",
-      "DATE_UPD": "Mon Jan 15 2018 08:00:00 GMT+00:00",
-      "RECOVEREE_ID": 2 ,
-      "TERecID": 1 ,
-      "TE_DATE": "Thu Apr 06 2017 08:00:00 GMT+00:00",
-      "TE_LOCATION": 2 ,
-      "USERNAME_ADD":  "jrbuser",
-      "USERNAME_UPD":  "jrbuser",
-      "training_event":  ""
-    },
-    {
-      "DATE_ADD": "Mon Jan 15 2018 08:00:00 GMT+00:00",
-        "DATE_UPD": "Mon Jan 15 2018 08:00:00 GMT+00:00",
-        "RECOVEREE_ID": 2 ,
-        "TERecID": 11 ,
-        "TE_DATE": "Mon Jan 15 2018 08:00:00 GMT+00:00",
-        "TE_LOCATION": 2 ,
-        "USERNAME_ADD":  "jrbuser",
-        "USERNAME_UPD":  "jrbuser",
-        "training_event":  ""
-      }
-  ],
+  "seeder" :seeder,
   "indexes" : ['RECOVEREE_ID', 'TE_DATE', 'TE_LOCATION', 'TERecID'],
   "compoundIndexes" : [
     {
