@@ -8,7 +8,7 @@ for(let i = 1; i <= tables.tbl_time_intervals.total; i++){
 
   seeder.push({
       "ID": i,
-      "INTERVALS": i, // Todo: create time intervals.
+      "INTERVALS": i * 5 , // Todo: create time intervals.
       "SORT_SEQUENCE": null
   })
 }

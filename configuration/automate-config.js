@@ -7,57 +7,57 @@ const settings = {
     },
     {
       "directory" : "./tables/clientinfo",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/coaching",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/contacts",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/demographics",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/employment",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/medical",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/person",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/program",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/surveys",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/system",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/training",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     }
   ]
