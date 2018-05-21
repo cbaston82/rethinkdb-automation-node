@@ -1,8 +1,0 @@
-2018-04-25T08:38:14.761674777 0.010589s notice: Recursively removing directory /home/cbaston/dev/rethinkdb-automate-test/rethinkdb_data/tmp
-2018-04-25T08:38:14.764288155 0.013201s notice: Initializing directory /home/cbaston/dev/rethinkdb-automate-test/rethinkdb_data
-2018-04-25T08:38:14.764329154 0.013242s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/cbaston/dev/rethinkdb-automate-test/rethinkdb_data' did not already exist or is empty.)
-2018-04-25T08:38:14.764351173 0.013264s notice: Running rethinkdb 2.3.6~0xenial (GCC 5.3.1)...
-2018-04-25T08:38:14.765671469 0.014585s notice: Running on Linux 4.4.0-121-generic x86_64
-2018-04-25T08:38:14.765702257 0.014615s notice: Loading data from directory /home/cbaston/dev/rethinkdb-automate-test/rethinkdb_data
-2018-04-25T08:38:14.786134069 0.035047s info: Automatically using cache size of 4465 MB
-2018-04-25T08:38:14.786719463 0.035632s error: TCP socket creation failed for port 29015: Address already in use.

@@ -1,0 +1,43 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision f7f3b8ed0181e1241154e2c71f6d119ddbf8cb42)
++++ README.md	(date 1525471242000)
+@@ -1,4 +1,8 @@
+ # FFR BE AUTOMATION
++This project is meant to automate the process of creating the database, tables, indexes, compound indexes and generating fake data to work with.
++
++## Getting Started
++- Install dependencies `npm install or yarn install`
+ 
+ ### Current dependencies - package.json
+ ```json
+@@ -17,10 +21,7 @@
+   }
+ }
+ ```
+-
+ ---
+-
+-
+ 
+ ### Adding a new tables directory
+ - Create new directory in `tables/DIRECTORY_NAME`
+@@ -36,7 +37,6 @@
+ }
+ ```
+ 
+-
+ ### Create a basic table
+ 
+ - Lets look at the `client_notes.js` file in **tables/clientinfo/client_notes.sj**
+@@ -89,7 +89,6 @@
+ 
+ ---
+ 
+-
+ ### Create a basic options table
+ 
+ - Lets look at the `tbl_family.js` file in **tables/demographics/tbl_family.js**

@@ -9,10 +9,10 @@ const config = require(__dirname + '/configuration/config.js');
  * 3. Create table if does not exists
  * 4. Seed the documents into the table - also seeding id to tie everything
  * 5. If no errors another asynchronous stream of functions creates the indexes
- * TODO: Need to eventually refactor the flow of this process
+ * TODO: Need to eventually refactor the flow of this process.
  * * @param data
  */
-var automate = function(data) {
+let automate = function(data) {
   async.waterfall([
       function connect(callback) {
         r.connect(config.rethinkdb, callback)

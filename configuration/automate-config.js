@@ -1,13 +1,8 @@
 const settings = {
   "directories" : [
     {
-      "directory" : "./tables/othertables",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
       "directory" : "./tables/billing",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
@@ -17,62 +12,52 @@ const settings = {
     },
     {
       "directory" : "./tables/coaching",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/contacts",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/demographics",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/employment",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/medical",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/person",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/program",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
-      "directory" : "./tables/recoveree",
-      "automate" :  false,
-      "exclude" : []
-    },
-    {
-      "directory" : "./tables/reporting",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/surveys",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/system",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     },
     {
       "directory" : "./tables/training",
-      "automate" :  false,
+      "automate" :  true,
       "exclude" : []
     }
   ]
