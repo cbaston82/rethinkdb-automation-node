@@ -1,5 +1,5 @@
 const faker = require('faker')
-const { RandomSSN } = require('ssn')
+// const { RandomSSN } = require('ssn')
 const random = require('../../helpers/random/index')
 const tables = require('../../configuration/tables-config')
 
@@ -9,7 +9,7 @@ const profileImages = ['businessman.jpg', 'businesswoman.jpg']
 
 // create seed data - total is set in tables-config
 for (let i = 0; i < tables.tbl_recoverees.total; i++) {
-  let randomSSN = new RandomSSN()
+  // let randomSSN = new RandomSSN()
   let id = tables.tbl_recoverees.id
   id = (i.toString().length < 2) ? id += '0' + i : id += i
 
@@ -49,7 +49,7 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'RECOVEREE_SCI_DATE': '',
     'RECOVEREE_SCI_SCORE': 0,
     'RECOVEREE_SEX_ORIENT': '',
-    'RECOVEREE_SSN': randomSSN.value().toFormattedString(),
+    'RECOVEREE_SSN': '000-00-0000',
     'RECOVEREE_TYPE': 0,
     'RECOVEREE_WELLNESS_SCORE': 0,
     'RECOVEREE_WELLNESS_SELF_ASSESS_DATE': '',

@@ -1,5 +1,6 @@
 const r = require('rethinkdb')
 const moment = require('moment')
+const tables = require('../../configuration/tables-config')
 
 module.exports = {
   isoDateFormatTimeCreate() {
@@ -25,4 +26,13 @@ module.exports = {
   number(max = 0){
     return (max === 0) ? Math.floor(Math.random() * Math.floor(2)) : Math.floor(Math.random() * max) + 1
   },
+  personType(attribute){
+    let trainersArray = []
+    let trainers = Math.floor(tables.tbl_recoverees.total / attribute)
+    for(let i =1; i <= trainers; i++){
+      trainersArray.push(i * attribute)
+    }
+    let randomTrainer = trainersArray[Math.floor(Math.random() * trainersArray.length)]
+    return randomTrainer
+  }
 }
