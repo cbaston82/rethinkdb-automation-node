@@ -58,13 +58,12 @@ function number(max = 0){
  * @returns {*}
  */
 function personType(attribute){
-  let trainersArray = []
-  let trainers = Math.floor(tables.tbl_recoverees.total / attribute)
-  for(let i =1; i <= trainers; i++){
-    trainersArray.push(i * attribute)
+  let personTypeArray = []
+  let persons = Math.floor(tables.tbl_recoverees.total / attribute)
+  for(let i =1; i <= persons; i++){
+    personTypeArray.push(i * attribute)
   }
-  let randomTrainer = trainersArray[Math.floor(Math.random() * trainersArray.length)]
-  return randomTrainer
+    return personTypeArray[Math.floor(Math.random() * personTypeArray.length)]
 }
 
 module.exports = {
