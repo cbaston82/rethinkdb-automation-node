@@ -12,7 +12,7 @@ for(let i = 1; i <= tables.tbl_rec_drugs.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "RecovereeAttributeID": 2, // Todo: remove if not neede3d
+    "RecovereeAttributeID": 2, // Todo: remove if not needed
     "fk_AttributeID": random.number(tables.tbl_drugs.types.length),
     "fk_RecovereeID": recId
   })

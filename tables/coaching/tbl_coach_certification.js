@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_coach_certifications.types.forEach((type, i) => {
   seeder.push({
     "CERTIFICATION":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "ID": i + 1
   })
 })
 

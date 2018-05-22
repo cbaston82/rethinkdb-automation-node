@@ -7,7 +7,7 @@ const seeder = []
 tables.tbl_coaching_units_conversion.types.forEach((type, i) => {
   seeder.push( {
     "ID": i + 1,
-    "IncludeInReport": 0, // Todo: remove if not needed.
+    "IncludeInReport": 0, // Todo: remove if not needed. definitely NOT needed destroy with extreme prejudice
     "MINUTES_PER_UNIT": type.MINUTES_PER_UNIT,
     "PROGRAM": type.PROGRAM, // Question: What programs is this tied to?
     "SORT_SEQUENCE": 0 // Todo: remove if not needed.

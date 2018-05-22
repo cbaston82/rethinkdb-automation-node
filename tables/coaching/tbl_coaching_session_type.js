@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_coaching_session_type.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "SESSION_TYPE":  type,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "SESSION_TYPE":  type
   })
 })
 
