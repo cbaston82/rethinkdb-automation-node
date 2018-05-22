@@ -1,41 +1,56 @@
+const tables = require('../../configuration/tables-config')
+const random = require('../../helpers/random')
+const faker = require('faker')
+
+// Seed data.
+const seeder = []
+let recId = 1
+// create seed data - total is set in tables-config.
+for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
+
+  // Many to one ids.
+  if(recId > tables.tbl_recoverees.total) recId = 1
+
+
+  seeder.push({
+    "ACTION_PLAN_RECOVEREE": "",
+    "ACTION_PLAN_STAFF": "",
+    "BILLABLE": random.number(),
+    "CHECK_IN": "",
+    "COACHED_BY": random.personType(2),
+    "COACHING_DATE":random.date(),
+    "COACHING_LOCATION": random.number(tables.tbl_rcc.types.length), // Question: is this correct. coaching location => tbl_rcc.
+    "COACHING_MINUTES": random.number(59),
+    "COACHING_NOTES": faker.lorem.sentences(3),
+    "COACHING_SESSION_TYPE": random.number(tables.tbl_coaching_session_type.types.length),
+    "COMMUNITY_LOCATION": "",
+    "CONNECTING": "",
+    "CoachingRecID": i, // Question: is this incremental.
+    "DATE_ADD": random.date(),
+    "DATE_UPD":  random.date(),
+    "DISCUSSION_ITEMS": faker.random.words(4),
+    "DOMAIN_GOAL": "",
+    "END_TIME": "",
+    "GOALS": faker.lorem.sentences(3),
+    "NEEDS_AND_CONCERNS": faker.lorem.sentences(2),
+    "NEXT_MTG_DATE": "",
+    "NEXT_MTG_TIME": "",
+    "OTHER_DISCUSSION_ITEM": faker.lorem.words(4),
+    "RECOVEREE_ID": recId,
+    "REC_COACHING_ACTIVITY": "",
+    "RNUM": i,
+    "SELF_CARE": "",
+    "SERVICE_LOCATION": random.number(tables.tbl_training_event_locations.types.length), // Question: is this correct?
+    "START_TIME": "",
+    "TBD": 0,
+    "USERNAME_ADD": "",
+    "USERNAME_UPD": "",
+  })
+  recId++
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "ACTION_PLAN_RECOVEREE":  "",
-      "ACTION_PLAN_STAFF":  "",
-      "BILLABLE": 0,
-      "CHECK_IN":  "",
-      "COACHED_BY": 18,
-      "COACHING_DATE": "Wed Jan 03 2018 08:00:00 GMT+00:00",
-      "COACHING_LOCATION": 2,
-      "COACHING_MINUTES": 0,
-      "COACHING_NOTES":  "",
-      "COACHING_SESSION_TYPE": 1,
-      "COMMUNITY_LOCATION":  "",
-      "CONNECTING":  "",
-      "CoachingRecID": 32,
-      "DATE_ADD": "Fri Dec 15 2017 08:00:00 GMT+00:00",
-      "DATE_UPD": "Fri Dec 15 2017 08:00:00 GMT+00:00",
-      "DISCUSSION_ITEMS":  "",
-      "DOMAIN_GOAL":  "",
-      "END_TIME":  "",
-      "GOALS":  "",
-      "NEEDS_AND_CONCERNS":  "",
-      "NEXT_MTG_DATE":  "",
-      "NEXT_MTG_TIME":  "",
-      "OTHER_DISCUSSION_ITEM":  "",
-      "RECOVEREE_ID": 1,
-      "REC_COACHING_ACTIVITY":  "",
-      "RNUM": 14,
-      "SELF_CARE":  "",
-      "SERVICE_LOCATION": 5,
-      "START_TIME":  "",
-      "TBD": 0,
-      "USERNAME_ADD":  "",
-      "USERNAME_UPD":  "",
-    }
-  ],
-  "indexes" : ['COACHED_BY', 'COACHING_DATE', 'COACHING_LOCATION', 'RECOVEREE_ID', 'RNUM'],
+  "seeder" :seeder,
   "compoundIndexes" : [
     {
       "name" : "rec_coaching_info",

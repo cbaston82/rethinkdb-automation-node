@@ -5,6 +5,21 @@ module.exports = {
   "tbl_rec_coaching_units": {
       "total": 8
   },
+  "tbl_rec_coaching_groups": {
+    "types" : []
+  },
+  "tbl_rec_coaching_groups_people": {
+    "types": []
+  },
+  "tbl_rec_coaching_activity": {
+    "total": 8
+  },
+  "tbl_rec_coaching": {
+    "total": 10
+  },
+  "tbl_rec_coach_types": {
+    "total": 8
+  },
   "tbl_rec_coach_assign": {
     "total": 8
   },

@@ -12,10 +12,10 @@ for(let i = 1; i <= tables.tbl_recoverees.total; i++){
   // 1. Create a random array of attributes.
   let Attributes = random.arrayOfNumbers(tables.tbl_attributes_master.types.length);
 
-  // 2. Make sure even number recoverees has trainer attribute (8).
-  if((i % 2) === 0) Attributes.push(8)
+  if((i % 2) === 0) Attributes.push(2) // if divisible by 2 add coach attribute
+  if((i % 8) === 0) Attributes.push(8) // if divisible by 8 add trainer attribute
 
-  // 3. Remove any duplicates.
+  // 3. Remove any duplicates
   attributesArray = Array.from(new Set(Attributes));
 
   seeder.push({
