@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_trainings_events_groups.types.forEach((type, i) => {
   seeder.push({
     "ID": i,
-    "SORT_SEQUENCE": null, // Todo: remove if not needed
-    "TRAININGS_EVENTS_GROUP":  type
+    "TRAININGS_EVENTS_GROUP": type
   })
 })
 

@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_activity_groups.types.forEach((type, i) => {
   seeder.push({
     "ACTIVITY_GROUP": type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "ID": i + 1
   })
 })
 

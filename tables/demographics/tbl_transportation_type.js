@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_transportation_type.types.forEach((type, i) => {
   seeder.push({
     "DESC":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "ID": i + 1
   })
 })
 

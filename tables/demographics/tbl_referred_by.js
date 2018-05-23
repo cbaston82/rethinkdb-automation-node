@@ -6,9 +6,8 @@ const seeder = []
 // create seed data.
 tables.tbl_referred_by.types.forEach((type, i) => {
   seeder.push({
-    "ID": i + 1 ,
-    "REFERRED_BY":  type ,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "ID": i + 1,
+    "REFERRED_BY": type
   })
 })
 

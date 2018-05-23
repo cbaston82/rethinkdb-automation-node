@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_language.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "LANGUAGE":  type,
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "LANGUAGE":  type
   })
 })
 

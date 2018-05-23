@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_how_they_heard.types.forEach((type, i) => {
   seeder.push( {
     "DESCRIPTION":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": i + 1
+    "ID": i + 1
   })
 })
 

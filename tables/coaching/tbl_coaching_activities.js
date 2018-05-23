@@ -6,13 +6,12 @@ const seeder = []
 // create seed data.
 tables.tbl_coaching_activities.types.forEach((type, i) => {
   seeder.push({
-    "COACHING_ACTIVITY":  type,
+    "COACHING_ACTIVITY": type,
     "DX_CODE": null, // Todo: remove if not needed.
     "HCPC_CODE": null, // Todo: remvoe if not needed.
     "ID": i + 1,
     "PROC_CODE": null, // Todo: remove if not needed.
     "RECOVERY_PLAN_GOAL": 0, // Question: how does this work?
-    "SORT_SEQUENCE": i + 1,
     "TIME_ALLOWED": null // Todo: remove if not needed.
   })
 })

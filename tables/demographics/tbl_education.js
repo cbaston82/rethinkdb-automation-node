@@ -6,9 +6,8 @@ const seeder = []
 // create seed data.
 tables.tbl_education.types.forEach((type, i) => {
   seeder.push({
-    "EDUCATION":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "EDUCATION": type,
+    "ID": i + 1
   })
 })
 

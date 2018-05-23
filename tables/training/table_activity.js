@@ -10,9 +10,8 @@ for(let i = 1; i <= tables.tbl_activity.total; i++){
 
   seeder.push({
     "ID": i + 1,
-    "ACTIVITY":  faker.random.word(),
-    "ACTIVITY_GROUP": random.number(tables.tbl_activity_groups.types.length),
-    "SORT_SEQUENCE": null
+    "ACTIVITY": faker.random.word(),
+    "ACTIVITY_GROUP": random.number(tables.tbl_activity_groups.types.length)
   })
 }
 

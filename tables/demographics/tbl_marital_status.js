@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_marital_status.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "SORT_SEQUENCE": 0, // Todo: remove if not needed.
-    "STATUS":  type
+    "STATUS": type
   })
 })
 

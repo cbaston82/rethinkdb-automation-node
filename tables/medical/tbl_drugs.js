@@ -6,9 +6,8 @@ const seeder = []
 // create seed data.
 tables.tbl_drugs.types.forEach((type, i) => {
   seeder.push({
-    "DESC":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "DESC": type,
+    "ID": i + 1
   })
 })
 

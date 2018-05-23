@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_sexual_orientation.types.forEach((type, i) => {
   seeder.push(    {
     "ID": i + 1,
-    "ORIENTATION":  type,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "ORIENTATION": type
   })
 })
 

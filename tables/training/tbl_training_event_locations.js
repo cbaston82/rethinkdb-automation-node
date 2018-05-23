@@ -7,8 +7,7 @@ const seeder = []
 tables.tbl_training_event_locations.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "LOCATION":  type,
-    "SORT_SEQUENCE": null // Remove if not needed.
+    "LOCATION": type
   })
 })
 

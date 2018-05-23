@@ -6,9 +6,8 @@ const seeder = []
 // create seed data.
 tables.tbl_family.types.forEach((type, i) => {
   seeder.push( {
-    "FAMILY":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "FAMILY": type,
+    "ID": i + 1
   })
 })
 

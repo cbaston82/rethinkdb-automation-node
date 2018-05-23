@@ -7,9 +7,8 @@ const seeder = []
 tables.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
   seeder.push({
     "ATTEMPTS": type.ATTEMPTS,
-    "DISCHARGE_REASON":  type.DISCHARGE_REASON,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed.
+    "DISCHARGE_REASON": type.DISCHARGE_REASON,
+    "ID": i + 1
   })
 })
 

@@ -11,8 +11,7 @@ for(let i = 1; i <= tables.tbl_trainings_events.total; i++){
   seeder.push( {
     "ID": i,
     "GROUP": random.number(tables.tbl_trainings_events_groups.types.length),
-    "IS_THIS_A_TRAINING": 0, // Remove if not needed/
-    "SORT_SEQUENCE": null, // Remove if not needed.
+    "IS_THIS_A_TRAINING": 0, // Todo: Remove if not needed.
     "TRAININGS_EVENTS_NAME":  faker.random.word()
   })
 }

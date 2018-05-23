@@ -7,10 +7,9 @@ const seeder = []
 tables.tbl_wellness_areas.types.forEach((type, i) => {
 
   seeder.push({
-    "DROPDOWN_DISPLAY":  `${i + 1}. ${type}`,
+    "DROPDOWN_DISPLAY": `${i + 1}. ${type}`,
     "ID": i + 1,
-    "SORT_SEQUENCE": i + 1,
-    "WELLNESS_AREA":  type,
+    "WELLNESS_AREA": type,
     "WELLNESS_AREA_NBR": i + 1
   })
 })

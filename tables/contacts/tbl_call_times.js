@@ -6,9 +6,8 @@ const seeder = []
 // create seed data.
 tables.tbl_call_times.types.forEach((type, i) => {
   seeder.push({
-    "CALL_TIMES":  type,
+    "CALL_TIMES": type,
     "ID": i + 1,
-    "SORT_SEQUENCE": i + 1
   })
 })
 
