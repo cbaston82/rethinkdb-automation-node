@@ -24,8 +24,8 @@ for(let i = 1; i <= tables.tbl_rec_goals_objectives.total; i++){
     "FK_GOAL_ID": goalId,
     "OBJECTIVE":  faker.lorem.sentence(),
     "OBJECTIVE_ID": i,
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD":  faker.internet.userName(),
+    "USERNAME_UPD":  faker.internet.userName()
   })
   recId++
   goalId++

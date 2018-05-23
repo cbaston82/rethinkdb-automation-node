@@ -18,8 +18,8 @@ for(let i = 1; i <= tables.tbl_trainings_events.total; i++){
     "TRAINING_NAME": random.number(tables.tbl_trainings_events.total), // Question: is this correct?
     "TRAINING_NOTES": faker.lorem.sentences(2),
     "TRAINING_TRAINERS":  "",
-    "USERNAME_ADD":  "Curtiss",
-    "USERNAME_UPD":  "Curtiss"
+    "USERNAME_ADD":  faker.internet.userName(),
+    "USERNAME_UPD":  faker.internet.userName()
   })
 }
 

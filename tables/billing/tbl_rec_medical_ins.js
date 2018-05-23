@@ -23,8 +23,8 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
     "RECOVEREE_ID": recId,
     "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
     "SIGNUP": 0, // Question: what is this?
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD":  faker.internet.userName(),
+    "USERNAME_UPD":  faker.internet.userName(),
   })
   recId++
 }

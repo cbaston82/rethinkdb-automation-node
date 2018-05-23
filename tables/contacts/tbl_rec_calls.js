@@ -22,8 +22,8 @@ for(let i = 1; i <= tables.tbl_rec_calls.total; i++){
     "OTHER_SUPPORTS": 0, // Question: what's this?.
     "RECOVEREE_ID": recId,
     "RELAPSE": random.number(),
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD":  faker.internet.userName(),
+    "USERNAME_UPD":  faker.internet.userName()
   })
   recId++
 }

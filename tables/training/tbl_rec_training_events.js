@@ -1,5 +1,6 @@
 const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -18,8 +19,8 @@ for(let i = 1; i <= tables.tbl_rec_trainings_events.total; i++){
     "TERecID": i,
     "TE_DATE": random.date(),
     "TE_LOCATION": random.number(tables.tbl_training_event_locations.types.length),
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser",
+    "USERNAME_ADD":  faker.internet.userName(),
+    "USERNAME_UPD":  faker.internet.userName(),
     "training_event":  ""
   })
   recId++
