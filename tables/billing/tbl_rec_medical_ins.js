@@ -13,16 +13,16 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "BHPROVIDER": null, // Question: what is this
+    "BHPROVIDER": null, // Question: What is this?. This is set to null on front end.
     "COUNTY": faker.address.county(),
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "EFF_DATE": random.date(),
-    "END_DATE": "",
+    "END_DATE": random.date(),
     "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
-    "SIGNUP": 0, // Question: what is this?
+    "SIGNUP": null, // Question: What is is this? This is set to null by default.
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),
   })

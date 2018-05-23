@@ -19,7 +19,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
     "CHECK_IN": "",
     "COACHED_BY": random.personType(2),
     "COACHING_DATE":random.date(),
-    "COACHING_LOCATION": random.number(tables.tbl_rcc.types.length), // Question: is this correct. coaching location => tbl_rcc.
+    "COACHING_LOCATION": random.number(tables.tbl_rcc.types.length),
     "COACHING_MINUTES": random.number(59),
     "COACHING_NOTES": faker.lorem.sentences(3),
     "COACHING_SESSION_TYPE": random.number(tables.tbl_coaching_session_type.types.length),
@@ -40,7 +40,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
     "REC_COACHING_ACTIVITY": "",
     "RNUM": i,
     "SELF_CARE": "",
-    "SERVICE_LOCATION": random.number(tables.tbl_training_event_locations.types.length), // Question: is this correct?
+    "SERVICE_LOCATION": random.number(tables.tbl_training_event_locations.types.length),
     "START_TIME": "",
     "TBD": 0,
     "USERNAME_ADD": "",

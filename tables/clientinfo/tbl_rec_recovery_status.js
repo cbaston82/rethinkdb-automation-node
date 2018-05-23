@@ -11,7 +11,7 @@ for(let i = 1; i <= tables.tbl_rec_recovery_status.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    // Todo: figure out data needed for tbl_rec_recovery_status.
+    // Todo: figure out what data will be seeded.
   })
   recId++
 }

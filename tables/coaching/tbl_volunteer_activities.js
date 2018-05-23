@@ -1,4 +1,5 @@
 const tables = require('../../configuration/tables-config')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -8,7 +9,7 @@ tables.tbl_volunteer_activities.types.forEach((type, i) => {
   seeder.push({
     "ACTIVITY": type,
     "ID": i + 1,
-    "BILLABLE": 0 // Todo: remove if not needed... IT IS needed as true || false
+    "BILLABLE": faker.random.boolean()
   })
 })
 

@@ -19,7 +19,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching_units.total; i++){
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "EFF_DATE": random.date(),
-    "END_DATE": "",
+    "END_DATE": random.date(),
     "ID": i,
     "MISSED": random.number(),
     "RECOVEREE_ID": recId,

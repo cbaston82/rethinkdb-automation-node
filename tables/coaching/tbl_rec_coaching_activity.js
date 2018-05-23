@@ -14,7 +14,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching_activity.total; i++){
   seeder.push({
     "ItemDiscussedID": i,
     "fk_CoachingRecID": random.number(tables.tbl_recoverees.total),
-    "fk_ItemID": 5 //Todo: add this. ties back to TBL_WELLNESS_AREAS
+    "fk_ItemID": random.number(tables.tbl_wellness_areas.types.length)
   })
   recId++
 }

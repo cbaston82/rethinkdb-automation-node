@@ -358,8 +358,8 @@ module.exports = {
   //==================================================
   // tables/contacts
   //==================================================
-  "tbl_checkup__referral_source": {
-    "total": 8
+  "tbl_checkup_referral_source": {
+    "types": ["self", "Mother", "Father", "Sister", "Friend"]
   },
   "tbl_rec_recovery_checkup_services": {
     "total": 8

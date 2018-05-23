@@ -16,10 +16,10 @@ for(let i = 1; i <= tables.tbl_rec_calls.total; i++){
     "ATTEMPTS": random.number(50),
     "CALL_DATE": random.date(),
     "COMMENTS": faker.lorem.sentences(2),
-    "CONTACT": 0, // Question: what's this?.
+    "CONTACT": faker.random.boolean(),
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
-    "OTHER_SUPPORTS": 0, // Question: what's this?.
+    "OTHER_SUPPORTS": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RELAPSE": random.number(),
     "USERNAME_ADD": faker.internet.userName(),
