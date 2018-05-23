@@ -18,26 +18,6 @@ module.exports = {
   "SURVEY": 3,
   "SURVEY_NAME": "Quality of Life Survey",
   "TOTAL_PEOPLE": 2
-},
-{
-  "AGE_AT_MAX_DATE": 39,
-    "AGE_TODAY": 40,
-    "DOMAIN": 1,
-    "DOMAIN_FACETS_A": "Activities of daily living, Dependence on Medicinal substances and medical aids, Energy and fatigue, Mobility, Pain and discomfort, Sleep and rest, Work capacity",
-    "DOMAIN_FACETS_B": null,
-    "DOMAIN_NAME": "Physical Health",
-    "FACETS": "Activities of daily living, Dependence on Medicinal substances and medical aids, Energy and fatigue, Mobility, Pain and discomfort, Sleep and rest, Work capacity",
-    "FIRST_SCORE": 94,
-    "GENDER": "Female",
-    "LAST_SCORE": 81,
-    "MAX_DATE": "Wed Nov 05 2014 08:00:00 GMT+00:00",
-    "RCC": "Center 2",
-    "RECOVEREE_BDATE": "Mon Mar 17 1975 07:00:00 GMT+00:00",
-    "RECOVEREE_ID": 2,
-    "STATUS": "Divorced",
-    "SURVEY": 3,
-    "SURVEY_NAME": "Quality of Life Survey",
-    "TOTAL_PEOPLE": 2
 }
 ],
   "indexes": ['DOMAIN', 'SURVEY'],
