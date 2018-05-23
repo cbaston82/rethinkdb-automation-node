@@ -12,8 +12,8 @@ tables.tbl_volunteer_category.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_VOLUNTEER_CATEGORY"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_VOLUNTEER_CATEGORY"
 }

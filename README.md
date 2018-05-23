@@ -40,7 +40,7 @@ This project is meant to automate the process of creating the database, tables, 
 ```json
 {
   "directory" : "./tables/DIRECTORY_NAME",
-  "automate" :  true, 
+  "automate" : true, 
   "exclude" : []
 }
 ```
@@ -73,17 +73,17 @@ for(let i = 1; i <= tables.client_notes.total; i++){
 
   // Loop and create data to seed.
   seeder.push({
-    "ID":  recId,
-    "NOTE":  faker.random.words(10),
-    "STAMP":  random.date()
+    "ID": recId,
+    "NOTE": faker.random.words(10),
+    "STAMP": random.date()
   })
   recId++
 }
 
 module.exports = {
-  "seeder" : seeder,
-  "indexes" : ['ID', 'STAMP'],
-  "compoundIndexes" : [],
+  "seeder": seeder,
+  "indexes": ['ID', 'STAMP'],
+  "compoundIndexes": [],
   "table" : 'CLIENT_NOTES'
 }
 
@@ -120,10 +120,10 @@ tables.tbl_family.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_FAMILY"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_FAMILY"
 }
 
 ```

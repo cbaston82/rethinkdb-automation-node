@@ -7,13 +7,13 @@ const seeder = []
 tables.tblrole.types.forEach((type, i) => {
   seeder.push({
     "RoleID": i + 1,
-    "Rolename":  type
+    "Rolename": type
   })
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RoleID'],
-  "compoundIndexes" : [],
-  "table" : "tblRole"
+  "seeder": seeder,
+  "indexes": ['RoleID'],
+  "compoundIndexes": [],
+  "table": "tblRole"
 }

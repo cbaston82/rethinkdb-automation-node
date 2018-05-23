@@ -12,8 +12,8 @@ tables.tbl_housing_options.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_HOUSING_OPTIONS"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_HOUSING_OPTIONS"
 }

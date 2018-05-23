@@ -12,9 +12,9 @@ tables.tbl_trainings_events_groups.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_TRAININGS_EVENTS_GROUPS"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_TRAININGS_EVENTS_GROUPS"
 }
 

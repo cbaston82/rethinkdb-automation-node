@@ -19,15 +19,15 @@ for(let i = 1; i <= tables.tbl_rec_coaching_units.total; i++){
     "DATE_UPD": random.date(),
     "END_DATE": random.date(),
     "RECOVEREE_ID": recId,
-    "USERNAME_ADD":  faker.internet.userName(),
-    "USERNAME_UPD":  faker.internet.userName()
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RECOVEREE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_COACH_ASSIGN"
+  "seeder": seeder,
+  "indexes": ['RECOVEREE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_COACH_ASSIGN"
 }

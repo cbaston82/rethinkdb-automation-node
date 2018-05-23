@@ -12,8 +12,8 @@ tables.tbl_checkup_services.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_CHECKUP_SERVICES"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_CHECKUP_SERVICES"
 }

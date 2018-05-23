@@ -15,9 +15,9 @@ tables.tbl_rcc.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_COACHING_UNITS_CONVERSION"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_COACHING_UNITS_CONVERSION"
 }
 

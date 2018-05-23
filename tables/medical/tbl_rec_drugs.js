@@ -21,8 +21,8 @@ for(let i = 1; i <= tables.tbl_rec_drugs.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RecovereeAttributeID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_DRUGS"
+  "seeder": seeder,
+  "indexes": ['RecovereeAttributeID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_DRUGS"
 }

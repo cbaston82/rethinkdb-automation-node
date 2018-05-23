@@ -7,13 +7,13 @@ const seeder = []
 tables.tbl_language.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "LANGUAGE":  type
+    "LANGUAGE": type
   })
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_LANGUAGE"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_LANGUAGE"
 }

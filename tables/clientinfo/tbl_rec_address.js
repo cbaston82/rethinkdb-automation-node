@@ -21,19 +21,19 @@ for(let i = 1; i <= tables.tbl_rec_address.total; i++){
     "RECOVEREE_CITY": faker.address.city(),
     "RECOVEREE_COUNTY": faker.address.country(),
     "RECOVEREE_EFF_DATE": random.date(),
-    "RECOVEREE_HOUSING":  faker.random.words(3),
+    "RECOVEREE_HOUSING": faker.random.words(3),
     "RECOVEREE_ST": faker.address.state(),
     "RECOVEREE_ZIP": faker.address.zipCode(),
     "RECOVERY_ID": recId,
-    "USERNAME_ADD":  faker.internet.userName(),
-    "USERNAME_UPD":  faker.internet.userName()
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
 }
 
 module.exports = {
-  "seeder" : seeder,
-  "indexes" : ['RECOVEREE_EFF_DATE', 'RECOVERY_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_ADDRESS"
+  "seeder": seeder,
+  "indexes": ['RECOVEREE_EFF_DATE', 'RECOVERY_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_ADDRESS"
 }

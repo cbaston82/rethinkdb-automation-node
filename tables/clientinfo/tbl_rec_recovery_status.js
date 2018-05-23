@@ -17,8 +17,8 @@ for(let i = 1; i <= tables.tbl_rec_recovery_status.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RECOVER_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_RECOVERY_STATUS"
+  "seeder": seeder,
+  "indexes": ['RECOVER_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_RECOVERY_STATUS"
 }

@@ -25,8 +25,8 @@ module.exports = {
       "SURVEY_DATE": "Tue Feb 18 2014 08:00:00 GMT+00:00",
     }
   ],
-  "indexes" : ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
-  "compoundIndexes" : [
+  "indexes": ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
+  "compoundIndexes": [
     {
       "name": "rec_srv",
       "indexes": ['RECOVEREE_ID', 'SURVEY']
@@ -36,5 +36,5 @@ module.exports = {
       "indexes": ['RECOVEREE_ID', 'SURVEY', 'QUESTION_NBR']
     }
   ],
-  "table" : "TBL_SURVEY_SCORES"
+  "table": "TBL_SURVEY_SCORES"
 }

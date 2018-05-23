@@ -13,8 +13,8 @@ tables.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_CHECKUP_DISCHARGE_REASONS"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_CHECKUP_DISCHARGE_REASONS"
 }

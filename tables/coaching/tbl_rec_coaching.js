@@ -27,7 +27,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
     "CONNECTING": "",
     "CoachingRecID": i, // Question: is this incremental.
     "DATE_ADD": random.date(),
-    "DATE_UPD":  random.date(),
+    "DATE_UPD": random.date(),
     "DISCUSSION_ITEMS": faker.random.words(4),
     "DOMAIN_GOAL": "",
     "END_TIME": "",
@@ -50,15 +50,15 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "compoundIndexes" : [
+  "seeder": seeder,
+  "compoundIndexes": [
     {
       "name" : "rec_coaching_info",
-      "indexes" : [
+      "indexes": [
         "RECOVEREE_ID",
         "RNUM"
       ]
     }
   ],
-  "table" : "TBL_REC_COACHING"
+  "table": "TBL_REC_COACHING"
 }

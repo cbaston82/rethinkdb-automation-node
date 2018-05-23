@@ -16,24 +16,24 @@ for(let i = 1; i <= tables.tbl_rec_goals_objectives.total; i++){
 
   seeder.push({
     "DATE_ADD": random.date(),
-    "DATE_OBJ_ANTICIPATED":  "",
-    "DATE_OBJ_CANCELLED":  "",
-    "DATE_OBJ_MET":  "",
+    "DATE_OBJ_ANTICIPATED": "",
+    "DATE_OBJ_CANCELLED": "",
+    "DATE_OBJ_MET": "",
     "DATE_OBJ_SET": random.date(),
     "DATE_UPD": random.date(),
     "FK_GOAL_ID": goalId,
-    "OBJECTIVE":  faker.lorem.sentence(),
+    "OBJECTIVE": faker.lorem.sentence(),
     "OBJECTIVE_ID": i,
-    "USERNAME_ADD":  faker.internet.userName(),
-    "USERNAME_UPD":  faker.internet.userName()
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
   goalId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['FK_GOAL_ID', 'ID', 'OBJECTIVE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_GOALS_OBJECTIVES"
+  "seeder": seeder,
+  "indexes": ['FK_GOAL_ID', 'ID', 'OBJECTIVE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_GOALS_OBJECTIVES"
 }

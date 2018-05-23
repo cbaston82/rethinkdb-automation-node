@@ -20,8 +20,8 @@ for(let i = 1; i <= tables.tbl_rec_ethnicity.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['fk_AttributeID', 'fk_RecovereeID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_ETHNICITY"
+  "seeder": seeder,
+  "indexes": ['fk_AttributeID', 'fk_RecovereeID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_ETHNICITY"
 }

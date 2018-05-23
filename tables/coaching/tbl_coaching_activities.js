@@ -17,9 +17,9 @@ tables.tbl_coaching_activities.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_COACHING_ACTIVITIES"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_COACHING_ACTIVITIES"
 }
 

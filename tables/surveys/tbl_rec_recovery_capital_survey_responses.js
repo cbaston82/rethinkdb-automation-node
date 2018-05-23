@@ -1,32 +1,32 @@
 module.exports = {
   "seeder" : [
     {
-      "DESCRIPTION":  "Somewhat true",
+      "DESCRIPTION": "Somewhat true",
       "ID": 2,
-      "VISUAL":  "||||||||||"
+      "VISUAL": "||||||||||"
     },
     {
-      "DESCRIPTION":  "Not at all true",
+      "DESCRIPTION": "Not at all true",
       "ID": 1,
-      "VISUAL":  "|||||"
+      "VISUAL": "|||||"
     },
     {
-      "DESCRIPTION":  "Very much true",
+      "DESCRIPTION": "Very much true",
       "ID": 4,
-      "VISUAL":  "||||||||||||||||||||"
+      "VISUAL": "||||||||||||||||||||"
     },
     {
-      "DESCRIPTION":  "Completely true",
+      "DESCRIPTION": "Completely true",
       "ID": 5,
-      "VISUAL":  "|||||||||||||||||||||||||"
+      "VISUAL": "|||||||||||||||||||||||||"
     },
     {
-      "DESCRIPTION":  "Pretty much true",
+      "DESCRIPTION": "Pretty much true",
       "ID": 3,
-      "VISUAL":  "|||||||||||||||"
+      "VISUAL": "|||||||||||||||"
     }
   ],
-  "indexes" : [],
-  "compoundIndexes" : [],
-  "table" : "TBL_RECOVERY_CAPITAL_SURVEY_RESPONSES"
+  "indexes": [],
+  "compoundIndexes": [],
+  "table": "TBL_RECOVERY_CAPITAL_SURVEY_RESPONSES"
 }

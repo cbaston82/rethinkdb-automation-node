@@ -18,8 +18,8 @@ for(let i = 1; i <= tables.tbl_person.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : [],
-  "compoundIndexes" : [],
-  "table" : "TBL_PERSON"
+  "seeder": seeder,
+  "indexes": [],
+  "compoundIndexes": [],
+  "table": "TBL_PERSON"
 }

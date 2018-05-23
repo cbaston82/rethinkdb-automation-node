@@ -17,8 +17,8 @@ for(let i = 1; i <= tables.tbl_rec_activities.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : [],
-  "compoundIndexes" : [],
+  "seeder": seeder,
+  "indexes": [],
+  "compoundIndexes": [],
   "table" : 'TBL_REC_ACTIVITIES'
 }

@@ -15,8 +15,8 @@ tables.tbl_wellness_areas.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID', 'WELLNESS_AREA_NBR'],
-  "compoundIndexes" : [],
-  "table" : "TBL_WELLNESS_AREAS"
+  "seeder": seeder,
+  "indexes": ['ID', 'WELLNESS_AREA_NBR'],
+  "compoundIndexes": [],
+  "table": "TBL_WELLNESS_AREAS"
 }

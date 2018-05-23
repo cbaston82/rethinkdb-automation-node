@@ -20,9 +20,9 @@ for(let i = 1; i <= tables.tbl_rec_coaching_activity.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ItemDiscussedID', 'fk_CoachingRecID', 'fk_ItemID'],
-  "compoundIndexes" : [],
-  "table" : "tbl_rec_coaching_activity"
+  "seeder": seeder,
+  "indexes": ['ItemDiscussedID', 'fk_CoachingRecID', 'fk_ItemID'],
+  "compoundIndexes": [],
+  "table": "tbl_rec_coaching_activity"
 }
 

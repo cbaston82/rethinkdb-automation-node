@@ -17,8 +17,8 @@ for(let i = 1; i <= tables.tbl_rec_race.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['fk_RecovereeID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_RACE"
+  "seeder": seeder,
+  "indexes": ['fk_RecovereeID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_RACE"
 }

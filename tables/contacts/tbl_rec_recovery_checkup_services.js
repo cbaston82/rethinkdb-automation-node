@@ -23,8 +23,8 @@ for(let i = 1; i <= tables.tbl_rec_recovery_checkup_services.total; i++){
 }
 
 module.exports = {
-  "seeder" : seeder,
-  "indexes" : ['Itemserviceid', 'fk_recoverycheckupid', 'fk_serviceid'],
-  "compoundIndexes" : [],
-  "table" : "tbl_rec_recovery_checkup_services"
+  "seeder": seeder,
+  "indexes": ['Itemserviceid', 'fk_recoverycheckupid', 'fk_serviceid'],
+  "compoundIndexes": [],
+  "table": "tbl_rec_recovery_checkup_services"
 }

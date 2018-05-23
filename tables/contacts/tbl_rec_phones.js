@@ -20,18 +20,18 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
     "LEAVE_A_MESSAGE": random.number(),
     "OK_TO_TEXT": random.number(),
     "PHONE_EXT": faker.random.number(),
-    "PHONE_NUMBER":  random.phoneNumber(),
+    "PHONE_NUMBER": random.phoneNumber(),
     "PHONE_TYPE": random.number(tables.tbl_phone_types.types.length),
     "RECOVEREE_ID": recId,
-    "USERNAME_ADD":  "faker.internet.userName()),",
-    "USERNAME_UPD":  "faker.internet.userName())"
+    "USERNAME_ADD": "faker.internet.userName()),",
+    "USERNAME_UPD": "faker.internet.userName())"
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RECOVEREE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_PHONES"
+  "seeder": seeder,
+  "indexes": ['RECOVEREE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_PHONES"
 }

@@ -16,8 +16,8 @@ for(let i = 1; i <= tables.tbl_activity.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
   "table" : 'TBL_ACTIVITY'
 }
