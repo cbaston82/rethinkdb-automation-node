@@ -9,7 +9,7 @@ tables.tbl_attributes_user.types.forEach((type, i) => {
     "AttributeID": i + 1,
     "AttributeName":  type,
     "ReportSelection": 0, // Question: what does this mean exactly
-    "UserName":  "Curtiss"
+    "UserName":  "faker.internet.userName())"
   })
 })
 

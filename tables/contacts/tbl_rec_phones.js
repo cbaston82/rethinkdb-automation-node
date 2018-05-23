@@ -23,8 +23,8 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
     "PHONE_NUMBER":  random.phoneNumber(),
     "PHONE_TYPE": random.number(tables.tbl_phone_types.types.length),
     "RECOVEREE_ID": recId,
-    "USERNAME_ADD":  "Curtiss",
-    "USERNAME_UPD":  "Brandon"
+    "USERNAME_ADD":  "faker.internet.userName()),",
+    "USERNAME_UPD":  "faker.internet.userName())"
   })
   recId++
 }

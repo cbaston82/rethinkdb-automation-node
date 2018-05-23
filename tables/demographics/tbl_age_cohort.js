@@ -10,7 +10,7 @@ tables.tbl_age_cohort.types.forEach((type, i) => {
     "END_AGE": type.END_AGE,
     "ID": i + 1,
     "START_AGE": type.START_AGE,
-    "USERNAME": "Curtiss" // Todo: remove if not needed, random username required
+    "USERNAME": "faker.internet.userName())" // Todo: remove if not needed, random username required
   })
 })
 
