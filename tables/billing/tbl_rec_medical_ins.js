@@ -18,20 +18,20 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "EFF_DATE": random.date(),
-    "END_DATE":  "",
-    "HAVE": 0, // Question: what is this?
+    "END_DATE": "",
+    "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
     "SIGNUP": 0, // Question: what is this?
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName(),
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['DATE_ADD', 'EFF_DATE', 'RECOVEREE_ID', 'RECOVEREE_INS'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_MEDICAL_INS"
+  "seeder": seeder,
+  "indexes": ['DATE_ADD', 'EFF_DATE', 'RECOVEREE_ID', 'RECOVEREE_INS'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_MEDICAL_INS"
 }

@@ -100,20 +100,20 @@ module.exports = {
         "DESC_SHORT": ""
       },
       {
-        "DESC":  "Status 2: Received Peer Recovery Coaching both before and during the reporting period",
-        "DESC_SHORT":  "Coached Before and During Rpt Period."
+        "DESC": "Status 2: Received Peer Recovery Coaching both before and during the reporting period",
+        "DESC_SHORT": "Coached Before and During Rpt Period."
       },
       {
-        "DESC":  "Status 3: Received Peer Recovery Coaching before the reporting period but not during the reporting period",
-        "DESC_SHORT":  "Coached Before, not During Rpt Period."
+        "DESC": "Status 3: Received Peer Recovery Coaching before the reporting period but not during the reporting period",
+        "DESC_SHORT": "Coached Before, not During Rpt Period."
       },
       {
-        "DESC":  "Status 4: Never received Peer Recovery Coaching.",
-        "DESC_SHORT":  "Never Coached."
+        "DESC": "Status 4: Never received Peer Recovery Coaching.",
+        "DESC_SHORT": "Never Coached."
       },
       {
-        "DESC":  "Status 5: Received Peer Recovery Coaching after the reporting period",
-        "DESC_SHORT":  "Coached After not During Rpt Period."
+        "DESC": "Status 5: Received Peer Recovery Coaching after the reporting period",
+        "DESC_SHORT": "Coached After not During Rpt Period."
       }
     ]
   },
@@ -168,24 +168,24 @@ module.exports = {
   "tbl_wellness_survey_responses": {
     "types": [
       {
-        "DESCRIPTION":  "Never",
-        "VISUAL":  "|||||"
+        "DESCRIPTION": "Never",
+        "VISUAL": "|||||"
       },
       {
-        "DESCRIPTION":  "Almost never",
-        "VISUAL":  "||||||||||"
+        "DESCRIPTION": "Almost never",
+        "VISUAL": "||||||||||"
       },
       {
-        "DESCRIPTION":  "Occasionally",
-        "VISUAL":  "|||||||||||||||"
+        "DESCRIPTION": "Occasionally",
+        "VISUAL": "|||||||||||||||"
       },
       {
-        "DESCRIPTION":  "Almost always",
-        "VISUAL":  "||||||||||||||||||||"
+        "DESCRIPTION": "Almost always",
+        "VISUAL": "||||||||||||||||||||"
       },
       {
-        "DESCRIPTION":  "Always",
-        "VISUAL":  "|||||||||||||||||||||||||"
+        "DESCRIPTION": "Always",
+        "VISUAL": "|||||||||||||||||||||||||"
       }
     ]
   },
@@ -373,36 +373,36 @@ module.exports = {
   "tbl_cell_provider": {
     "types": [
       {
-        "CELLULAR_PROVIDER":  "AT&T",
-        "EMAIL_TEXT_SUFFIX":  "@txt.att.net"
+        "CELLULAR_PROVIDER": "AT&T",
+        "EMAIL_TEXT_SUFFIX": "@txt.att.net"
       } ,
       {
-        "CELLULAR_PROVIDER":  "Verizon",
-        "EMAIL_TEXT_SUFFIX":  "@vtext.com"
+        "CELLULAR_PROVIDER": "Verizon",
+        "EMAIL_TEXT_SUFFIX": "@vtext.com"
       } ,
       {
-        "CELLULAR_PROVIDER":  "Sprint",
-        "EMAIL_TEXT_SUFFIX":  "@messaging.sprintpcs.com"
+        "CELLULAR_PROVIDER": "Sprint",
+        "EMAIL_TEXT_SUFFIX": "@messaging.sprintpcs.com"
       } ,
       {
-        "CELLULAR_PROVIDER":  "T-Mobile",
-        "EMAIL_TEXT_SUFFIX":  "@tmomail.net"
+        "CELLULAR_PROVIDER": "T-Mobile",
+        "EMAIL_TEXT_SUFFIX": "@tmomail.net"
       } ,
       {
-        "CELLULAR_PROVIDER":  "US Cellular",
-        "EMAIL_TEXT_SUFFIX":  "@email.uscc.net"
+        "CELLULAR_PROVIDER": "US Cellular",
+        "EMAIL_TEXT_SUFFIX": "@email.uscc.net"
       } ,
       {
-        "CELLULAR_PROVIDER":  "Nextel",
-        "EMAIL_TEXT_SUFFIX":  "@messaging.nextel.com"
+        "CELLULAR_PROVIDER": "Nextel",
+        "EMAIL_TEXT_SUFFIX": "@messaging.nextel.com"
       } ,
       {
-        "CELLULAR_PROVIDER":  "Virgin Mobile",
-        "EMAIL_TEXT_SUFFIX":  "@vmobl.com"
+        "CELLULAR_PROVIDER": "Virgin Mobile",
+        "EMAIL_TEXT_SUFFIX": "@vmobl.com"
       } ,
       {
-        "CELLULAR_PROVIDER":  "Metro PCS",
-        "EMAIL_TEXT_SUFFIX":  "@mymetropcs.com"
+        "CELLULAR_PROVIDER": "Metro PCS",
+        "EMAIL_TEXT_SUFFIX": "@mymetropcs.com"
       }
     ]
   },
@@ -410,11 +410,11 @@ module.exports = {
     "types": [
       {
         "ATTEMPTS": 10,
-        "DISCHARGE_REASON":  "D10"
+        "DISCHARGE_REASON": "D10"
       } ,
       {
         "ATTEMPTS": 15,
-        "DISCHARGE_REASON":  "LOST CONTACT"
+        "DISCHARGE_REASON": "LOST CONTACT"
       }
     ]
   },

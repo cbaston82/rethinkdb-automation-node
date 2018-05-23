@@ -15,15 +15,15 @@ for(let i = 1; i <= tables.tbl_rec_calls.total; i++){
   seeder.push({
     "ATTEMPTS": random.number(50),
     "CALL_DATE": random.date(),
-    "COMMENTS":  faker.lorem.sentences(2),
+    "COMMENTS": faker.lorem.sentences(2),
     "CONTACT": 0, // Question: what's this?.
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "OTHER_SUPPORTS": 0, // Question: what's this?.
     "RECOVEREE_ID": recId,
     "RELAPSE": random.number(),
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
 }

@@ -1,6 +1,6 @@
-const async = require('async')
-const r = require('rethinkdb')
-const config = require(__dirname + '/configuration/config.js')
+const async = require('async');
+const r = require('rethinkdb');
+const config = require(__dirname + '/configuration/config.js');
 
 /**
  * Create a asynchronous stream of functions
@@ -12,113 +12,84 @@ const config = require(__dirname + '/configuration/config.js')
  * TODO: Need to eventually refactor the flow of this process.
  * * @param data
  */
-
-/**
- *
- * @param callback
- */
-async function connect (callback) {
-  await r.connect(config.rethinkdb, callback)
-}
-
-/**
- *
- * @param connection
- * @param callback
- */
-async function createDatabase (connection, callback) {
-  //Create the database if needed.
-  await r.dbList()
-    .contains(config.rethinkdb.db)
-    .do(containsDb => {
-      return r.branch(
-        containsDb,
-        { created: 0 },
-        r.dbCreate(config.rethinkdb.db)
-      )
-    })
-    .run(connection, (err) => {
-      console.log('Connection created successfully.')
-      callback(err, connection)
-    })
-}
-
-function createTable (connection, callback) {
-  //Create the table if needed.
-  r.tableList()
-    .contains(data.table)
-    .do(containsTable => {
-      return r.branch(
-        containsTable,
-        { created: 0 },
-        r.tableCreate(data.table)
-      )
-    })
-    .run(connection, (err) => {
-      console.log(`${data.table} table created successfully.`)
-      callback(err, connection)
-    })
-}
-
-function createDocument (connection, callback) {
-  // Seed data into table.
-  r.table(data.table)
-    .insert(data.seeder)
-    .run(connection, (err) => {
-      console.log(`${data.table} table documents seeded successfully.`)
-      callback(err, connection)
-    })
-}
-
-let automate = function (data) {
+let automate = function(data) {
   async.waterfall([
-      connect,
-      createDatabase,
-      createTable,
-      createDocument
+      function connect(callback) {
+        r.connect(config.rethinkdb, callback)
+      },
+      function createDatabase (connection, callback) {
+        //Create the database if needed.
+        r.dbList().contains(config.rethinkdb.db).do(containsDb => {
+          return r.branch(
+            containsDb,
+            { created: 0 },
+            r.dbCreate(config.rethinkdb.db)
+          );
+        }).run(connection, (err) => {
+          console.log('Connection created successfully.')
+          callback(err, connection)
+        });
+      },
+      function createTable(connection, callback) {
+        //Create the table if needed.
+        r.tableList().contains(data.table).do(containsTable => {
+          return r.branch(
+            containsTable,
+            { created: 0 },
+            r.tableCreate(data.table)
+          );
+        }).run(connection, (err) => {
+          console.log(`${data.table} table created successfully.`)
+          callback(err, connection);
+        });
+      },
+      function creatDocument (connection, callback) {
+        // Seed data into table.
+        r.table(data.table).insert(data.seeder).run(connection, (err) => {
+          console.log(`${data.table} table documents seeded successfully.`)
+          callback(err, connection);
+        });
+      }
     ],
     (err, connection) => {
       if (err) {
-        console.error(err)
-        process.exit(1)
-        return
+        console.error(err);
+        process.exit(1);
+        return;
       }
 
       // Create the indexes if they are defined in the table.js
-      if (typeof data.indexes !== 'undefined') {
+      if(typeof data.indexes !== 'undefined'){
         data.indexes.forEach((index) => {
           async.waterfall([
-            connect(callback),
+            function connect (callback) {
+              r.connect(config.rethinkdb, callback);
+            },
             function createIndex (connection, callback) {
               //Create the index if needed.
-              r.table(data.table)
-                .indexList()
-                .contains(index)
-                .do(hasIndex => {
-                  return r.branch(
-                    hasIndex,
-                    { created: 0 },
-                    r.table(data.table)
-                      .indexCreate(index)
-                  )
-                })
-                .run(connection, (err) => {
-                  console.log(`${index} index added to ${data.table}`)
-                  callback(err, connection)
-                })
+              r.table(data.table).indexList().contains(index).do(hasIndex => {
+                return r.branch(
+                  hasIndex,
+                  { created: 0 },
+                  r.table(data.table).indexCreate(index)
+                );
+              }).run(connection, (err) => {
+                console.log(`${index} index added to ${data.table}`)
+                callback(err, connection);
+              });
             },
             function waitForIndex (connection, callback) {
               //Wait for the index to be ready.
-              r.table(data.table)
-                .indexWait(index).run(connection, (err, result) => {
+              r.table(data.table).indexWait(index).run(connection, (err, result) => {
                 console.log(`${index} index on ${data.table} table now ready.`)
-                callback(err, connection)
-              })
+                callback(err, connection);
+              });
             },
-          ], (err, connection) => {
+          ], (err, connection)  => {
             if (err) {
-              console.error(err)
-              process.exit(1)
+              console.error(err);
+              process.exit(1);
+              return;
             }
             // Do something else if no error (Optional)
           })
@@ -126,37 +97,37 @@ let automate = function (data) {
       }
 
       // Create the compound index if they are defined in the table.js file
-      if (typeof data.compoundIndexes !== undefined) {
+      if(typeof  data.compoundIndexes !== "undefined"){
         data.compoundIndexes.forEach((compoundIndex) => {
           async.waterfall([
             function connect (callback) {
-              r.connect(config.rethinkdb, callback)
+              r.connect(config.rethinkdb, callback);
             },
             function createCompoundIndex (connection, callback) {
 
               // Create the compound array
-              let compoundArray = []
+              var compoundArray = []
               compoundIndex.indexes.forEach((index) => {
                 compoundArray.push(r.row(index))
               })
 
-              r.table(data.table)
-                .indexCreate(compoundIndex.name, compoundArray)
+              r.table(data.table).indexCreate(compoundIndex.name, compoundArray)
                 .run(connection, (err) => {
                   console.log(`index added to ${data.table}`)
                   callback(err, connection)
                 })
             }
-          ], (err, connection) => {
+          ], (err, connection)  => {
             if (err) {
-              console.error()
-              process.exit(1)
+              console.error();
+              process.exit(1);
+              return;
             }
             // Do something else if no error (Optional)
           })
         })
       }
-    })
+    });
 }
 
-module.exports = { automate }
+module.exports = {automate}

@@ -13,16 +13,16 @@ for(let i = 1; i <= tables.client_info.total; i++){
   if(recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
-    "ID":  recId,
-    "FILENAME":  "/" + faker.system.fileName(),
-    "STAMP":  random.date()
+    "ID": recId,
+    "FILENAME": "/" + faker.system.fileName(),
+    "STAMP": random.date()
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID', 'FILENAME'],
-  "compoundIndexes" : [],
+  "seeder": seeder,
+  "indexes": ['ID', 'FILENAME'],
+  "compoundIndexes": [],
   "table" : 'CLIENT_FILES'
 }

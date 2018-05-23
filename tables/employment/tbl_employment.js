@@ -6,15 +6,14 @@ const seeder = []
 // create seed data.
 tables.tbl_employment.types.forEach((type, i) => {
   seeder.push({
-    "EMPLOYMENT":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "EMPLOYMENT": type,
+    "ID": i + 1
   })
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_EMPLOYMENT"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_EMPLOYMENT"
 }

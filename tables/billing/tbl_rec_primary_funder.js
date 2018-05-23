@@ -17,8 +17,8 @@ for(let i = 1; i <= tables.tbl_rec_primary_funder.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['AS_OF', 'END_DATE', 'RECOVEREE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_PRIMARY_FUNDER"
+  "seeder": seeder,
+  "indexes": ['AS_OF', 'END_DATE', 'RECOVEREE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_PRIMARY_FUNDER"
 }

@@ -12,8 +12,8 @@ for(let i = 1; i <= tables.tbl_events.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : [],
-  "compoundIndexes" : [],
-  "table" : "TBL_EVENTS"
+  "seeder": seeder,
+  "indexes": [],
+  "compoundIndexes": [],
+  "table": "TBL_EVENTS"
 }

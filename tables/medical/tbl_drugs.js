@@ -6,16 +6,15 @@ const seeder = []
 // create seed data.
 tables.tbl_drugs.types.forEach((type, i) => {
   seeder.push({
-    "DESC":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "DESC": type,
+    "ID": i + 1
   })
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_DRUGS"
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_DRUGS"
 }
 

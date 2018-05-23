@@ -19,8 +19,8 @@ for(let i = 1; i <= tables.tbl_trainings_trainers.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['Trainer', 'TrainingID', 'TrainingsFacilID'],
-  "compoundIndexes" : [],
-  "table" : "tbl_trainings_trainers"
+  "seeder": seeder,
+  "indexes": ['Trainer', 'TrainingID', 'TrainingsFacilID'],
+  "compoundIndexes": [],
+  "table": "tbl_trainings_trainers"
 }

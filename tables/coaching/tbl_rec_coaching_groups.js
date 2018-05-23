@@ -11,10 +11,10 @@ tables.tbl_rec_coaching_groups.types.forEach((type, i) => {
 })
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : [],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_COACHING_GROUPS"
+  "seeder": seeder,
+  "indexes": [],
+  "compoundIndexes": [],
+  "table": "TBL_REC_COACHING_GROUPS"
 }
 
 

@@ -19,8 +19,8 @@ for(let i = 1; i <= tables.tbl_rec_coach_types.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['RecovereeAttributeID', 'fk_RecovereeID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_COACH_TYPES"
+  "seeder": seeder,
+  "indexes": ['RecovereeAttributeID', 'fk_RecovereeID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_COACH_TYPES"
 }

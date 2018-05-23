@@ -16,7 +16,7 @@ for(let i = 1; i <= tables.tbl_rec_te_activity.total; i++){
   seeder.push({
     "COMPLETED": 0,
     "ItemDiscussedID": i,
-    "NOTES":  faker.lorem.words(2),
+    "NOTES": faker.lorem.words(2),
     "fk_ItemID": eventID,
     "fk_TERecID": i
   })
@@ -25,8 +25,8 @@ for(let i = 1; i <= tables.tbl_rec_te_activity.total; i++){
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['ItemDiscussedID', 'fk_ItemID', 'fk_TERecID'],
-  "compoundIndexes" : [],
-  "table" : "tbl_rec_TE_activity"
+  "seeder": seeder,
+  "indexes": ['ItemDiscussedID', 'fk_ItemID', 'fk_TERecID'],
+  "compoundIndexes": [],
+  "table": "tbl_rec_TE_activity"
 }

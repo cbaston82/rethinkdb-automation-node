@@ -1,5 +1,6 @@
 const random = require('../../helpers/random/index')
 const tables = require('../../configuration/tables-config')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -21,15 +22,15 @@ for(let i = 1; i <= tables.tbl_rec_family.total; i++){
     "TOTAL_CHILDREN": random.number(5),
     "TOTAL_CHILDREN_CUSTOD": random.number(5),
     "TOTAL_CHILDREN_NONCUSTOD":random.number(5),
-    "USERNAME_ADD":  "jrbuser",
-    "USERNAME_UPD":  "jrbuser"
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['DATE_ADD', 'RECOVEREE_FAMILY', 'RECOVEREE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_FAMILY"
+  "seeder": seeder,
+  "indexes": ['DATE_ADD', 'RECOVEREE_FAMILY', 'RECOVEREE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_FAMILY"
 }

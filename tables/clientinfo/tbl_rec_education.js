@@ -20,15 +20,15 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
     "RECOVEREE_EDUCATION": random.number(tables.tbl_education.types.length),
     "RECOVEREE_EFF_DATE": random.date(),
     "RECOVEREE_ID": recId,
-    "USERNAME_ADD":  "Tetra",
-    "USERNAME_UPD":  "Tetra"
+    "USERNAME_ADD": "Tetra",
+    "USERNAME_UPD": "Tetra"
   })
   recId++
 }
 
 module.exports = {
-  "seeder" :seeder,
-  "indexes" : ['AS_OF', 'RECOVEREE_ID'],
-  "compoundIndexes" : [],
-  "table" : "TBL_REC_EDUCATION"
+  "seeder": seeder,
+  "indexes": ['AS_OF', 'RECOVEREE_ID'],
+  "compoundIndexes": [],
+  "table": "TBL_REC_EDUCATION"
 }

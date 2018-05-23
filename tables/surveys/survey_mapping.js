@@ -2,17 +2,17 @@ module.exports = {
   "seeder" :[
     {
       "ID": 4,
-      "MAP":  "TJfVNm",
-      "NAME":  "ARC"
+      "MAP": "TJfVNm",
+      "NAME": "ARC"
     },
     {
-      "FULL":  "asdf",
+      "FULL": "asdf",
       "ID": 3234,
-      "MAP":  "asdf",
-      "NAME":  "asdf"
+      "MAP": "asdf",
+      "NAME": "asdf"
     }
   ],
-  "indexes" : ['ID'],
-  "compoundIndexes" : [],
+  "indexes": ['ID'],
+  "compoundIndexes": [],
   "table" : 'SURVEY_MAPPING'
 }
