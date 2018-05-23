@@ -19,7 +19,7 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
     "DATE_UPD": random.date(),
     "EFF_DATE": random.date(),
     "END_DATE":  "",
-    "HAVE": 0, // Question: what is this?
+    "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
     "SIGNUP": 0, // Question: what is this?

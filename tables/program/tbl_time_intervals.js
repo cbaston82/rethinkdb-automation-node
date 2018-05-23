@@ -6,10 +6,10 @@ const seeder = []
 // create seed data.
 for (let i = 1; i <= tables.tbl_time_intervals.total; i++) {
 
+  // just creating time intervals by 5.
   seeder.push({
     'ID': i,
     'INTERVALS': i * 5,
-    'SORT_SEQUENCE': null // TODO: remove!!!
   })
 }
 

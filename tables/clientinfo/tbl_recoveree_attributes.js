@@ -22,7 +22,7 @@ for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
     'Attributes': attributesArray,
     'DATE_ADD': random.date(),
     'DATE_UPD': random.date(),
-    'RCCID': 0, // Todo: Tie to a program
+    'RCCID': 0, // Todo: Need to get program ID.
     'RECOVEREE_ID': i,
     'SERVICES_INITIATED': faker.random.words(5)
   })

@@ -8,8 +8,6 @@ tables.tbl_medical_ins.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
     "INSURANCE_CARRIER":  type
-    // "PUBLIC": 0
-    // "SORT_SEQUENCE": null
   })
 })
 

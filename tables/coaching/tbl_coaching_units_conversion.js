@@ -1,16 +1,16 @@
 const tables = require('../../configuration/tables-config')
+const random = require('../../helpers/random')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_coaching_units_conversion.types.forEach((type, i) => {
+// Looping through tlb_rcc to create unit conversion for each program.
+tables.tbl_rcc.types.forEach((type, i) => {
   seeder.push( {
     "ID": i + 1,
-    "IncludeInReport": 0, // Todo: remove if not needed. definitely NOT needed destroy with extreme prejudice
-    "MINUTES_PER_UNIT": type.MINUTES_PER_UNIT,
-    "PROGRAM": type.PROGRAM, // Question: What programs is this tied to?
-    "SORT_SEQUENCE": 0 // Todo: remove if not needed.
+    "MINUTES_PER_UNIT": random.number(59),
+    "PROGRAM": i + 1,
   })
 })
 

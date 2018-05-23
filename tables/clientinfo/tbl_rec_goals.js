@@ -30,7 +30,7 @@ for (let i = 1; i <= tables.tbl_rec_goals.total; i++) {
     'STRENGTHS': faker.lorem.words(4),
     'USERNAME_ADD': 'jrbuser',
     'USERNAME_UPD': 'jrbuser',
-    'WANTS_TO_PASS': 0, // Question: what is this. this is a boolean replace number with true/false
+    'WANTS_TO_PASS': faker.random.boolean(),
     'WELLNESS_AREA': random.number(tables.tbl_wellness_areas.types.length)
   })
   recId++
