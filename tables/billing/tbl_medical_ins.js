@@ -7,9 +7,9 @@ const seeder = []
 tables.tbl_medical_ins.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
-    "INSURANCE_CARRIER":  type,
-    "PUBLIC": 0, // Todo: remove if not needed
-    "SORT_SEQUENCE": null // Todo: remove if not needed
+    "INSURANCE_CARRIER":  type
+    // "PUBLIC": 0
+    // "SORT_SEQUENCE": null
   })
 })
 

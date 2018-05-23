@@ -19,7 +19,7 @@ for(let i = 1; i <= tables.tbl_rec_recovery_checkup.total; i++){
     "EFFECTIVE_DATE": random.date(),
     "RECOVEREE_ID": recId,
     "REFERRAL_SOURCE": random.number(tables.tbl_referral_source.types.length),
-    "Recoverycheckupid": recId, // Todo: maps to tbl_rec_recovery_checkup_services ??
+    "Recoverycheckupid": recId, // Todo: maps to tbl_rec_recovery_checkup_services //TODO: Matt come back to this
     "TIME_TO_CALL": random.number(tables.tbl_call_times.types.length),
     "USERNAME_ADD":  "jrbuser",
     "USERNAME_UPD":  "jrbuser",

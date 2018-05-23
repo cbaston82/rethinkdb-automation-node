@@ -13,7 +13,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching_units.total; i++){
 
   seeder.push({
     "ASSIGNED_DATE": random.date(),
-    "COACHED_BY": 2, // Todo: Set to random active coach.
+    "COACHED_BY": random.personType(2),
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
     "END_DATE": random.date(),

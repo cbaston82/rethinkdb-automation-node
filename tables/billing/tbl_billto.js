@@ -7,8 +7,8 @@ const seeder = []
 tables.tbl_billto.types.forEach((type, i) => {
   seeder.push({
     "BILLTO_NAME":  type,
-    "ID": i + 1,
-    "SORT_SEQUENCE": 0 // Todo: remove if not needed
+    "ID": i + 1
+    // "SORT_SEQUENCE": 0
   })
 })
 
