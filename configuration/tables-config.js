@@ -790,5 +790,43 @@ module.exports = {
   },
   "tbl_rec_drugs": {
     "total": 8
+  },
+  //==================================================
+  // tables/surveys
+  //==================================================
+  "tbl_survey_names": {
+    "types": [
+      {
+        "ABREV_NAME": null,
+        "FREQUENCY": 30 ,
+        "MAX_SCORE": 175 ,
+        "SURVEY_NAME": "Recovery Capital Survey"
+      },
+      {
+        "ABREV_NAME": null,
+        "FREQUENCY": 30,
+        "MAX_SCORE": 195,
+        "SURVEY_NAME": "Wellness Self-Assessment Survey"
+      },
+      {
+        "ABREV_NAME": "QOL",
+        "FREQUENCY": 30,
+        "MAX_SCORE": null,
+        "SURVEY_NAME": "Quality of Life Survey"
+      },
+      {
+        "ABREV_NAME": "ARC",
+        "FREQUENCY": 30,
+        "MAX_SCORE": 250,
+        "SURVEY_NAME": "Assessment of Recovery Capital",
+      },
+      {
+        "ABREV_NAME": "SCI",
+        "FREQUENCY": 30,
+        "MAX_SCORE": null,
+        "SURVEY_NAME": "Sense of Community"
+      }
+    ]
   }
+
 }
