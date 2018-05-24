@@ -1,5 +1,4 @@
 const tables = require('../../configuration/tables-config')
-const faker = require('faker')
 
 // Seed data.
 const seeder = []

@@ -797,30 +797,35 @@ module.exports = {
   "tbl_survey_names": {
     "types": [
       {
+        "ID": 1,
         "ABREV_NAME": null,
         "FREQUENCY": 30,
         "MAX_SCORE": 175,
         "SURVEY_NAME": "Recovery Capital Survey"
       },
       {
+        "ID": 2,
         "ABREV_NAME": null,
         "FREQUENCY": 30,
         "MAX_SCORE": 195,
         "SURVEY_NAME": "Wellness Self-Assessment Survey"
       },
       {
+        "ID": 3,
         "ABREV_NAME": "QOL",
         "FREQUENCY": 30,
         "MAX_SCORE": null,
         "SURVEY_NAME": "Quality of Life Survey"
       },
       {
+        "ID": 4,
         "ABREV_NAME": "ARC",
         "FREQUENCY": 30,
         "MAX_SCORE": 250,
         "SURVEY_NAME": "Assessment of Recovery Capital",
       },
       {
+        "ID": 11,
         "ABREV_NAME": "SCI",
         "FREQUENCY": 30,
         "MAX_SCORE": null,

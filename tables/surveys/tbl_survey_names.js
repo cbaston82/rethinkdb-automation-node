@@ -8,7 +8,7 @@ tables.tbl_survey_names.types.forEach((type, i) => {
   seeder.push({
       "ABREV_NAME": type.ABREV_NAME,
       "FREQUENCY": type.FREQUENCY,
-      "ID": i + 1,
+      "ID": type.ID,
       "MAX_SCORE": type.MAX_SCORE,
       "SURVEY_NAME": type.SURVEY_NAME
   })

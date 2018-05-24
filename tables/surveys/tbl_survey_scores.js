@@ -1,30 +1,44 @@
+const random = require('../../helpers/random/index')
+const tables = require('../../configuration/tables-config')
+
+// Seed data.
+const seeder = []
+const questions = [2,3,4]
+
+// #1 Only create survey scores for current recoverees.
+for(let i = 1; i <= tables.tbl_recoverees.total; i++){
+
+  // #2 Loop through each survey available.
+ tables.tbl_survey_names.types.forEach((survey) => {
+
+   let randomDate = random.date()
+
+   // #3 find each survey _question and. this makes sure each recovery
+   // has every survey filled out.
+   tables.tbl_survey_questions.types.forEach((question) => {
+
+     if (question.SURVEY === survey.ID) {
+
+       let randomNumber = random.number(5)
+       seeder.push({
+         "ADJ_RESPONSE": randomNumber,
+         "QUESTION_NBR": question.QUESTION,
+         "RECOVEREE_ID": i,
+         "RESPONSE": randomNumber,
+         "SURVEY": survey.ID,
+         "SURVEY_DATE": randomDate
+       })
+
+     }
+
+   })
+
+ })
+
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "ADJ_RESPONSE": 3,
-      "QUESTION_NBR": 16,
-      "RECOVEREE_ID": 1,
-      "RESPONSE": 3,
-      "SURVEY": 3,
-      "SURVEY_DATE": "Mon Jan 06 2014 08:00:00 GMT+00:00",
-    },
-    {
-      "ADJ_RESPONSE": 4,
-      "QUESTION_NBR": 3,
-      "RECOVEREE_ID": 1,
-      "RESPONSE": 2,
-      "SURVEY": 3,
-      "SURVEY_DATE": "Mon Dec 01 2014 08:00:00 GMT+00:00",
-    },
-    {
-      "ADJ_RESPONSE": 5,
-      "QUESTION_NBR": 27,
-      "RECOVEREE_ID": 2,
-      "RESPONSE": 5,
-      "SURVEY": 4,
-      "SURVEY_DATE": "Tue Feb 18 2014 08:00:00 GMT+00:00",
-    }
-  ],
+  "seeder": seeder,
   "indexes": ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
   "compoundIndexes": [
     {
