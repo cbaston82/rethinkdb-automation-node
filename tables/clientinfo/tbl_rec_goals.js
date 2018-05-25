@@ -28,8 +28,8 @@ for (let i = 1; i <= tables.tbl_rec_goals.total; i++) {
     'RECOVERY_COACH': random.personType(2),
     'RNUM': i,
     'STRENGTHS': faker.lorem.words(4),
-    'USERNAME_ADD': 'jrbuser',
-    'USERNAME_UPD': 'jrbuser',
+    'USERNAME_ADD': faker.internet.usernName(),
+    'USERNAME_UPD': faker.internet.usernName(),
     'WANTS_TO_PASS': faker.random.boolean(),
     'WELLNESS_AREA': random.number(tables.tbl_wellness_areas.types.length)
   })

@@ -58,8 +58,8 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'TREATMENT_DISCHARGE': '',
     'TYPE_OF_TRANS': 0,
     'TestDelete': '',
-    'USERNAME_ADD': 'jrbuser',
-    'USERNAME_UPD': 'jrbuser',
+    'USERNAME_ADD': faker.internet.usernName(),
+    'USERNAME_UPD': faker.internet.usernName(),
     'archived': false,
     'id': id
   })
