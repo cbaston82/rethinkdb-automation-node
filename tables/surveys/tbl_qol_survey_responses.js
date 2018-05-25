@@ -1,14 +1,22 @@
+const tables = require('../../configuration/tables-config')
+
+const seeder = []
+
+// create seed data.
+tables.tbl_qol_survey_responses.types.forEach((type, i) => {
+  seeder.push({
+      "COLUMN_HEADING": type.COLUMN_HEADING,
+      "COLUMN_HEADING_SP": type.COLUMN_HEADING_SP,
+      "DESCRIPTION": type.DESCRIPTION,
+      "DESCRIPTION_SP": type.DESCRIPTION_SP,
+      "GROUP": type.GROUP,
+      "ID": type.ID,
+      "VISUAL": type.VISUAL
+  })
+})
+
 module.exports = {
-  "seeder" : [
-    {
-      "COLUMN_HEADING": "1-Very Dissatisfied, 2-Dissatisfied, 3-Neither Satisfied nor Dissatisfied, 4-Satisfied, 5-Very Satisfied",
-      "COLUMN_HEADING_SP": "1-Muy insatisfecho/a, 2-Insatisfecho/a, 3-Ni insatisfecho/a ni satisfecho/a, 4-Bastante satisfecho/a, 5-Muy satisfecho/a",
-      "DESCRIPTION": "Dissatisfied",
-      "DESCRIPTION_SP": "Insatisfecho/a",
-      "GROUP": 7,
-      "ID": 2
-    }
-  ],
+  "seeder" : seeder,
   "indexes": [],
   "compoundIndexes": [],
   "table": "TBL_QOL_SURVEY_RESPONSES"
