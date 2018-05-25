@@ -1,16 +1,39 @@
+const random = require('../../helpers/random')
+const tables = require('../../configuration/tables-config')
+
+
+// Seed data.
+const seeder = []
+
+// #1 Only create survey scores for current recoverees.
+for(let i = 1; i <= tables.tbl_recoverees.total; i++){
+
+  // #2 Loop through each domain available.
+  tables.tbl_domain_information.types.forEach((domain) => {
+
+    let randomDate = random.date()
+
+    // has every survey filled out.
+    tables.tbl_survey_names.types.forEach((survey) => {
+
+      seeder.push({
+        "DOMAIN": domain.DOMAIN,
+        "DOMAIN_SCORE": random.number(30),
+        "RECOVEREE_ID": i,
+        "SCOREA": random.number(50),
+        "SCOREB": random.number(100),
+        "SURVEY": survey.ID,
+        "SURVEY_DATE": randomDate
+      })
+
+    })
+
+  })
+
+}
+
 module.exports = {
-  "seeder" : [
-    {
-      "DOMAIN": 8,
-      "DOMAIN_SCORE": 21,
-      "RECOVEREE_ID": 2,
-      "SCOREA": null,
-      "SCOREB": 84,
-      "SURVEY": 4,
-      "SURVEY_DATE": "Wed Nov 05 2014 08:00:00 GMT+00:00",
-      "id": "0672be7f-3e7a-4aaa-842e-779e82a8ca51"
-    }
-  ],
+  "seeder" : seeder,
   "indexes": ['DOMAIN', 'RECOVEREE_ID', 'SURVEY'],
   "compoundIndexes": [
     {
