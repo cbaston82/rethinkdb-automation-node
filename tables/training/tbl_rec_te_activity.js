@@ -1,5 +1,6 @@
 const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const random = require('../../helpers/random')
 
 // Seed data.
 const seeder = []
@@ -14,7 +15,7 @@ for (let i = 1; i <= tables.tbl_rec_te_activity.total; i++) {
   if (eventID > tables.tbl_trainings_events.total) eventID = 1
 
   seeder.push({
-    "COMPLETED": 0,
+    "COMPLETED": random.number(),
     "ItemDiscussedID": i,
     "NOTES": faker.lorem.words(2),
     "fk_ItemID": eventID,

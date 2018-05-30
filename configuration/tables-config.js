@@ -249,7 +249,7 @@ module.exports = {
     "total": 0
   },
   "tbl_rec_te_activity": {
-    "total": 8
+    "total": 6
   },
   "tbl_trainings_trainers": {
     "total": 5
@@ -275,7 +275,7 @@ module.exports = {
     ]
   },
   "tbl_rec_trainings_events": {
-    "total": 10
+    "total": 6
   },
   // tables/system
   "tblrole": {
