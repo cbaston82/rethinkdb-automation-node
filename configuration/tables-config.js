@@ -301,7 +301,7 @@ module.exports = {
     "total": 8
   },
   "tbl_rec_recovery_status": { // many to a recoveree.
-    "total": 0
+    "total": 12
   },
   "tbl_rec_goals": { // many to a recoveree.
     "total": 8

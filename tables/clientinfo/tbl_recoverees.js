@@ -23,6 +23,9 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
   let TREATMENT_DISCHARGE = new Date(RECOVEREE_CASE_CLOSED)
   TREATMENT_DISCHARGE.setDate(TREATMENT_DISCHARGE.getDate() + 7)
 
+  let surveyDate = new Date(SERVICES_INITIATED)
+  surveyDate.setDate(surveyDate.getDate() + 2)
+
   seeder.push({
     'ALTERNATE_ID': '',
     'DATE_ADD': SERVICES_INITIATED,
@@ -30,13 +33,13 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'FIRST_DRUG': random.number(tables.tbl_drugs.types.length),
     'FirstDrugUsed': random.number(tables.tbl_drugs.types.length),
     'PICTURE': profileImages[Math.floor(Math.random() * profileImages.length)],
-    'RECOVEREE_ARC_DATE': '',
-    'RECOVEREE_ARC_SCORE': 0,
+    'RECOVEREE_ARC_DATE': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_ARC_SCORE': random.number(100),
     'RECOVEREE_ATTACHMENTS': '',
     'RECOVEREE_BDATE': random.date(),
     'RECOVEREE_CAPITAL_DATE': '',
     'RECOVEREE_CAPITAL_SCORE': 0,
-    'RECOVEREE_CASE_CLOSED': random.isoDateFormatTimeCreate(RECOVEREE_CASE_CLOSED),
+    'RECOVEREE_CASE_CLOSED': random.isoDateFormatTimeCreate(surveyDate),
     'RECOVEREE_CASE_OPENED': "",
     'RECOVEREE_CERTIFICATION': [],
     'RECOVEREE_DATE_ADDED': random.date(),
@@ -52,17 +55,17 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'RECOVEREE_NAME': faker.name.firstName() + ' ' + faker.name.lastName(),
     'RECOVEREE_NOTES': faker.lorem.sentences(2),
     'RECOVEREE_PREFERRED_LANGUAGE': random.number(tables.tbl_language.types.length),
-    'RECOVEREE_QOL_DATE': '',
+    'RECOVEREE_QOL_DATE': random.isoDateFormatTimeCreate(surveyDate),
     'RECOVEREE_RACE': random.number(tables.tbl_race.types.length),
     'RECOVEREE_REFERRED_BY_DATE': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
     'RECOVEREE_REFERRED_BY_source': random.number(tables.tbl_referral_source.types.length),
-    'RECOVEREE_SCI_DATE': '',
-    'RECOVEREE_SCI_SCORE': 0,
+    'RECOVEREE_SCI_DATE': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_SCI_SCORE': random.number(100),
     'RECOVEREE_SEX_ORIENT': '',
     'RECOVEREE_SSN': '000-00-0000',
     'RECOVEREE_TYPE': 0,
-    'RECOVEREE_WELLNESS_SCORE': 0,
-    'RECOVEREE_WELLNESS_SELF_ASSESS_DATE': '',
+    'RECOVEREE_WELLNESS_SCORE': random.number(100),
+    'RECOVEREE_WELLNESS_SELF_ASSESS_DATE': random.isoDateFormatTimeCreate(surveyDate),
     'SERVICES_INITIATED': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
     'TOTAL_CHILDREN': random.number(5),
     'TREATMENT_DISCHARGE': random.isoDateFormatTimeCreate(TREATMENT_DISCHARGE),
