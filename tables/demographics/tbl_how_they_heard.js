@@ -5,7 +5,7 @@ const seeder = []
 
 // create seed data.
 tables.tbl_how_they_heard.types.forEach((type, i) => {
-  seeder.push( {
+  seeder.push({
     "DESCRIPTION": type,
     "ID": i + 1
   })

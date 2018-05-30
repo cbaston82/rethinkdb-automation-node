@@ -7,10 +7,10 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_doc_info.total; i++){
+for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
     "DATE_ADD": random.date(),
@@ -36,5 +36,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['EFF_DATE', 'RECOVERY_ID'],
   "compoundIndexes": [],
-  "table" : 'TBL_REC_DOC_INFO'
+  "table": 'TBL_REC_DOC_INFO'
 }

@@ -7,11 +7,11 @@ let recId = 1
 let eventID = 1
 
 // create seed data.
-for(let i = 1; i <= tables.tbl_rec_te_activity.total; i++){
+for (let i = 1; i <= tables.tbl_rec_te_activity.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
-  if(eventID > tables.tbl_trainings_events.total) eventID = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
+  if (eventID > tables.tbl_trainings_events.total) eventID = 1
 
   seeder.push({
     "COMPLETED": 0,

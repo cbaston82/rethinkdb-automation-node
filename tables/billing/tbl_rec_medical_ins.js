@@ -7,10 +7,10 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
+for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
     "BHPROVIDER": null, // Question: What is this?. This is set to null on front end.
@@ -21,7 +21,7 @@ for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
     "END_DATE": random.date(),
     "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
-    "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
+    "RECOVEREE_INS": random.number(tables.tbl_medical_ins.types.length),
     "SIGNUP": null, // Question: What is is this? This is set to null by default.
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),

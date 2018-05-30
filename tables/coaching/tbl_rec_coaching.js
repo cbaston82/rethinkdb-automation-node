@@ -6,10 +6,10 @@ const faker = require('faker')
 const seeder = []
 let recId = 1
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
+for (let i = 1; i <= tables.tbl_rec_coaching.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
 
   seeder.push({
@@ -18,7 +18,7 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
     "BILLABLE": random.number(),
     "CHECK_IN": "",
     "COACHED_BY": random.personType(2),
-    "COACHING_DATE":random.date(),
+    "COACHING_DATE": random.date(),
     "COACHING_LOCATION": random.number(tables.tbl_rcc.types.length),
     "COACHING_MINUTES": random.number(59),
     "COACHING_NOTES": faker.lorem.sentences(3),
@@ -51,14 +51,12 @@ for(let i = 1; i <= tables.tbl_rec_coaching.total; i++){
 
 module.exports = {
   "seeder": seeder,
-  "compoundIndexes": [
-    {
-      "name" : "rec_coaching_info",
-      "indexes": [
-        "RECOVEREE_ID",
-        "RNUM"
-      ]
-    }
-  ],
+  "compoundIndexes": [{
+    "name": "rec_coaching_info",
+    "indexes": [
+      "RECOVEREE_ID",
+      "RNUM"
+    ]
+  }],
   "table": "TBL_REC_COACHING"
 }

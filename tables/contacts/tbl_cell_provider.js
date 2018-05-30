@@ -15,7 +15,7 @@ tables.tbl_cell_provider.types.forEach((type, i) => {
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['ID','CELLULAR_PROVIDER'],
+  "indexes": ['ID', 'CELLULAR_PROVIDER'],
   "compoundIndexes": [],
   "table": "TBL_CELL_PROVIDER"
 }

@@ -8,11 +8,11 @@ let recId = 1
 let goalId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_goals_objectives.total; i++){
+for (let i = 1; i <= tables.tbl_rec_goals_objectives.total; i++) {
 
   // Many to one ids. This is important.
-  if(recId > tables.tbl_recoverees.total) recId = 1
-  if(goalId > tables.tbl_rec_goals.total) goalId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
+  if (goalId > tables.tbl_rec_goals.total) goalId = 1
 
   seeder.push({
     "DATE_ADD": random.date(),

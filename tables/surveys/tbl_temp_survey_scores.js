@@ -1,7 +1,7 @@
 // This is just an empty table. nothing to do here.
 module.exports = {
-  "seeder" : [],
+  "seeder": [],
   "indexes": ['RECOVEREE_ID', 'SURVEY'],
-   "compoundIndexes": [],
+  "compoundIndexes": [],
   "table": "TBL_TEMP_SURVEY_SCORES"
 }

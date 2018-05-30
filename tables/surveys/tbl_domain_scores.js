@@ -6,7 +6,7 @@ const tables = require('../../configuration/tables-config')
 const seeder = []
 
 // #1 Only create survey scores for current recoverees.
-for(let i = 1; i <= tables.tbl_recoverees.total; i++){
+for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
 
   // #2 Loop through each domain available.
   tables.tbl_domain_information.types.forEach((domain) => {
@@ -33,15 +33,14 @@ for(let i = 1; i <= tables.tbl_recoverees.total; i++){
 }
 
 module.exports = {
-  "seeder" : seeder,
+  "seeder": seeder,
   "indexes": ['DOMAIN', 'RECOVEREE_ID', 'SURVEY'],
-  "compoundIndexes": [
-    {
-      "name" : "dom_srv_date",
+  "compoundIndexes": [{
+      "name": "dom_srv_date",
       "indexes": ['DOMAIN', 'SURVEY', 'SURVEY_DATE']
     },
     {
-      "name" : "srv_date",
+      "name": "srv_date",
       "indexes": ['SURVEY', 'SURVEY_DATE']
     }
   ],

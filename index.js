@@ -8,7 +8,7 @@ const automateTable = require('./automate-table')
 automateConfig.settings.directories.forEach(settings => {
 
   // Gather all the files (tables that will be automate)
-  if(settings.automate === true){
+  if (settings.automate === true) {
     gatherTableFiles(settings.directory, settings.exclude)
   }
 })
@@ -18,13 +18,13 @@ automateConfig.settings.directories.forEach(settings => {
  * @param directory
  * @param exclude
  */
-function gatherTableFiles(directory, exclude){
+function gatherTableFiles(directory, exclude) {
   fs.readdir(directory, (err, files) => {
     files.forEach(file => {
 
       // This is where the MAGIC happens
       // Creates the db, tables, seeds data, creates indexes etc from filename.js
-      if (exclude.indexOf(file) === -1 && file.includes('.js')){
+      if (exclude.indexOf(file) === -1 && file.includes('.js')) {
         automateTable.automate(require(`${directory}/${file}`))
       }
     });

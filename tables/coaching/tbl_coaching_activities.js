@@ -22,4 +22,3 @@ module.exports = {
   "compoundIndexes": [],
   "table": "TBL_COACHING_ACTIVITIES"
 }
-

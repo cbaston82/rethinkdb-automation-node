@@ -6,8 +6,8 @@ const tables = require('../../configuration/tables-config')
  * Return date in ISO Format.
  * @returns {*}
  */
-function isoDateFormatTimeCreate() {
-  return r.ISO8601(moment(new Date()).format('YYYY-MM-DD') + 'T08:00:00.000Z')
+function isoDateFormatTimeCreate(date) {
+  return r.ISO8601(moment(date).format('YYYY-MM-DD') + 'T08:00:00.000Z')
 }
 
 /**
@@ -49,9 +49,9 @@ function arrayOfNumbers(max) {
  * @returns {number}
  */
 function number(max = 0) {
-  return (max === 0)
-    ? Math.floor(Math.random() * Math.floor(2))
-    : Math.floor(Math.random() * max) + 1
+  return (max === 0) ?
+    Math.floor(Math.random() * Math.floor(2)) :
+    Math.floor(Math.random() * max) + 1
 }
 
 /**

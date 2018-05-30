@@ -6,9 +6,9 @@ const seeder = []
 // create seed data.
 tables.tbl_rcc.types.forEach((type, i) => {
   seeder.push({
-      "ID": i +1,
-      "RCC": type,
-    })
+    "ID": i + 1,
+    "RCC": type,
+  })
 })
 
 module.exports = {

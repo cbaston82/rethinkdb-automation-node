@@ -5,7 +5,7 @@ const faker = require('faker')
 // Seed data.
 const seeder = []
 
-tables.tbl_checkup_referral_source.types.forEach((type, i)=> {
+tables.tbl_checkup_referral_source.types.forEach((type, i) => {
   seeder.push({
     "CONTACT_PERSON": faker.name.firstName() + ' ' + faker.name.lastName(),
     "EMAIL_ADDRESS": faker.internet.email(),
@@ -23,4 +23,3 @@ module.exports = {
   "compoundIndexes": [],
   "table": "TBL_CHECKUP_REFERRAL_SOURCE"
 }
-

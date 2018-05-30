@@ -6,7 +6,7 @@ const faker = require('faker')
 const seeder = []
 
 // create seed data.
-for(let i = 1; i <= tables.tbl_activity.total; i++){
+for (let i = 1; i <= tables.tbl_activity.total; i++) {
 
   seeder.push({
     "ID": i + 1,
@@ -19,5 +19,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table" : 'TBL_ACTIVITY'
+  "table": 'TBL_ACTIVITY'
 }

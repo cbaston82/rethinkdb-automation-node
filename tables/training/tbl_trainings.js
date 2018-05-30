@@ -6,7 +6,7 @@ const faker = require('faker')
 const seeder = []
 
 // create seed data.
-for(let i = 1; i <= tables.tbl_trainings_events.total; i++){
+for (let i = 1; i <= tables.tbl_trainings_events.total; i++) {
 
   seeder.push({
     "DATE_ADD": random.date(),

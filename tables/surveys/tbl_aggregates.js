@@ -7,7 +7,7 @@ const seeder = []
 
 // Question: Not sure if the logic is correct for generting aggregates.
 // #1 Only create survey scores for current recoverees.
-for(let i = 1; i <= tables.tbl_recoverees.total; i++){
+for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
 
   // #2 Loop through each domain available.
   tables.tbl_domain_information.types.forEach((domain) => {
@@ -46,7 +46,7 @@ for(let i = 1; i <= tables.tbl_recoverees.total; i++){
 
 
 module.exports = {
-  "seeder" : seeder,
+  "seeder": seeder,
   "indexes": ['DOMAIN', 'SURVEY'],
   "compoundIndexes": [],
   "table": "TBL_AGGREGATES"

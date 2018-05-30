@@ -5,7 +5,7 @@ const seeder = []
 
 // create seed data.
 tables.tbl_family.types.forEach((type, i) => {
-  seeder.push( {
+  seeder.push({
     "FAMILY": type,
     "ID": i + 1
   })

@@ -19,5 +19,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID', 'START_AGE', 'END_AGE'],
   "compoundIndexes": [],
-  "table" :"TBL_AGE_COHORT"
+  "table": "TBL_AGE_COHORT"
 }
