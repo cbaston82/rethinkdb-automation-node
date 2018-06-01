@@ -298,7 +298,7 @@ module.exports = {
     "id": "0ed70a4b-682d-446d-bf88-7640359b07"
   },
   "tbl_rec_people_types": { // many to a recoveree.
-    "total": 8
+    "total": 6
   },
   "tbl_rec_recovery_status": { // many to a recoveree.
     "total": 12
@@ -469,7 +469,7 @@ module.exports = {
     ]
   },
   "tbl_rec_medical_ins": { // many to a tbl_recoveree.
-    "total": 8
+    "total": 6
   },
   "tbl_rec_primary_funder": {
     "total": 0

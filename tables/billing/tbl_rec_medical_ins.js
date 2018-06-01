@@ -12,13 +12,22 @@ for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
   // Many to one ids.
   if (recId > tables.tbl_recoverees.total) recId = 1
 
+  let DATE_ADD = new Date();
+  DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
+
+  let DATE_UPD = new Date(DATE_ADD)
+  DATE_UPD.setDate(DATE_UPD.getDate() + 7)
+
+  let END_DATE = new Date(DATE_UPD)
+  END_DATE.setDate(END_DATE.getDate() + 7)
+
   seeder.push({
     "BHPROVIDER": null, // Question: What is this?. This is set to null on front end.
     "COUNTY": faker.address.county(),
-    "DATE_ADD": random.date(),
-    "DATE_UPD": random.date(),
-    "EFF_DATE": random.date(),
-    "END_DATE": random.date(),
+    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
+    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
+    "EFF_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
+    "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
     "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RECOVEREE_INS": random.number(tables.tbl_medical_ins.types.length),
