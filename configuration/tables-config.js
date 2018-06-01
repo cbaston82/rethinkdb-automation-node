@@ -472,7 +472,7 @@ module.exports = {
     "total": 6
   },
   "tbl_rec_primary_funder": {
-    "total": 0
+    "total": 6
   },
   // tables/employment
   "tbl_employment": {
