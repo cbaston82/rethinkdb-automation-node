@@ -12,12 +12,28 @@ for (let i = 1; i <= tables.tbl_rec_coaching_units.total; i++) {
   // Many to one ids.
   if (recId > tables.tbl_recoverees.total) recId = 1
 
+  // some dates to make dates flow correctly.
+  let DATE_ADD = new Date();
+  DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
+
+  let DATE_UPD = new Date(DATE_ADD)
+  DATE_UPD.setDate(DATE_UPD.getDate() + 7)
+
+  let END_DATE = new Date(DATE_UPD)
+  END_DATE.setDate(END_DATE.getDate() + 7)
+
+  // Added this to make sure a recoveree is not assigned to them self as a coach.
+  let COACHED_BY =  random.personType(2)
+  while (COACHED_BY === recId) {
+    COACHED_BY = random.personType(2)
+  }
+
   seeder.push({
-    "ASSIGNED_DATE": random.date(),
-    "COACHED_BY": random.personType(2),
-    "DATE_ADD": random.date(),
-    "DATE_UPD": random.date(),
-    "END_DATE": random.date(),
+    "ASSIGNED_DATE": random.isoDateFormatTimeCreate(DATE_ADD),
+    "COACHED_BY": COACHED_BY,
+    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
+    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
+    "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
     "RECOVEREE_ID": recId,
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()

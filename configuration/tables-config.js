@@ -1,7 +1,7 @@
 module.exports = {
   // tables/coaching
   "tbl_rec_coaching_units": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_coaching_groups": {
     "types": []
@@ -10,16 +10,16 @@ module.exports = {
     "types": []
   },
   "tbl_rec_coaching_activity": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_coaching": {
     "total": 10
   },
   "tbl_rec_coach_types": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_coach_assign": {
-    "total": 8
+    "total": 6
   },
   "tbl_coaching_units_conversion": {
     "types": [{
@@ -287,7 +287,7 @@ module.exports = {
   },
   // tables/programs
   "tbl_time_intervals": {
-    "total": 8
+    "total": 6
   },
   "tbl_rcc": {
     "types": ['Center1', 'Center2', 'Center3', 'Center4', 'Center5']
@@ -304,40 +304,40 @@ module.exports = {
     "total": 12
   },
   "tbl_rec_goals": { // many to a recoveree.
-    "total": 8
+    "total": 6
   },
   "tbl_recoveree_attributes": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_goals_objectives": { // may to tbl_rec_goals.
     "total": 16
   },
   "client_info": {
-    "total": 8
+    "total": 6
   },
   "client_notes": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_address": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_activities": {
     "total": 0
   },
   "tbl_rec_doc_info": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_education": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_emergency_contact": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_ethnicity": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_family": {
-    "total": 8
+    "total": 6
   },
   "tbl_rec_race": {
     "total": 0
@@ -347,7 +347,7 @@ module.exports = {
     "types": ["self", "Mother", "Father", "Sister", "Friend"]
   },
   "tbl_rec_recovery_checkup_services": {
-    "total": 8
+    "total": 6
   },
   "tbl_call_times": {
     "types": ['AM', '8am - 10am', '10am - 12pm', 'Afternoon', 'PM']
@@ -408,14 +408,14 @@ module.exports = {
     "types": ['Mobile', 'Home', 'Office']
   },
   "tbl_rec_calls": {
-    "total": 8
+    "total": 6
   },
   // tables/person
   "tbl_person": {
-    "total": 8
+    "total": 6
   },
   "tbl_person_demographics": {
-    "total": 8
+    "total": 6
   },
   "tbl_clean_time_ranges": {
     "types": [{
@@ -486,7 +486,7 @@ module.exports = {
     ]
   },
   "tbl_rec_employment": {
-    "total": 8
+    "total": 6
   },
   // tables/demographics
   "tbl_sexual_orientation": {
@@ -760,7 +760,7 @@ module.exports = {
     ]
   },
   "tbl_rec_drugs": {
-    "total": 8
+    "total": 6
   },
   // tables/surveys
   "tbl_survey_names": {

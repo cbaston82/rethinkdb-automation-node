@@ -12,6 +12,7 @@ for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
   // Many to one ids.
   if (recId > tables.tbl_recoverees.total) recId = 1
 
+  // some dates to make dates flow correctly.
   let DATE_ADD = new Date();
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
 
