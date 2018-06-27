@@ -16,5 +16,3 @@ module.exports = {
   "compoundIndexes": [],
   "table": "TBL_REC_COACHING_GROUPS"
 }
-
-

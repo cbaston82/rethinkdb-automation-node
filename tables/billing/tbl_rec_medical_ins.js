@@ -7,22 +7,32 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_medical_ins.total; i++){
+for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
+
+  // some dates to make dates flow correctly.
+  let DATE_ADD = new Date();
+  DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
+
+  let DATE_UPD = new Date(DATE_ADD)
+  DATE_UPD.setDate(DATE_UPD.getDate() + 7)
+
+  let END_DATE = new Date(DATE_UPD)
+  END_DATE.setDate(END_DATE.getDate() + 7)
 
   seeder.push({
-    "BHPROVIDER": null, // Question: what is this
+    "BHPROVIDER": null, // Question: What is this?. This is set to null on front end.
     "COUNTY": faker.address.county(),
-    "DATE_ADD": random.date(),
-    "DATE_UPD": random.date(),
-    "EFF_DATE": random.date(),
-    "END_DATE": "",
+    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
+    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
+    "EFF_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
+    "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
     "HAVE": faker.random.boolean(),
     "RECOVEREE_ID": recId,
-    "RECOVEREE_INS":random.number(tables.tbl_medical_ins.types.length),
-    "SIGNUP": 0, // Question: what is this?
+    "RECOVEREE_INS": random.number(tables.tbl_medical_ins.types.length),
+    "SIGNUP": null, // Question: What is is this? This is set to null by default.
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),
   })

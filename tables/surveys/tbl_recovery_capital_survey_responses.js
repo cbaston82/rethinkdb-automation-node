@@ -4,16 +4,17 @@ const tables = require('../../configuration/tables-config')
 const seeder = []
 
 // create seed data.
-tables.tbl_rcc.types.forEach((type, i) => {
+tables.tbl_recovery_capital_survey_responses.types.forEach((type, i) => {
   seeder.push({
+    "DESCRIPTION": type.DESCRIPTION,
     "ID": i + 1,
-    "RCC": type,
+    "VISUAL": type.VISUAL
   })
 })
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['ID'],
+  "indexes": [],
   "compoundIndexes": [],
-  "table": "TBL_RCC"
+  "table": "TBL_RECOVERY_CAPITAL_SURVEY_RESPONSES"
 }

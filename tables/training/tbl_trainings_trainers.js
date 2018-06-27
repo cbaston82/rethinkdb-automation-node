@@ -5,10 +5,10 @@ const seeder = []
 let recId = 2
 
 // create seed data.
-for(let i = 1; i <= tables.tbl_trainings_trainers.total; i++){
+for (let i = 1; i <= tables.tbl_trainings_trainers.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 2
+  if (recId > tables.tbl_recoverees.total) recId = 2
 
   seeder.push({
     "Trainer": recId,

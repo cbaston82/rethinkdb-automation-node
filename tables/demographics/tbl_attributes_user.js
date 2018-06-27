@@ -1,4 +1,5 @@
 const tables = require('../../configuration/tables-config')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -8,8 +9,7 @@ tables.tbl_attributes_user.types.forEach((type, i) => {
   seeder.push({
     "AttributeID": i + 1,
     "AttributeName": type,
-    "ReportSelection": 0, // Question: what does this mean exactly
-    "UserName": "faker.internet.userName())"
+    "UserName": faker.internet.userName()
   })
 })
 

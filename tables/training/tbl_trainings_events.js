@@ -6,12 +6,12 @@ const random = require('../../helpers/random')
 const seeder = []
 
 // create seed data.
-for(let i = 1; i <= tables.tbl_trainings_events.total; i++){
+for (let i = 1; i <= tables.tbl_trainings_events.total; i++) {
 
-  seeder.push( {
+  seeder.push({
     "ID": i,
     "GROUP": random.number(tables.tbl_trainings_events_groups.types.length),
-    "IS_THIS_A_TRAINING": 0, // Todo: Remove if not needed.
+    "IS_THIS_A_TRAINING": 0, // Question: All set to 0 by default in db.
     "TRAININGS_EVENTS_NAME": faker.random.word()
   })
 }

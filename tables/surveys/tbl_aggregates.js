@@ -1,45 +1,52 @@
-module.exports = {
-  "seeder" : [{
-    "AGE_AT_MAX_DATE": 22,
-    "AGE_TODAY": 22,
-    "DOMAIN": 5,
-    "DOMAIN_FACETS_A": null,
-    "DOMAIN_FACETS_B": null,
-    "DOMAIN_NAME": "Overall Perception of Quality of Life",
-    "FACETS": null,
-    "FIRST_SCORE": 60,
-    "GENDER": "Female",
-    "LAST_SCORE": 100,
-    "MAX_DATE": "Tue Nov 04 2014 08:00:00 GMT+00:00",
-  "RCC": "Center 1",
-  "RECOVEREE_BDATE": "Sun Jun 07 1992 07:00:00 GMT+00:00",
-  "RECOVEREE_ID": 3,
-  "STATUS": "Living as married",
-  "SURVEY": 3,
-  "SURVEY_NAME": "Quality of Life Survey",
-  "TOTAL_PEOPLE": 2
-},
-{
-  "AGE_AT_MAX_DATE": 39,
-    "AGE_TODAY": 40,
-    "DOMAIN": 1,
-    "DOMAIN_FACETS_A": "Activities of daily living, Dependence on Medicinal substances and medical aids, Energy and fatigue, Mobility, Pain and discomfort, Sleep and rest, Work capacity",
-    "DOMAIN_FACETS_B": null,
-    "DOMAIN_NAME": "Physical Health",
-    "FACETS": "Activities of daily living, Dependence on Medicinal substances and medical aids, Energy and fatigue, Mobility, Pain and discomfort, Sleep and rest, Work capacity",
-    "FIRST_SCORE": 94,
-    "GENDER": "Female",
-    "LAST_SCORE": 81,
-    "MAX_DATE": "Wed Nov 05 2014 08:00:00 GMT+00:00",
-    "RCC": "Center 2",
-    "RECOVEREE_BDATE": "Mon Mar 17 1975 07:00:00 GMT+00:00",
-    "RECOVEREE_ID": 2,
-    "STATUS": "Divorced",
-    "SURVEY": 3,
-    "SURVEY_NAME": "Quality of Life Survey",
-    "TOTAL_PEOPLE": 2
+const tables = require('../../configuration/tables-config')
+const random = require('../../helpers/random')
+const faker = require('faker')
+
+// Seed data.
+const seeder = []
+
+// Question: Not sure if the logic is correct for generting aggregates.
+// #1 Only create survey scores for current recoverees.
+for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
+
+  // #2 Loop through each domain available.
+  tables.tbl_domain_information.types.forEach((domain) => {
+
+    let randomDate = random.date()
+
+    // has every survey filled out.
+    tables.tbl_survey_names.types.forEach((survey) => {
+
+      seeder.push({
+        "AGE_AT_MAX_DATE": random.number(100),
+        "AGE_TODAY": random.number(100),
+        "DOMAIN": domain.DOMAIN,
+        "DOMAIN_FACETS_A": null,
+        "DOMAIN_FACETS_B": null,
+        "DOMAIN_NAME": domain.DOMAIN_NAME,
+        "FACETS": null,
+        "FIRST_SCORE": random.number(100),
+        "GENDER": random.number(tables.tbl_gender.types.length),
+        "LAST_SCORE": random.number(100),
+        "MAX_DATE": random.date(),
+        "RCC": "Center 1",
+        "RECOVEREE_BDATE": randomDate,
+        "RECOVEREE_ID": i,
+        "STATUS": faker.lorem.sentences(2),
+        "SURVEY": 3,
+        "SURVEY_NAME": survey.SURVEY_NAME,
+        "TOTAL_PEOPLE": 2 // Question: how are total people determined?
+      })
+
+    })
+  })
+
 }
-],
+
+
+
+module.exports = {
+  "seeder": seeder,
   "indexes": ['DOMAIN', 'SURVEY'],
   "compoundIndexes": [],
   "table": "TBL_AGGREGATES"

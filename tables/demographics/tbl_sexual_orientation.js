@@ -5,7 +5,7 @@ const seeder = []
 
 // create seed data.
 tables.tbl_sexual_orientation.types.forEach((type, i) => {
-  seeder.push(    {
+  seeder.push({
     "ID": i + 1,
     "ORIENTATION": type
   })

@@ -7,10 +7,10 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_emergency_contact.total; i++){
+for (let i = 1; i <= tables.tbl_rec_emergency_contact.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
     "DATE_ADD": random.date(),
@@ -20,7 +20,7 @@ for(let i = 1; i <= tables.tbl_rec_emergency_contact.total; i++){
     "EMER_CONTACT": faker.name.firstName() + ' ' + faker.name.lastName(),
     "EMER_DATE": random.date(),
     "EMER_PHONE": random.phoneNumber(),
-    "EMER_REL_CD":random.number(tables.tbl_relationship_cd.types.length),
+    "EMER_REL_CD": random.number(tables.tbl_relationship_cd.types.length),
     "EMER_ST": faker.address.state(),
     "EMER_ZIP": faker.address.zipCode(),
     "END_DATE": random.date(),

@@ -7,19 +7,19 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_calls.total; i++){
+for (let i = 1; i <= tables.tbl_rec_calls.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
     "ATTEMPTS": random.number(50),
     "CALL_DATE": random.date(),
     "COMMENTS": faker.lorem.sentences(2),
-    "CONTACT": 0, // Question: what's this?.
+    "CONTACT": faker.random.boolean(),
     "DATE_ADD": random.date(),
     "DATE_UPD": random.date(),
-    "OTHER_SUPPORTS": 0, // Question: what's this?.
+    "OTHER_SUPPORTS": faker.random.boolean(),
     "RECOVEREE_ID": recId,
     "RELAPSE": random.number(),
     "USERNAME_ADD": faker.internet.userName(),

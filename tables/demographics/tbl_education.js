@@ -17,4 +17,3 @@ module.exports = {
   "compoundIndexes": [],
   "table": "TBL_EDUCATION"
 }
-

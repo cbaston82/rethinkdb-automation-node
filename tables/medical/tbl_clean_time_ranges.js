@@ -8,7 +8,7 @@ tables.tbl_clean_time_ranges.types.forEach((type, i) => {
   seeder.push({
     "DESC": type.DESC,
     "HIGH_NBR_OFDAYS": type.HIGH_NBR_OFDAYS,
-    "ID": i +1,
+    "ID": i + 1,
     "LOW_NBR_OFDAYS": type.LOW_NBR_OFDAYS
   })
 })

@@ -7,10 +7,10 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_rec_education.total; i++){
+for (let i = 1; i <= tables.tbl_rec_education.total; i++) {
 
   // Many to one ids.
-  if(recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_recoverees.total) recId = 1
 
   seeder.push({
     "CELLULAR_PROVIDER": random.number(tables.tbl_cell_provider.types.length),
@@ -23,8 +23,8 @@ for(let i = 1; i <= tables.tbl_rec_education.total; i++){
     "PHONE_NUMBER": random.phoneNumber(),
     "PHONE_TYPE": random.number(tables.tbl_phone_types.types.length),
     "RECOVEREE_ID": recId,
-    "USERNAME_ADD": "faker.internet.userName()),",
-    "USERNAME_UPD": "faker.internet.userName())"
+    "USERNAME_ADD": faker.internet.userName(),
+    "USERNAME_UPD": faker.internet.userName()
   })
   recId++
 }

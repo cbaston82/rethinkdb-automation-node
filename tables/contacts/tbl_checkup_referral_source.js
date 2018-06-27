@@ -5,8 +5,7 @@ const faker = require('faker')
 // Seed data.
 const seeder = []
 
-// create seed data - total is set in tables-config.
-for(let i = 1; i <= tables.tbl_checkup__referral_source.total; i++){
+tables.tbl_checkup_referral_source.types.forEach((type, i) => {
   seeder.push({
     "CONTACT_PERSON": faker.name.firstName() + ' ' + faker.name.lastName(),
     "EMAIL_ADDRESS": faker.internet.email(),
@@ -14,11 +13,9 @@ for(let i = 1; i <= tables.tbl_checkup__referral_source.total; i++){
     "NOTES": faker.lorem.sentences(3),
     "PHONE": random.phoneNumber(),
     "PHONE_EXT": faker.random.number(),
-    "REFERRAL_NAME": "Self" // Todo: get dynamically from table.
+    "REFERRAL_NAME": type
   })
-}
-
-
+})
 
 module.exports = {
   "seeder": seeder,
@@ -26,4 +23,3 @@ module.exports = {
   "compoundIndexes": [],
   "table": "TBL_CHECKUP_REFERRAL_SOURCE"
 }
-

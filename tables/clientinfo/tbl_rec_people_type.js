@@ -13,7 +13,7 @@ for (let i = 1; i <= tables.tbl_rec_people_types.total; i++) {
 
   seeder.push({
     'RecovereeAttributeID': 4, // Todo: remove if not needed.
-    'fk_AttributeID': random.number(tables.tbl_ethnicity.types.length),
+    'fk_AttributeID': random.number(tables.tbl_people_types.types.length),
     'fk_RecovereeID': recId
   })
   recId++

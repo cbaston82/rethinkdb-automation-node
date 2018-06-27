@@ -15,6 +15,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table" : 'TBL_ACTIVITY_GROUPS'
+  "table": 'TBL_ACTIVITY_GROUPS'
 }
-

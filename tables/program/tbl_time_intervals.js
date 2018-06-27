@@ -14,7 +14,8 @@ for (let i = 1; i <= tables.tbl_time_intervals.total; i++) {
 }
 
 module.exports = {
-  'seeder': seeder, 'indexes': ['ID'],
+  'seeder': seeder,
+  'indexes': ['ID'],
   'compoundIndexes': [],
   'table': 'TBL_TIME_INTERVALS'
 }
