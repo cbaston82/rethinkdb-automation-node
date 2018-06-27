@@ -13,7 +13,7 @@ module.exports = {
     "total": 6
   },
   "tbl_rec_coaching": {
-    "total": 10
+    "total": 6
   },
   "tbl_rec_coach_types": {
     "total": 6
@@ -293,6 +293,9 @@ module.exports = {
     "types": ['Center1', 'Center2', 'Center3', 'Center4', 'Center5']
   },
   // tables/clientinfo
+  "tbl_rec_institutions": {
+    "total" : 6
+  },
   "tbl_recoverees": {
     "total": 6,
     "id": "0ed70a4b-682d-446d-bf88-7640359b07"
@@ -402,7 +405,7 @@ module.exports = {
     ]
   },
   "tbl_checkup_services": {
-    "types": ['Text', 'Phone']
+    "types": ['Text', 'Phone', 'email']
   },
   "tbl_phone_types": {
     "types": ['Mobile', 'Home', 'Office']
@@ -621,7 +624,7 @@ module.exports = {
     "types": [
       "African American",
       "European",
-      "Carribian",
+      "Caribbean",
       "Portuguese",
       "Haitian",
       "Cape Verdean",
@@ -756,7 +759,8 @@ module.exports = {
       "Heroin",
       "Cocaine",
       "Crack",
-      "Benzos"
+      "Benzos",
+      "Merijuana"
     ]
   },
   "tbl_rec_drugs": {
