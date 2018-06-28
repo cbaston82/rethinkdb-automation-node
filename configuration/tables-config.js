@@ -296,6 +296,9 @@ module.exports = {
   "tbl_rec_institutions": {
     "total" : 6
   },
+  "tbl_rec_participate_ability": {
+   "total": 6
+  },
   "tbl_recoverees": {
     "total": 6,
     "id": "0ed70a4b-682d-446d-bf88-7640359b07"
