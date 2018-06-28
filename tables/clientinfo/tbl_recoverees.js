@@ -69,7 +69,6 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'SERVICES_INITIATED': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
     'TOTAL_CHILDREN': random.number(5),
     'TREATMENT_DISCHARGE': random.isoDateFormatTimeCreate(TREATMENT_DISCHARGE),
-    'TYPE_OF_TRANS': random.number(tables.tbl_transportation_type.types.length),
     'TestDelete': '',
     'USERNAME_ADD': faker.internet.userName(),
     'USERNAME_UPD': faker.internet.userName(),
@@ -96,8 +95,6 @@ module.exports = {
     'RECOVEREE_REFERRED_BY_source',
     'RECOVEREE_SEX_ORIENT',
     'RECOVEREE_TYPE',
-    'TYPE_OF_TRANS'
-
   ],
   'compoundIndexes': [],
   'table': 'TBL_RECOVEREES'
