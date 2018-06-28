@@ -1,6 +1,5 @@
 const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
-const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -10,16 +9,14 @@ let recId = 1
 for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
   // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+  if (recId > tables.tbl_rec_military.total) recId = 1
 
   seeder.push({
     "RECOVEREE_ID": recId,
-    "JAIL": faker.random.boolean(),
-    "PSYCHIATRIC_TREATMENT": faker.random.boolean(),
-    "ALCOHOL_OR_DRUG_TREATMENT": faker.random.boolean(),
-    "MEDICAL_TREATMENT": faker.random.boolean(),
-    "OTHER": faker.lorem.words(),
-    "CREATED": random.date()
+    "VETERAN_STATUS": random.number(3),
+    "MILITARY_BRANCH": random.number(8),
+    "DISCHARGE_STATUS": random.number(8),
+    "DATA_CREATED": random.date()
   })
   recId++
 }
@@ -28,5 +25,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['RECOVEREE_ID'],
   "compoundIndexes": [],
-  "table": 'TBL_REC_INSTITUTIONS'
+  "table": 'TBL_REC_MILITARY'
 }
