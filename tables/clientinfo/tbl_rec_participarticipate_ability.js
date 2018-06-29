@@ -14,6 +14,7 @@ for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
   seeder.push({
     "RECOVEREE_ID": recId,
+    "ID": i,
     "RELIGIOUS_SPIRITUAL_BELIEFS": faker.random.boolean(),
     "CULTURAL_NEEDS_CONCERNS": faker.random.boolean(),
     "SEXUAL_PREFERENCES_ORIENTATION": faker.random.boolean(),
@@ -26,7 +27,7 @@ for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['RECOVEREE_ID'],
+  "indexes": ['ID'],
   "compoundIndexes": [],
   "table": 'TBL_REC_PARTICIPATION_ABILITY'
 }

@@ -14,6 +14,7 @@ for (let i = 1; i <= tables.tbl_rec_health.total; i++) {
 
   seeder.push({
     "RECOVEREE_ID": recId,
+    "ID": i,
     "TIMES_HOSPITALIZED": random.number(5),
     "LAST_HOSPITALIZATION": random.date(),
     "MEDICAL_PROBLEMS": faker.random.boolean(),
@@ -29,7 +30,7 @@ for (let i = 1; i <= tables.tbl_rec_health.total; i++) {
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['RECOVEREE_ID'],
+  "indexes": ['ID'],
   "compoundIndexes": [],
   "table": 'TBL_REC_HEALTH'
 }
