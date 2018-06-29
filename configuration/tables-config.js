@@ -293,10 +293,30 @@ module.exports = {
     "types": ['Center1', 'Center2', 'Center3', 'Center4', 'Center5']
   },
   // tables/clientinfo
+  "tbl_rec_family_groups": {
+    "types": [ 'biologicalMother', 'biologicalFather', 'biologicalSiblings']
+  },
+  "tbl_rec_family_groups_children": {
+    "types": [
+      {
+        "group": 1,
+        "children": ['Grandmother', 'Grandfather', 'Mother', 'Aunt', 'Uncle']
+      },
+      {
+        "group": 2,
+        "children": ['Grandmother', 'Grandfather', 'Mother', 'Aunt', 'Uncle']
+      },
+      {
+        "group": 3,
+        "children": ['Bother #1', 'Bother #2', 'Sister #1', 'Sister #2', 'Other']
+      }
+    ]
+  },
   "tbl_rec_military": {
     "total": 6
   },
   "tbl_client_transport": {
+
     "total": 6
   },
   "tbl_rec_health": {
