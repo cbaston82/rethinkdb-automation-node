@@ -13,6 +13,7 @@ for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
   seeder.push({
     "RECOVEREE_ID": recId,
+    "ID": i,
     "VETERAN_STATUS": random.number(3),
     "MILITARY_BRANCH": random.number(8),
     "DISCHARGE_STATUS": random.number(8),
@@ -23,7 +24,7 @@ for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['RECOVEREE_ID'],
+  "indexes": ['ID'],
   "compoundIndexes": [],
   "table": 'TBL_REC_MILITARY'
 }
