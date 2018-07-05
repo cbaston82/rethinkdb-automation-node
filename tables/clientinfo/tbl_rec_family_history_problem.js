@@ -1,6 +1,6 @@
 const tables = require('../../configuration/tables-config')
-const faker = require('faker')
 const random = require('../../helpers/random')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -10,18 +10,19 @@ let recId = 1
 for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
 
   // Many to one ids.
-  if (recId > tables.tbl_client_transport.total) recId = 1
+  if (recId > tables.tbl_rec_family_history_problem.total) recId = 1
 
   seeder.push({
     "RECOVEREE_ID": recId,
-    "TYPE_OF_TRANS": random.number(tables.tbl_transportation_type.types.length)
+    "ID": i,
+    "FAMILY": random.arrayOfNumbers(15)
   })
   recId++
 }
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['RECOVEREE_ID', 'TYPE_OF_TRANS'],
+  "indexes": ['ID'],
   "compoundIndexes": [],
-  "table": 'TBL_CLIENT_TRANSPORT'
+  "table": 'TBL_REC_FAMILY_HISTORY_PROBLEMS'
 }

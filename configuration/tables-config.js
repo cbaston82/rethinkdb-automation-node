@@ -294,7 +294,7 @@ module.exports = {
   },
   // tables/clientinfo
   "tbl_rec_family_groups": {
-    "types": [ 'biologicalMother', 'biologicalFather', 'biologicalSiblings']
+    "types": [ 'Biological Mother', 'Biological Father', 'Biological Siblings']
   },
   "tbl_rec_family_groups_children": {
     "types": [
@@ -311,6 +311,9 @@ module.exports = {
         "children": ['Bother #1', 'Bother #2', 'Sister #1', 'Sister #2', 'Other']
       }
     ]
+  },
+  "tbl_rec_family_history_problem": {
+    "total": 6
   },
   "tbl_rec_military": {
     "total": 6

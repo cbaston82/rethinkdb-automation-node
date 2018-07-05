@@ -9,8 +9,8 @@ let ID = 1
 tables.tbl_rec_family_groups_children.types.forEach((type) => {
   type.children.forEach((child) => {
     seeder.push({
-      "GROUP": type.group,
-      "name": child,
+      "GROUP_ID": type.group,
+      "NAME": child,
       "ID": ID
     })
     ID ++
