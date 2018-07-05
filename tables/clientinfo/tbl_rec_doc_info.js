@@ -25,6 +25,12 @@ for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
     "EVER_ON_PROBATION": random.number(),
     "ON_PAROLE_NOW": random.number(),
     "ON_PROBATION_NOW": random.number(),
+    "NONE_PREVIOUSLY": random.number(),
+    "JAIL_PREVIOUSLY": random.number(),
+    "PSYCHIATRIC_TREATMENT_PREVIOUSLY": random.number(),
+    "ALCOHOL_TREATMENT_PREVIOUSLY": random.number(),
+    "MEDICAL_TREATMENT_PREVIOUSLY": random.number(),
+    "OTHER_PREVIOUSLY": random.number(),
     "RECOVERY_ID": recId,
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()

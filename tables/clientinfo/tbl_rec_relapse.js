@@ -7,7 +7,7 @@ const seeder = []
 let recId = 1
 
 // create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_institutions.total; i++) {
+for (let i = 1; i <= tables.tbl_rec_relapse.total; i++) {
 
   // Many to one ids.
   if (recId > tables.tbl_client_transport.total) recId = 1
