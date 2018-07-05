@@ -328,9 +328,6 @@ module.exports = {
   "tbl_rec_health": {
     "total": 6
   },
-  "tbl_rec_institutions": {
-    "total" : 6
-  },
   "tbl_rec_participate_ability": {
    "total": 6
   },
