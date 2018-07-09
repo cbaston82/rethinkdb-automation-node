@@ -22,6 +22,7 @@ for (let i = 1; i <= tables.tbl_rec_health.total; i++) {
     "PRESCRIBED_MEDICATION": faker.random.boolean(),
     "PRESCRIBED_MEDICATION_LIST": faker.lorem.words(),
     "PENSION": faker.random.boolean(),
+    "PENSION_EXPLANATION": faker.lorem.words(),
     "NUTRITIONAL_LIFESTYLE": faker.random.word(),
     "PHYSICAL_LIFESTYLE": faker.random.word()
   })
@@ -32,5 +33,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table": 'TBL_REC_HEALTH'
+  "table": 'tbl_rec_health'
 }

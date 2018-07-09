@@ -17,7 +17,7 @@ function isoDateFormatTimeCreate(date) {
 function date() {
   let date = new Date()
   date.setDate(date.getDate() - Math.floor(Math.random() * 365) + 1)
-  return r.ISO8601(moment(date).format('YYYY-MM-DD') + 'T08:00:00.000Z')
+  return moment(date).format('YYYY-MM-DD')
 }
 
 /**
