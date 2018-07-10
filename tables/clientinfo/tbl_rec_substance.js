@@ -35,5 +35,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table": 'tbl_rec_substance_history'
+  "table": 'TBL_REC_SUBSTANCE_HISTORY'
 }
