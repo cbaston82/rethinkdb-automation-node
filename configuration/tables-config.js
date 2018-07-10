@@ -801,6 +801,17 @@ module.exports = {
       "Merijuana"
     ]
   },
+  "tbl_drugs_acquired": {
+    "types": [
+      "Buy it withy money I earn legally",
+      "Get friends to buy it",
+      "Steal",
+      "Prostitution",
+      "Sell drugs",
+      "Manufacture it",
+      "Grow it",
+    ]
+  },
   "tbl_rec_drugs": {
     "total": 6
   },
