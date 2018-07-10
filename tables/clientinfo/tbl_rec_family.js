@@ -36,6 +36,8 @@ for (let i = 1; i <= tables.tbl_rec_family.total; i++) {
     "TOTAL_CHILDREN": TOTAL_CHILDREN,
     "TOTAL_CHILDREN_CUSTOD": TOTAL_CHILDREN_CUSTOD,
     "TOTAL_CHILDREN_NONCUSTOD": TOTAL_CHILDREN_INCUSTODY,
+    "MINOR_CHILDREN": random.number(TOTAL_CHILDREN),
+    "WELFARE_SERVICES": faker.random.boolean(),
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()
   })
