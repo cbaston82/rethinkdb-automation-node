@@ -33,5 +33,5 @@ module.exports = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table": 'tbl_rec_health'
+  "table": 'TBL_REC_HEALTH'
 }

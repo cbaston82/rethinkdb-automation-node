@@ -15,7 +15,7 @@ for (let i = 1; i <= tables.tbl_rec_substance_history.total; i++) {
   seeder.push({
     "RECOVEREE_ID": recId,
     "ID": i,
-    "FIRST_USE_AGE": random.date(),
+    "FIRST_USE_AGE": faker.random.number(),
     "AGE_REGULARLY_USING": faker.random.number(),
     "INJECTED_DRUGS": faker.random.boolean(),
     "EXPERIENCED_BLACKOUTS": faker.random.boolean(),
