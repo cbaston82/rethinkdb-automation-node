@@ -293,6 +293,9 @@ module.exports = {
     "types": ['Center1', 'Center2', 'Center3', 'Center4', 'Center5']
   },
   // tables/clientinfo
+  "tbl_rec_substance_history": {
+   "total": 6
+  },
   "tbl_rec_relapse": {
     "total": 6
   },
