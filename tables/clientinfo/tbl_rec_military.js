@@ -1,5 +1,5 @@
 const tables = require('../../configuration/tables-config')
-const random = require('../../helpers/random')
+const faker = require('faker')
 
 // Seed data.
 const seeder = []
@@ -13,11 +13,10 @@ for (let i = 1; i <= tables.tbl_rec_military.total; i++) {
 
   seeder.push({
     "RECOVEREE_ID": recId,
-    "ID": i,
-    "VETERAN_STATUS": random.number(3),
-    "MILITARY_BRANCH": random.number(8),
-    "DISCHARGE_STATUS": random.number(8),
-    "DATA_CREATED": random.date()
+    "EVER_SERVED": faker.random.boolean(),
+    "VETERAN": faker.random.boolean(),
+    "VA_BENEFITS": faker.random.boolean(),
+    "VA_SERVICES": faker.random.boolean()
   })
   recId++
 }
