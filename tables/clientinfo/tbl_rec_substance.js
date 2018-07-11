@@ -10,7 +10,7 @@ let recId = 1
 for (let i = 1; i <= tables.tbl_rec_substance_history.total; i++) {
 
   // Many to one ids.
-  if (recId > tables.tbl_rec_military.total) recId = 1
+  if (recId > tables.tbl_rec_substance_history.total) recId = 1
 
   seeder.push({
     "RECOVEREE_ID": recId,

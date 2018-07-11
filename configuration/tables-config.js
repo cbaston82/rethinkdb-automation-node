@@ -302,6 +302,9 @@ module.exports = {
   "tbl_rec_family_groups": {
     "types": [ 'Biological Mother', 'Biological Father', 'Biological Siblings']
   },
+  "tbl_participation_influences": {
+    "types": [ 'Religious or spiritual beliefs', 'Cultural needs or concerns', 'Sexual preferences or orientation', 'Language']
+  },
   "tbl_rec_family_groups_children": {
     "types": [
       {
