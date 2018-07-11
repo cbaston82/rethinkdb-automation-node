@@ -23,7 +23,7 @@ for (let i = 1; i <= tables.tbl_rec_military.total; i++) {
 
 module.exports = {
   "seeder": seeder,
-  "indexes": ['ID'],
+  "indexes": ['RECOVEREE_ID'],
   "compoundIndexes": [],
   "table": 'TBL_REC_MILITARY'
 }
