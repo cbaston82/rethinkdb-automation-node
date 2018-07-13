@@ -557,9 +557,12 @@ module.exports = {
   },
   "tbl_housing_options": {
     "types": [
-      "Streets/Outdoors",
-      "Shelter",
+      "Streets/Outdoors/Homeless",
+      "Public Shelter",
       "Someone Else's",
+      "Friends/Family",
+      "Parent's House",
+      "Girlfriend/Boyfriend "
       "Halfway House",
       "Own/rent",
       "Recovery or Sober House",
