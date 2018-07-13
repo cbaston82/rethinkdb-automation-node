@@ -562,7 +562,7 @@ module.exports = {
       "Someone Else's",
       "Friends/Family",
       "Parent's House",
-      "Girlfriend/Boyfriend "
+      "Girlfriend/Boyfriend",
       "Halfway House",
       "Own/rent",
       "Recovery or Sober House",
