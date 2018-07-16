@@ -30,10 +30,19 @@ for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
     "PSYCHIATRIC_TREATMENT_PREVIOUSLY": random.number(),
     "ALCOHOL_TREATMENT_PREVIOUSLY": random.number(),
     "MEDICAL_TREATMENT_PREVIOUSLY": random.number(),
-    "OTHER_PREVIOUSLY": random.number(),
+    "OTHER_PREVIOUSLY": faker.lorem.sentence(),
     "RECOVERY_ID": recId,
     "USERNAME_ADD": faker.internet.userName(),
-    "USERNAME_UPD": faker.internet.userName()
+    "USERNAME_UPD": faker.internet.userName(),
+    "PAROLE_TYPE": faker.lorem.word(),
+    "CONVICTED": random.number(),
+    "DRIVING_VIOLATION": random.number(),
+    "DRIVING_INTOXICATED": random.number(),
+    "PUBLIC_INTOXICATION": random.number(),
+    "DISORDERLY_CONDUCT": random.number(),
+    "VAGRANCY": random.number(),
+    "CHARGES_PENDING": random.number(),
+    "CHARGES_PENDING_EXPLANATION": faker.lorem.sentence()
   })
   recId++
 }

@@ -1,5 +1,5 @@
 const tables = require('../../configuration/tables-config')
-const random = require('../../helpers/random')
+const random = require('../../helpers/random/index')
 const faker = require('faker')
 
 // Seed data.
