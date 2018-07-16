@@ -42,7 +42,8 @@ for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
     "DISORDERLY_CONDUCT": random.number(),
     "VAGRANCY": random.number(),
     "CHARGES_PENDING": random.number(),
-    "CHARGES_PENDING_EXPLANATION": faker.lorem.sentence()
+    "CHARGES_PENDING_EXPLANATION": faker.lorem.sentence(),
+    "CRIMES_LIST": faker.lorem.sentence()
   })
   recId++
 }
