@@ -14,7 +14,9 @@ for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
 
   seeder.push({
     "RECOVEREE_ID": recId,
-    "TYPE_OF_TRANS": random.number(tables.tbl_transportation_type.types.length)
+    "TYPE_OF_TRANS": random.number(tables.tbl_transportation_type.types.length),
+    "VALID_LICENSE": faker.random.boolean(),
+    "LICENSE_EXPLANATION": faker.lorem.sentences()
   })
   recId++
 }
