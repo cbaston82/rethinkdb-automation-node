@@ -7,7 +7,7 @@ const settings = {
     {
       "directory": "./tables/clientinfo",
       "automate": true,
-      "exclude": []
+      "exclude": ['tbl_participation_influences.js']
     },
     {
       "directory": "./tables/coaching",
