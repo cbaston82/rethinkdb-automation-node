@@ -1,0 +1,28 @@
+{
+  "tbl_rec_family_groups": {
+    "types": [ "Biological Mother", "Biological Father", "Biological Siblings"]
+  },
+  "tbl_participation_influences": {
+    "types": [ "Religious or spiritual beliefs", "Cultural needs or concerns", "Sexual preferences or orientation", "Language"]
+  },
+  "tbl_rec_family_groups_children": {
+    "types": [
+      {
+        "group": 1,
+        "children": ["Grandmother", "Grandfather", "Mother", "Aunt", "Uncle"]
+      },
+      {
+        "group": 2,
+        "children": ["Grandmother", "Grandfather", "Mother", "Aunt", "Uncle"]
+      },
+      {
+        "group": 3,
+        "children": ["Bother #1", "Bother #2", "Sister #1", "Sister #2", "Other"]
+      }
+    ]
+  },
+  "tbl_recoverees": {
+    "total": 6,
+    "id": "0ed70a4b-682d-446d-bf88-7640359b07"
+  }
+}

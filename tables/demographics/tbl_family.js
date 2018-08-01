@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const demographics = require('./demographics')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_family.types.forEach((type, i) => {
+demographics.tbl_family.types.forEach((type, i) => {
   seeder.push({
     "FAMILY": type,
     "ID": i + 1

@@ -1,0 +1,19 @@
+{
+  "tbl_billto": {
+    "types": [
+      "Medicare",
+      "Medicaid"
+    ]
+  },
+  "tbl_medical_ins": {
+    "types": [
+      "None",
+      "Medicare",
+      "Medicaid",
+      "Private",
+      "MAP/County Program",
+      "VA",
+      "Other"
+    ]
+  }
+}

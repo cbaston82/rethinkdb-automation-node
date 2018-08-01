@@ -1,25 +1,18 @@
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('../clientinfo/clientinfo')
+const contacts = require('./contacts')
 
 // Seed data.
 const seeder = []
-let recId = 1
-let recoverycheckupid = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_recovery_checkup_services.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
-  if (recoverycheckupid > tables.tbl_rec_recovery_checkup.total) recoverycheckupid = 1
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     "Itemserviceid": i,
-    "fk_recoverycheckupid": recoverycheckupid,
-    "fk_serviceid": random.number(tables.tbl_checkup_services.types.length)
+    "fk_recoverycheckupid": i,
+    "fk_serviceid": random.number(contacts.tbl_checkup_services.types.length)
   })
-  recId++
-  recoverycheckupid++
 }
 
 module.exports = {

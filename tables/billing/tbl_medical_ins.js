@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const billing = require('./billing')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_medical_ins.types.forEach((type, i) => {
+billing.tbl_medical_ins.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
     "INSURANCE_CARRIER": type

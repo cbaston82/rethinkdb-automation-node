@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const coaching = require('./coaching')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_wellness_survey_responses.types.forEach((type, i) => {
+coaching.tbl_wellness_survey_responses.types.forEach((type, i) => {
   seeder.push({
     "DESCRIPTION": type.DESCRIPTION,
     "ID": i + 1,

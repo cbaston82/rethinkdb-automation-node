@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const system = require('./system')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tblrole.types.forEach((type, i) => {
+system.tblrole.types.forEach((type, i) => {
   seeder.push({
     "RoleID": i + 1,
     "Rolename": type

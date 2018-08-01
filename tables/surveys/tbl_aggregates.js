@@ -1,21 +1,23 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
 const faker = require('faker')
+const clientinfo = require('../clientinfo/clientinfo')
+const surveys = require('./surveys')
+const demographics = require('../demographics/demographics')
 
 // Seed data.
 const seeder = []
 
 // Question: Not sure if the logic is correct for generting aggregates.
 // #1 Only create survey scores for current recoverees.
-for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // #2 Loop through each domain available.
-  tables.tbl_domain_information.types.forEach((domain) => {
+  surveys.tbl_domain_information.types.forEach((domain) => {
 
     let randomDate = random.date()
 
     // has every survey filled out.
-    tables.tbl_survey_names.types.forEach((survey) => {
+    surveys.tbl_survey_names.types.forEach((survey) => {
 
       seeder.push({
         "AGE_AT_MAX_DATE": random.number(100),
@@ -26,7 +28,7 @@ for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
         "DOMAIN_NAME": domain.DOMAIN_NAME,
         "FACETS": null,
         "FIRST_SCORE": random.number(100),
-        "GENDER": random.number(tables.tbl_gender.types.length),
+        "GENDER": random.number(demographics.tbl_gender.types.length),
         "LAST_SCORE": random.number(100),
         "MAX_DATE": random.date(),
         "RCC": "Center 1",

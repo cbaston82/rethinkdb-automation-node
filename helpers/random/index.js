@@ -1,6 +1,6 @@
 const r = require('rethinkdb')
 const moment = require('moment')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('../../tables/clientinfo/clientinfo')
 
 /**
  * Return date in ISO Format.
@@ -61,7 +61,7 @@ function number(max = 0) {
  */
 function personType(attribute) {
   let personTypeArray = []
-  let persons = Math.floor(tables.tbl_recoverees.total / attribute)
+  let persons = Math.floor(clientinfo.tbl_recoverees.total / attribute)
   for (let i = 1; i <= persons; i++) {
     personTypeArray.push(i * attribute)
   }

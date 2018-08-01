@@ -1,14 +1,14 @@
-const tables = require('../../configuration/tables-config')
+const coaching = require('./coaching')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_rec_coaching_groups.types.forEach((type, i) => {
-  seeder.push({
+// coaching.tbl_rec_coaching_groups.types.forEach((type, i) => {
+//   seeder.push({
     // Todo. find out what data to seed.
-  })
-})
+//   })
+// })
 
 module.exports = {
   "seeder": seeder,

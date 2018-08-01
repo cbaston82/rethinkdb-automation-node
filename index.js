@@ -24,7 +24,8 @@ function gatherTableFiles(directory, exclude) {
 
       // This is where the MAGIC happens
       // Creates the db, tables, seeds data, creates indexes etc from filename.js
-      if (exclude.indexOf(file) === -1 && file.includes('.js')) {
+      if (exclude.indexOf(file) === -1 && !file.includes('.json')) {
+        console.log(file)
         automateTable.automate(require(`${directory}/${file}`))
       }
     });

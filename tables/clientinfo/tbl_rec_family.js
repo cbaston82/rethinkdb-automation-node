@@ -1,16 +1,13 @@
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const clientinfo = require('./clientinfo')
+const demographics = require('../demographics/demographics')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_family.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   let DATE_ADD = new Date();
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
@@ -31,8 +28,8 @@ for (let i = 1; i <= tables.tbl_rec_family.total; i++) {
     "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
     "EFF_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
     "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
-    "RECOVEREE_FAMILY": random.number(tables.tbl_family.types.length),
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_FAMILY": random.number(demographics.tbl_family.types.length),
+    "RECOVEREE_ID": i,
     "TOTAL_CHILDREN": TOTAL_CHILDREN,
     "TOTAL_CHILDREN_CUSTOD": TOTAL_CHILDREN_CUSTOD,
     "TOTAL_CHILDREN_NONCUSTOD": TOTAL_CHILDREN_INCUSTODY,
@@ -41,7 +38,6 @@ for (let i = 1; i <= tables.tbl_rec_family.total; i++) {
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()
   })
-  recId++
 }
 
 module.exports = {

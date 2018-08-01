@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const demographics = require('./demographics')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_referred_by.types.forEach((type, i) => {
+demographics.tbl_referred_by.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
     "REFERRED_BY": type

@@ -1,23 +1,18 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
+const clientinfo = require('../clientinfo/clientinfo')
+const medical = require('./medical')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data.
-for (let i = 1; i <= tables.tbl_rec_drugs.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     "RecovereeAttributeID": 2, // Todo: remove if not needed
-    "fk_AttributeID": random.number(tables.tbl_drugs.types.length),
-    "fk_RecovereeID": recId
+    "fk_AttributeID": random.number(medical.tbl_drugs.types.length),
+    "fk_RecovereeID": i
   })
-
-  recId++
 }
 
 module.exports = {

@@ -1,16 +1,17 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
 const faker = require('faker')
+const clientinfo = require('./clientinfo')
+const demographics = require('../demographics/demographics')
 
 // Seed data.
 const seeder = []
 let attributesArray = []
 
-// create seed data - create one record for each recoveree.
-for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // 1. Create a random array of attributes.
-  let Attributes = random.arrayOfNumbers(tables.tbl_attributes_master.types.length)
+  let Attributes = random.arrayOfNumbers(demographics.tbl_attributes_master.types.length)
 
   if ((i % 2) === 0) Attributes.push(2) // if divisible by 2 add coach attribute.
   if ((i % 8) === 0) Attributes.push(8) // if divisible by 8 add trainer attribute

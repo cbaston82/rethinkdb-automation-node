@@ -1,20 +1,21 @@
 const random = require('../../helpers/random')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('../clientinfo/clientinfo')
+const surveys = require('./surveys')
 
 
 // Seed data.
 const seeder = []
 
 // #1 Only create survey scores for current recoverees.
-for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // #2 Loop through each domain available.
-  tables.tbl_domain_information.types.forEach((domain) => {
+  surveys.tbl_domain_information.types.forEach((domain) => {
 
     let randomDate = random.date()
 
     // has every survey filled out.
-    tables.tbl_survey_names.types.forEach((survey) => {
+    surveys.tbl_survey_names.types.forEach((survey) => {
 
       seeder.push({
         "DOMAIN": domain.DOMAIN,

@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const coaching = require('./coaching')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_coaching_activities.types.forEach((type, i) => {
+coaching.tbl_coaching_activities.types.forEach((type, i) => {
   seeder.push({
     "COACHING_ACTIVITY": type,
     "DX_CODE": null, // Todo: remove if not needed.

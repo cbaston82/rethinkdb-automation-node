@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const person = require('../person/person')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_clean_time_ranges.types.forEach((type, i) => {
+person.tbl_clean_time_ranges.types.forEach((type, i) => {
   seeder.push({
     "DESC": type.DESC,
     "HIGH_NBR_OFDAYS": type.HIGH_NBR_OFDAYS,

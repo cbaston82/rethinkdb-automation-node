@@ -1,16 +1,12 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random/index')
 const faker = require('faker')
+const clientinfo = require('../clientinfo/clientinfo')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_trigger.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_rec_trigger.total) recId = 1
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     "ACCEPTANCEGRATITUDE": {
@@ -39,7 +35,7 @@ for (let i = 1; i <= tables.tbl_rec_trigger.total; i++) {
       "WORKPROBLEM": faker.lorem.word()
     },
     "DATE": random.date(),
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_ID": i,
     "SUPPORTGROUP": {
       "SUPPORTHELP": faker.lorem.word(),
       "SUPPORTNAME1": faker.lorem.word(),
@@ -60,7 +56,6 @@ for (let i = 1; i <= tables.tbl_rec_trigger.total; i++) {
       "TRIGGER3": faker.lorem.word()
     }
   })
-  recId++
 }
 
 module.exports = {

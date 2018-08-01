@@ -1,9 +1,9 @@
-const tables = require('../../configuration/tables-config')
+const surveys = require('./surveys')
 
 const seeder = []
 
 // create seed data.
-tables.tbl_qol_survey_responses.types.forEach((type, i) => {
+surveys.tbl_qol_survey_responses.types.forEach((type, i) => {
   seeder.push({
     "COLUMN_HEADING": type.COLUMN_HEADING,
     "COLUMN_HEADING_SP": type.COLUMN_HEADING_SP,

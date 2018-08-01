@@ -1,12 +1,12 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
+const programs = require('../program/programs')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
 // Looping through tlb_rcc to create unit conversion for each program.
-tables.tbl_rcc.types.forEach((type, i) => {
+programs.tbl_rcc.types.forEach((type, i) => {
   seeder.push({
     "ID": i + 1,
     "MINUTES_PER_UNIT": random.number(59),

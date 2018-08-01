@@ -1,0 +1,12 @@
+{
+  "tbl_employment": {
+    "types": [
+      "Full Time",
+      "Part-Time",
+      "Looking for Work",
+      "SSI/SSDI",
+      "Retired",
+      "Not Looking for Work"
+    ]
+  }
+}

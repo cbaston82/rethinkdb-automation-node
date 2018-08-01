@@ -1,20 +1,15 @@
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('../clientinfo/clientinfo')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_person.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     "ID": i
     // Todo: Figure out what data this will take.
   })
-  recId++
 }
 
 module.exports = {

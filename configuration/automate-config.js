@@ -30,6 +30,11 @@ const settings = {
       "exclude": []
     },
     {
+      "directory": "./tables/ffr",
+      "automate": true,
+      "exclude": []
+    },
+    {
       "directory": "./tables/medical",
       "automate": true,
       "exclude": []

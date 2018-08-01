@@ -1,0 +1,226 @@
+{
+  "tbl_rec_coaching_groups": {
+    "types": []
+  },
+  "tbl_rec_coaching_groups_people": {
+    "types": []
+  },
+  "tbl_coaching_units_conversion": {
+    "types": [
+      {
+        "MINUTES_PER_UNIT": 4,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 9,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 15,
+        "PROGRAM": 3
+      },
+      {
+        "MINUTES_PER_UNIT": 3,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 3,
+        "PROGRAM": 1
+      },
+      {
+        "MINUTES_PER_UNIT": 26,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 22,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 1,
+        "PROGRAM": 3
+      },
+      {
+        "MINUTES_PER_UNIT": 16,
+        "PROGRAM": 2
+      },
+      {
+        "MINUTES_PER_UNIT": 60,
+        "PROGRAM": 3
+      }
+    ]
+  },
+  "tbl_coach_certifications": {
+    "types": [
+      "PRC 46 Hour Training Completed",
+      "PRC Specialist Designation",
+      "PRC Specialist Certification",
+      "PRC Trainer",
+      "PRC Trainer of Trainers",
+      "Co-Occurring",
+      "Certified Peer Specialist",
+      "TAY Module Completed",
+      "WRAP"
+    ]
+  },
+  "tbl_coaching_session_type": {
+    "types": [
+      "Individual Face-to-Face Recovery Coaching",
+      "Telephone Recovery Coaching",
+      "Internet Recovery Coaching",
+      "Travelling Companion Recovery Coaching",
+      "Missed Appointment"
+    ]
+  },
+  "tbl_coaching_status": {
+    "types": [{
+        "DESC": "Status 1: New to Peer Recovery Coaching during the reporting period",
+        "DESC_SHORT": "New to Coaching in Rpt Period"
+      },
+      {
+        "DESC": "Status 1 & 2: New to Peer Recovery Coaching during the reporting period and Received Peer Recovery Coaching both before and during the reporting period",
+        "DESC_SHORT": ""
+      },
+      {
+        "DESC": "Status 2: Received Peer Recovery Coaching both before and during the reporting period",
+        "DESC_SHORT": "Coached Before and During Rpt Period."
+      },
+      {
+        "DESC": "Status 3: Received Peer Recovery Coaching before the reporting period but not during the reporting period",
+        "DESC_SHORT": "Coached Before, not During Rpt Period."
+      },
+      {
+        "DESC": "Status 4: Never received Peer Recovery Coaching.",
+        "DESC_SHORT": "Never Coached."
+      },
+      {
+        "DESC": "Status 5: Received Peer Recovery Coaching after the reporting period",
+        "DESC_SHORT": "Coached After not During Rpt Period."
+      }
+    ]
+  },
+  "tbl_coaching_activities": {
+    "types": [
+      "Substance Use & Sobriety",
+      "Global Health Psychological",
+      "Global Health Physical",
+      "Citizenship & Community Involvement",
+      "Social Support",
+      "Meaningful Activities",
+      "Housing & Safety",
+      "Risk Taking",
+      "Coping & Life Functioning",
+      "Recovery Experience",
+      "Review Recovery Plan",
+      "Weekly Mini Goal Review and Follow up",
+      "Reviewed URICA",
+      "DSHS 9 Month Interview",
+      "Review Wellness Self-Assessment",
+      "ID Card",
+      "Take GPRA - 6 month",
+      "DSHS Enrollment Interview",
+      "Take Recovery Capital Survey",
+      "Set-up Primary Care Doctor",
+      "Take Quality of Life Survey",
+      "Budgeting/Financial Planning",
+      "Legal Issues",
+      "Mutual Support Meetings",
+      "Volunteer Opportunities",
+      "Locate Housing",
+      "Education Opportunities",
+      "Take Wellness Self-Assessment",
+      "DSHS 6 Month Interview",
+      "Recreation/Leisure",
+      "Take GPRA - Initial",
+      "Review Quality of Life Survey",
+      "Worked with family/natural support/service provider",
+      "Employability",
+      "Worked on Strength Based Assessment",
+      "Set-up Outpatient Treatment",
+      "Develop Recovery Plan",
+      "DSHS 12 Month Interview",
+      "Set-up Mental Health Treatment",
+      "Set-up Inpatient Treatment",
+      "DSHS 3 Month Interview",
+      "Take URICA",
+      "Review Recovery Capital Survey",
+      "Take GPRA- Discharge"
+    ]
+  },
+  "tbl_wellness_survey_responses": {
+    "types": [{
+        "DESCRIPTION": "Never",
+        "VISUAL": "|||||"
+      },
+      {
+        "DESCRIPTION": "Almost never",
+        "VISUAL": "||||||||||"
+      },
+      {
+        "DESCRIPTION": "Occasionally",
+        "VISUAL": "|||||||||||||||"
+      },
+      {
+        "DESCRIPTION": "Almost always",
+        "VISUAL": "||||||||||||||||||||"
+      },
+      {
+        "DESCRIPTION": "Always",
+        "VISUAL": "|||||||||||||||||||||||||"
+      }
+    ]
+  },
+  "tbl_volunteer_category": {
+    "types": [
+      "Giving Back",
+      "Community Service",
+      "Stipended Position",
+      "Intern"
+    ]
+  },
+  "tbl_volunteer_activities": {
+    "types": [
+      "Recovery Group Facilitation",
+      "Educational Instruction",
+      "Board Member",
+      "Educational Instruction",
+      "Front Desk / Reception",
+      "Administrative / Clerical",
+      "Administration",
+      "Health and Wellness Instructor",
+      "Peer Leader",
+      "Community Based Event",
+      "Community Service",
+      "Other Volunteer Services",
+      "Peer Recovery Coach",
+      "Cleaning / Housekeeping",
+      "Resource Volunteer",
+      "Event Planning and Coordination"
+    ]
+  },
+  "tbl_wellness_self_assessment_groups": {
+    "types": [
+      "Physical Wellness",
+      "Environmental Wellness",
+      "Spiritual Wellness",
+      "Emotional/Psychological Wellness",
+      "Intellectual Wellness",
+      "Occupational Wellness",
+      "Social Wellness"
+    ]
+  },
+  "tbl_wellness_areas": {
+    "types": [
+      "All (non-employees)",
+      "Interests and Activities",
+      "Living Environment",
+      "Employment",
+      "Learning",
+      "Financial",
+      "Lifestyles and Health",
+      "Faith and Spirituality",
+      "Relationships",
+      "Mental Health",
+      "Legal Issues"
+    ]
+  }
+}

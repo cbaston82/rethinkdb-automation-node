@@ -1,16 +1,17 @@
 const faker = require('faker')
-// const { RandomSSN } = require('ssn')
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('./clientinfo')
+const demographics = require('../demographics/demographics')
+const medical = require('../medical/medical')
 
 // Seed data
 const seeder = []
 const profileImages = ['businessman.jpg', 'businesswoman.jpg']
 
 // create seed data - total is set in tables-config
-for (let i = 0; i < tables.tbl_recoverees.total; i++) {
-  // let randomSSN = new RandomSSN()
-  let id = tables.tbl_recoverees.id
+for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
+
+  let id = clientinfo.tbl_recoverees.id
   id = (i.toString().length < 2) ? id += '0' + i : id += i
 
   // Might seem like overkill. Doing this so dates make sense.
@@ -30,8 +31,8 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'ALTERNATE_ID': '',
     'DATE_ADD': SERVICES_INITIATED,
     'DATE_UPD': SERVICES_INITIATED,
-    'FIRST_DRUG': random.number(tables.tbl_drugs.types.length),
-    'FirstDrugUsed': random.number(tables.tbl_drugs.types.length),
+    'FIRST_DRUG': random.number(medical.tbl_drugs.types.length),
+    'FirstDrugUsed': random.number(medical.tbl_drugs.types.length),
     'PICTURE': profileImages[Math.floor(Math.random() * profileImages.length)],
     'RECOVEREE_ARC_DATE': random.isoDateFormatTimeCreate(surveyDate),
     'RECOVEREE_ARC_SCORE': random.number(100),
@@ -45,20 +46,20 @@ for (let i = 0; i < tables.tbl_recoverees.total; i++) {
     'RECOVEREE_DATE_ADDED': random.date(),
     'RECOVEREE_DATE_UPDATED': random.date(),
     'RECOVEREE_EMAIL': faker.internet.email(),
-    'RECOVEREE_GENDER': random.number(tables.tbl_gender.types.length),
-    'RECOVEREE_HOW_THEY_HEARD': random.number(tables.tbl_how_they_heard.types.length),
+    'RECOVEREE_GENDER': random.number(demographics.tbl_gender.types.length),
+    'RECOVEREE_HOW_THEY_HEARD': random.number(demographics.tbl_how_they_heard.types.length),
     'RECOVEREE_ID': i + 1,
     'RECOVEREE_INACTIVE': false,
-    'RECOVEREE_LANGUAGES': random.arrayOfNumbers(tables.tbl_language.types.length),
+    'RECOVEREE_LANGUAGES': random.arrayOfNumbers(demographics.tbl_language.types.length),
     'RECOVEREE_LOCATION': 0,
-    'RECOVEREE_MARITAL_STATUS': random.number(tables.tbl_marital_status.types.length),
+    'RECOVEREE_MARITAL_STATUS': random.number(demographics.tbl_marital_status.types.length),
     'RECOVEREE_NAME': faker.name.firstName() + ' ' + faker.name.lastName(),
     'RECOVEREE_NOTES': faker.lorem.sentences(2),
-    'RECOVEREE_PREFERRED_LANGUAGE': random.number(tables.tbl_language.types.length),
+    'RECOVEREE_PREFERRED_LANGUAGE': random.number(demographics.tbl_language.types.length),
     'RECOVEREE_QOL_DATE': random.isoDateFormatTimeCreate(surveyDate),
-    'RECOVEREE_RACE': random.number(tables.tbl_race.types.length),
+    'RECOVEREE_RACE': random.number(demographics.tbl_race.types.length),
     'RECOVEREE_REFERRED_BY_DATE': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
-    'RECOVEREE_REFERRED_BY_source': random.number(tables.tbl_referral_source.types.length),
+    'RECOVEREE_REFERRED_BY_source': random.number(demographics.tbl_referral_source.types.length),
     'RECOVEREE_SCI_DATE': random.isoDateFormatTimeCreate(surveyDate),
     'RECOVEREE_SCI_SCORE': random.number(100),
     'RECOVEREE_SEX_ORIENT': '',

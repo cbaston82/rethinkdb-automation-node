@@ -1,4 +1,4 @@
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('./clientinfo')
 
 // Seed data.
 const seeder = []
@@ -6,12 +6,12 @@ const seeder = []
 let ID = 1
 
 // create seed data.
-tables.tbl_rec_family_groups_children.types.forEach((type) => {
+clientinfo.tbl_rec_family_groups_children.types.forEach((type, i) => {
   type.children.forEach((child) => {
     seeder.push({
       "GROUP_ID": type.group,
       "NAME": child,
-      "ID": ID
+      "ID": i + 1
     })
     ID ++
   })

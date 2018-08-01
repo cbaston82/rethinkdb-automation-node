@@ -1,11 +1,11 @@
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const coaching = require('./coaching')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_volunteer_activities.types.forEach((type, i) => {
+coaching.tbl_volunteer_activities.types.forEach((type, i) => {
   seeder.push({
     "ACTIVITY": type,
     "ID": i + 1,

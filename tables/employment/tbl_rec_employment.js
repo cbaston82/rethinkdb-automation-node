@@ -1,13 +1,13 @@
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const clientinfo = require('../clientinfo/clientinfo')
+const employment = require('./employment')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_employment.total; i++) {
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
 
   // some dates to make dates flow correctly.
@@ -20,10 +20,6 @@ for (let i = 1; i <= tables.tbl_rec_employment.total; i++) {
   let END_DATE = new Date(DATE_UPD)
   END_DATE.setDate(END_DATE.getDate() + 7)
 
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
-
   seeder.push({
     "AS_OF": random.isoDateFormatTimeCreate(AS_OF),
     "DATE_ADD": random.isoDateFormatTimeCreate(AS_OF),
@@ -35,12 +31,11 @@ for (let i = 1; i <= tables.tbl_rec_employment.total; i++) {
     "TRADE_OR_SKILL_SPECIFY": faker.random.words(),
     "USUAL_OCCUPATION": faker.random.words(),
     "FINANCIAL_SUPPORT": faker.random.boolean(),
-    "RECOVEREE_EMPLOYMENT": random.number(tables.tbl_employment.types.length),
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_EMPLOYMENT": random.number(employment.tbl_employment.types.length),
+    "RECOVEREE_ID": i,
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()
   })
-  recId++
 }
 
 module.exports = {

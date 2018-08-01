@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const contacts = require('./contacts')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_call_times.types.forEach((type, i) => {
+contacts.tbl_call_times.types.forEach((type, i) => {
   seeder.push({
     "CALL_TIMES": type,
     "ID": i + 1,

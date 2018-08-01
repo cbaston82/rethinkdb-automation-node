@@ -1,16 +1,12 @@
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const clientinfo = require('./clientinfo')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     "DATE_ADD": random.date(),
@@ -31,7 +27,7 @@ for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
     "ALCOHOL_TREATMENT_PREVIOUSLY": random.number(),
     "MEDICAL_TREATMENT_PREVIOUSLY": random.number(),
     "OTHER_PREVIOUSLY": faker.lorem.sentence(),
-    "RECOVERY_ID": recId,
+    "RECOVERY_ID": i,
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),
     "PAROLE_TYPE": faker.lorem.word(),
@@ -45,7 +41,6 @@ for (let i = 1; i <= tables.tbl_rec_doc_info.total; i++) {
     "CHARGES_PENDING_EXPLANATION": faker.lorem.sentence(),
     "CRIMES_LIST": faker.lorem.sentence()
   })
-  recId++
 }
 
 module.exports = {

@@ -1,21 +1,22 @@
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('../clientinfo/clientinfo')
+const surveys = require('./surveys')
 
 // Seed data.
 const seeder = []
 const questions = [2, 3, 4]
 
 // #1 Only create survey scores for current recoverees.
-for (let i = 1; i <= tables.tbl_recoverees.total; i++) {
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // #2 Loop through each survey available.
-  tables.tbl_survey_names.types.forEach((survey) => {
+  surveys.tbl_survey_names.types.forEach((survey) => {
 
     let randomDate = random.date()
 
     // #3 find each survey _question and. this makes sure each recovery
     // has every survey filled out.
-    tables.tbl_survey_questions.types.forEach((question) => {
+    surveys.tbl_survey_questions.types.forEach((question) => {
 
       if (question.SURVEY === survey.ID) {
 

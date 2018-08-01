@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const contacts= require('./contacts')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_cell_provider.types.forEach((type, i) => {
+contacts.tbl_cell_provider.types.forEach((type, i) => {
   seeder.push({
     "CELLULAR_PROVIDER": type.CELLULAR_PROVIDER,
     "EMAIL_TEXT_PREFIX": null,

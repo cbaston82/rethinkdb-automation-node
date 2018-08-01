@@ -1,18 +1,13 @@
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
 const random = require('../../helpers/random')
+const clientinfo = require('./clientinfo')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_recovery_status.total; i++) {
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
-
-  // Might seem like overkill. Doing this so dates make sense.
   let AS_OF = new Date();
   AS_OF.setDate(AS_OF.getDate() - random.number(365))
 
@@ -26,13 +21,12 @@ for (let i = 1; i <= tables.tbl_rec_recovery_status.total; i++) {
     END_DATE: random.isoDateFormatTimeCreate(END_DATE),
     IN_RECOVERY: random.number(),
     RECOVERY_DATE: random.isoDateFormatTimeCreate(AS_OF),
-    RECOVERY_ID: recId,
+    RECOVERY_ID: i,
     SOBRIETY_DATE: random.isoDateFormatTimeCreate(END_DATE),
     USERNAME_ADD: faker.internet.userName(),
     USERNAME_UPD: faker.internet.userName(),
     WHAT_IS_RECOVERY: faker.lorem.sentences()
   })
-  recId++
 }
 
 module.exports = {

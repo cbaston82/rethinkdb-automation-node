@@ -1,11 +1,11 @@
-const tables = require('../../configuration/tables-config')
 const faker = require('faker')
+const demographics = require('./demographics')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_age_cohort.types.forEach((type, i) => {
+demographics.tbl_age_cohort.types.forEach((type, i) => {
   seeder.push({
     "DESCRIPTION": type.DESCRIPTION,
     "END_AGE": type.END_AGE,

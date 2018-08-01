@@ -1,20 +1,16 @@
 const faker = require('faker')
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+const clientinfo = require('./clientinfo')
+const coaching = require('../coaching/coaching')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data - total is set in tables-config.
 // TODO: Finish seeding - where ever "// seed".
-for (let i = 1; i <= tables.tbl_rec_goals.total; i++) {
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
-
-
-  // some dates to make dates flow correctly.
+  // some dates to make dates flow correctly sort off.
   let DATE_ADD = new Date();
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
 
@@ -26,7 +22,7 @@ for (let i = 1; i <= tables.tbl_rec_goals.total; i++) {
 
   // Added this to make sure a recoveree is not assigned to them self as a coach.
   let COACHED_BY =  random.personType(2)
-  while (COACHED_BY === recId) {
+  while (COACHED_BY === i) {
     COACHED_BY = random.personType(2)
   }
 
@@ -41,16 +37,15 @@ for (let i = 1; i <= tables.tbl_rec_goals.total; i++) {
     'GOAL': faker.lorem.sentences(3),
     'GOAL_ID': i,
     'INTAKE_DATE': random.isoDateFormatTimeCreate(DATE_ADD),
-    'RECOVEREE_ID': recId,
+    'RECOVEREE_ID': i,
     'RECOVERY_COACH': COACHED_BY,
     'RNUM': i,
     'STRENGTHS': faker.lorem.words(4),
     'USERNAME_ADD': faker.internet.userName(),
     'USERNAME_UPD': faker.internet.userName(),
     'WANTS_TO_PASS': faker.random.boolean(),
-    'WELLNESS_AREA': random.number(tables.tbl_wellness_areas.types.length)
+    'WELLNESS_AREA': random.number(coaching.tbl_wellness_areas.types.length)
   })
-  recId++
 }
 
 module.exports = {

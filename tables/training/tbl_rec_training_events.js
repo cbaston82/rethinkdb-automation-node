@@ -1,16 +1,13 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
 const faker = require('faker')
+const clientinfo = require('../clientinfo/clientinfo')
+const programs = require('../program/programs')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data.
-for (let i = 1; i <= tables.tbl_rec_trainings_events.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // Might seem like overkill. Doing this so dates make sense.
   let DATE_ADD = new Date();
@@ -22,15 +19,14 @@ for (let i = 1; i <= tables.tbl_rec_trainings_events.total; i++) {
   seeder.push({
     "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
     "DATE_UPD": random.isoDateFormatTimeCreate(DATE_ADD),
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_ID": i,
     "TERecID": i,
     "TE_DATE": random.isoDateFormatTimeCreate(TE_DATE),
-    "TE_LOCATION": random.number(tables.tbl_rcc.types.length),
+    "TE_LOCATION": random.number(programs.tbl_rcc.types.length),
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),
     "training_event": ""
   })
-  recId++
 }
 
 module.exports = {

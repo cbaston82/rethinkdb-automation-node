@@ -1,15 +1,15 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
 const faker = require('faker')
+const clientinfo = require('../clientinfo/clientinfo')
+const programs = require('../program/programs')
+const coaching = require('./coaching')
+const training = require('../training/training')
 
 // Seed data.
 const seeder = []
-let recId = 1
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_coaching.total; i++) {
 
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // some dates to make dates flow correctly.
   let DATE_ADD = new Date();
@@ -23,7 +23,7 @@ for (let i = 1; i <= tables.tbl_rec_coaching.total; i++) {
 
   // Added this to make sure a recoveree is not assigned to them self as a coach.
   let COACHED_BY =  random.personType(2)
-  while (COACHED_BY === recId) {
+  while (COACHED_BY === i) {
     COACHED_BY = random.personType(2)
   }
 
@@ -34,10 +34,10 @@ for (let i = 1; i <= tables.tbl_rec_coaching.total; i++) {
     "CHECK_IN": faker.lorem.words(3),
     "COACHED_BY": COACHED_BY,
     "COACHING_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
-    "COACHING_LOCATION": random.number(tables.tbl_rcc.types.length),
-    "COACHING_MINUTES": random.number(tables.tbl_time_intervals.total),
+    "COACHING_LOCATION": random.number(programs.tbl_rcc.types.length),
+    "COACHING_MINUTES": random.number(programs.tbl_time_intervals.total),
     "COACHING_NOTES": faker.lorem.sentences(3),
-    "COACHING_SESSION_TYPE": random.number(tables.tbl_coaching_session_type.types.length),
+    "COACHING_SESSION_TYPE": random.number(coaching.tbl_coaching_session_type.types.length),
     "COMMUNITY_LOCATION": faker.lorem.words(3),
     "CONNECTING": faker.lorem.words(4),
     "CoachingRecID": i, // Question: is this incremental.
@@ -51,17 +51,16 @@ for (let i = 1; i <= tables.tbl_rec_coaching.total; i++) {
     "NEXT_MTG_DATE": random.isoDateFormatTimeCreate(NEXT_MTG_DATE),
     "NEXT_MTG_TIME": "8:00 AM",
     "OTHER_DISCUSSION_ITEM": faker.lorem.words(4),
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_ID": i,
     "REC_COACHING_ACTIVITY": "",
     "RNUM": i,
     "SELF_CARE": "",
-    "SERVICE_LOCATION": random.number(tables.tbl_training_event_locations.types.length),
+    "SERVICE_LOCATION": random.number(training.tbl_training_event_locations.types.length),
     "START_TIME": "11:00 AM",
     "TBD": random.number(),
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()
   })
-  recId++
 }
 
 module.exports = {

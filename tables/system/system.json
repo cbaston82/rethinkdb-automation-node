@@ -1,0 +1,9 @@
+{
+  "tblrole": {
+    "types": [
+      "Admin",
+      "Employee",
+      "volunteer"
+    ]
+  }
+}

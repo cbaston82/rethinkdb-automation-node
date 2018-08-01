@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const surveys = require('./surveys')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_recovery_capital_survey_responses.types.forEach((type, i) => {
+surveys.tbl_recovery_capital_survey_responses.types.forEach((type, i) => {
   seeder.push({
     "DESCRIPTION": type.DESCRIPTION,
     "ID": i + 1,

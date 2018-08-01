@@ -1,16 +1,14 @@
 const faker = require('faker')
 const random = require('../../helpers/random/index')
-const tables = require('../../configuration/tables-config')
+
+const clientinfo = require('../clientinfo/clientinfo')
+const billing = require('./billing')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
-// create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_recoverees.total) recId = 1
+// create seed data.
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // some dates to make dates flow correctly.
   let DATE_ADD = new Date();
@@ -30,13 +28,12 @@ for (let i = 1; i <= tables.tbl_rec_medical_ins.total; i++) {
     "EFF_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
     "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
     "HAVE": faker.random.boolean(),
-    "RECOVEREE_ID": recId,
-    "RECOVEREE_INS": random.number(tables.tbl_medical_ins.types.length),
+    "RECOVEREE_ID": i,
+    "RECOVEREE_INS": random.number(billing.tbl_medical_ins.types.length),
     "SIGNUP": null, // Question: What is is this? This is set to null by default.
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),
   })
-  recId++
 }
 
 module.exports = {

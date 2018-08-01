@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const contacts = require('./contacts')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
+contacts.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
   seeder.push({
     "ATTEMPTS": type.ATTEMPTS,
     "DISCHARGE_REASON": type.DISCHARGE_REASON,

@@ -1,19 +1,16 @@
-const tables = require('../../configuration/tables-config')
 const random = require('../../helpers/random')
 const faker = require('faker')
+const clientinfo = require('./clientinfo')
+const medical = require('../medical/medical')
 
 // Seed data.
 const seeder = []
-let recId = 1
 
 // create seed data - total is set in tables-config.
-for (let i = 1; i <= tables.tbl_rec_substance_history.total; i++) {
-
-  // Many to one ids.
-  if (recId > tables.tbl_rec_substance_history.total) recId = 1
+for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "RECOVEREE_ID": recId,
+    "RECOVEREE_ID": i,
     "ID": i,
     "FIRST_USE_AGE": faker.random.number(),
     "AGE_REGULARLY_USING": faker.random.number(),
@@ -27,11 +24,10 @@ for (let i = 1; i <= tables.tbl_rec_substance_history.total; i++) {
     "SUBSTANCE_DISORDER_TREATMENT_DETOX": random.number(5),
     "EVER_ABSTINENT": faker.random.boolean(),
     "EVER_ABSTINENT_LONGEST_TIME": faker.random.words(),
-    "DRUGS_ACQUIRED": random.arrayOfNumbers(tables.tbl_drugs_acquired.types.length),
+    "DRUGS_ACQUIRED": random.arrayOfNumbers(medical.tbl_drugs_acquired.types.length),
     "ATTENDED_SUPPORT": faker.random.boolean(),
     "ATTENDING_SUPPORT": faker.random.boolean()
   })
-  recId++
 }
 
 module.exports = {

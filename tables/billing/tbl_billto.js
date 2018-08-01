@@ -1,10 +1,10 @@
-const tables = require('../../configuration/tables-config')
+const billing = require('./billing')
 
 // Seed data.
 const seeder = []
 
 // create seed data.
-tables.tbl_billto.types.forEach((type, i) => {
+billing.tbl_billto.types.forEach((type, i) => {
   seeder.push({
     "BILLTO_NAME": type,
     "ID": i + 1

@@ -1,0 +1,41 @@
+{
+  "tbl_person": {
+    "total": 6
+  },
+  "tbl_person_demographics": {
+    "total": 6
+  },
+  "tbl_clean_time_ranges": {
+    "types": [{
+      "DESC": "01. <= 6 Months",
+      "LOW_NBR_OFDAYS": 0,
+      "HIGH_NBR_OFDAYS": 180
+    },
+      {
+        "DESC": "02. >6 and <= 12 Months",
+        "LOW_NBR_OFDAYS": 181,
+        "HIGH_NBR_OFDAYS": 365
+      },
+      {
+        "DESC": "03. >12 and <= 24 Months",
+        "LOW_NBR_OFDAYS": 366,
+        "HIGH_NBR_OFDAYS": 730
+      },
+      {
+        "DESC": "04. >2 and  <= 3 Years",
+        "LOW_NBR_OFDAYS": 731,
+        "HIGH_NBR_OFDAYS": 1095
+      },
+      {
+        "DESC": "05. >3 and <= 5 Years",
+        "LOW_NBR_OFDAYS": 1096,
+        "HIGH_NBR_OFDAYS": 1825
+      },
+      {
+        "DESC": "06. >5 Years",
+        "LOW_NBR_OFDAYS": 999999999,
+        "HIGH_NBR_OFDAYS": 180
+      }
+    ]
+  }
+}
