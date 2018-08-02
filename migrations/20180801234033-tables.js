@@ -21,11 +21,8 @@ const data = {
     {
       name: 'billID',
       indexes: ['BILLTO_NAME', 'ID']
-    },
-    {
-      name: 'IDbill',
-      indexes: ['BILLTO_NAME', 'ID']
-    }],
+    }
+  ],
   'table': 'TBL_BILLTO'
 }
 
