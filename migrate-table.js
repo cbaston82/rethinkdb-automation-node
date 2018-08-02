@@ -11,17 +11,17 @@ const resolver = require('./helpers/resolver')
 async function up (r, connection, data) {
   const query = await r.tableCreate(data.table)
     .run(connection)
-  await tableInserter(r, data, connection)
+  await tableInsertIt(r, data, connection)
   resolver.resolveIt(query)
 }
 
-async function tableInserter (r, data, connection) {
+async function tableInsertIt (r, data, connection) {
   const query = await r.table(data.table)
     .insert(data.seeder)
     .run(connection)
   resolver.resolveIt(query)
   await indexCreate(r, data, connection)
-  // await compoundIndexCreate(r, data, connection)
+  await compoundIndexCreate(r, data, connection)
 }
 
 async function indexCreate (r, data, connection) {
@@ -37,20 +37,17 @@ async function indexCreate (r, data, connection) {
 
 async function compoundIndexCreate (r, data, connection) {
   if (data.compoundIndexes.length > 0) {
-    data.indexes.forEach((index) => {
-      data.compoundIndexes.forEach(async (compoundIndex) => {
-        let compoundArray = []
-        console.log(index)
+    data.compoundIndexes.forEach(async (compoundIndex) => {
+      let compoundArray = []
 
-        compoundIndex.indexes.forEach((index) => {
-          compoundArray.push(r.row(index))
-        })
-
-        const query = await r.table(data.table)
-          .indexCreate(compoundIndex.name, compoundArray)
-          .run(connection)
-        resolver.resolveIt(query)
+      compoundIndex.indexes.forEach((index) => {
+        compoundArray.push(r.row(index))
       })
+
+      const query = await r.table(data.table)
+        .indexCreate(compoundIndex.name, compoundArray)
+        .run(connection)
+      resolver.resolveIt(query)
     })
   }
 }

@@ -16,10 +16,28 @@ billing.tbl_billto.types.forEach((type, i) => {
 
 const data = {
   'seeder': seeder,
-  'indexes': ['ID'],
-  'compoundIndexes': [],
+  'indexes': ['ID', 'BILLTO_NAME'],
+  'compoundIndexes': [
+    {
+      name: 'billID',
+      indexes: ['BILLTO_NAME', 'ID']
+    },
+    {
+      name: 'IDbill',
+      indexes: ['BILLTO_NAME', 'ID']
+    }],
   'table': 'TBL_BILLTO'
 }
+
+/*const data = {
+  'seeder': seeder,
+  'indexes': ['ID'],
+  'compoundIndexes': [{
+    name: 'billID',
+    indexes: ['BILLTO_NAME', 'ID']
+  }],
+  'table': 'TBL_BILLTO'
+}*/
 
 module.exports.up = async function (r, connection) {
   const promiseThing = await migrate.up(r, connection, data)

@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "up": "node index.js",
-    "down": "node dropdb.js",
+    "up": "rethinkdb-migrate up --all --db=ayy -f config.js",
+    "down": "rethinkdb-migrate down --all --db=ayy -f config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
