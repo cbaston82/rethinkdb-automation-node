@@ -14,7 +14,7 @@ function up(r, connection, data){
       if (error) throw error
 
       // Create the indexes if they are defined.
-      if(typeof data.indexes !== "undefined") {
+      if (typeof data.indexes !== "undefined") {
         data.indexes.forEach((index) => {
           r.table(data.table).indexCreate(index).run(connection, (error, result) => {
             if (error) throw error
@@ -23,7 +23,7 @@ function up(r, connection, data){
       }
 
       // Create the compound index if they are defined.
-      if(typeof data.compoundIndexes !== "undefined") {
+      if (typeof data.compoundIndexes !== "undefined") {
         data.compoundIndexes.forEach((compoundIndex) => {
 
           // Create the compound array
