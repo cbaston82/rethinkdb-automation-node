@@ -11,7 +11,7 @@ const settings = {
     },
     {
       "directory": "./tables/coaching",
-      "automate": true,
+      "automate": false,
       "exclude": []
     },
     {
@@ -36,7 +36,7 @@ const settings = {
     },
     {
       "directory": "./tables/medical",
-      "automate": true,
+      "automate": false,
       "exclude": []
     },
     {
