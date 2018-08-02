@@ -20,17 +20,28 @@ async function tableInsertIt (r, data, connection) {
     .insert(data.seeder)
     .run(connection)
   resolver.resolveIt(query)
-  await indexCreate(r, data, connection)
+  await indexArrayBuilder(r, data, connection)
   await compoundIndexCreate(r, data, connection)
 }
 
-async function indexCreate (r, data, connection) {
+async function createIndex (r, data, index, connection) {
+  if (Object.keys(index).length === 1) {
+    const query = await r.table(data)
+      .indexCreate(index.name)
+      .run(connection)
+    resolver.resolveIt(query)
+  } else {
+    const query = await r.table(data)
+      .indexCreate(index.name, index.arr)
+      .run(connection)
+    resolver.resolveIt(query)
+  }
+}
+
+async function indexArrayBuilder (r, data, connection) {
   if (data.indexes.length > 0) {
     data.indexes.forEach(async (index) => {
-      const query = await r.table(data.table)
-        .indexCreate(index)
-        .run(connection)
-      resolver.resolveIt(query)
+      await createIndex(r, data.table, { name: index }, connection)
     })
   }
 }
@@ -44,10 +55,8 @@ async function compoundIndexCreate (r, data, connection) {
         compoundArray.push(r.row(index))
       })
 
-      const query = await r.table(data.table)
-        .indexCreate(compoundIndex.name, compoundArray)
-        .run(connection)
-      resolver.resolveIt(query)
+      await createIndex(r, data.table,
+        { name: compoundIndex.name, arr: compoundArray }, connection)
     })
   }
 }
