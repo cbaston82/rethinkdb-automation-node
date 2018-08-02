@@ -8,35 +8,29 @@ const billing = require('../tables/billing/billing.json')
 const seeder = []
 
 // create seed data.
-billing.tbl_billto.types.forEach((type, i) => {
+billing.tbl_medical_ins.types.forEach((type, i) => {
   seeder.push({
-    'BILLTO_NAME': type,
-    'ID': i + 1
+    "ID": i + 1,
+    "INSURANCE_CARRIER": type
   })
 })
 
-const data = {
-  'seeder': seeder,
-  'indexes': ['ID', 'BILLTO_NAME'],
-  'compoundIndexes': [
-    {
-      name: 'billID',
-      indexes: ['BILLTO_NAME', 'ID']
-    }
-  ],
-  'table': 'TBL_BILLTO'
+const data = module.exports = {
+  "seeder": seeder,
+  "indexes": ['ID'],
+  "compoundIndexes": [],
+  "table": "TBL_MEDICAL_INS"
 }
 
 module.exports.up = async function (r, connection) {
-  if (settings.billing.automate && !settings.billing.exclude.includes('TBL_BILLTO')) {
+  if (settings.billing.automate && !settings.billing.exclude.includes(data.table)) {
     const promiseThing = await migrate.up(r, connection, data)
     resolver.resolveIt(promiseThing)
   }
 }
 
-
 module.exports.down = async function (r, connection) {
-  if (settings.billing.automate && !settings.billing.exclude.includes('TBL_BILLTO')) {
+  if (settings.billing.automate && !settings.billing.exclude.includes(data.table)) {
     const promiseThing = await migrate.down(r, connection, data)
     resolver.resolveIt(promiseThing)
   }

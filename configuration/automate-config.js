@@ -1,9 +1,10 @@
 const settings = {
-  "directories": [{
-      "directory": "./tables/billing",
-      "automate": true,
-      "exclude": []
-    },
+  "billing": {
+    "directory": "./tables/billing",
+    "automate": true,
+    "exclude": []
+  },
+  "directories": [
     {
       "directory": "./tables/clientinfo",
       "automate": true,
