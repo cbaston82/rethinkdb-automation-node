@@ -5,42 +5,54 @@
  * @param data
  * @returns {*}
  */
-function up(r, connection, data){
-  return r.tableCreate(data.table).run(connection, (error, result) => {
-    if (error) throw error
 
-    // #2 insert data.
-    r.table(data.table).insert(data.seeder).run(connection, (error, result) => {
-      if (error) throw error
+const resolver = require('./helpers/resolver')
 
-      // Create the indexes if they are defined.
-      if (typeof data.indexes !== "undefined") {
-        data.indexes.forEach((index) => {
-          r.table(data.table).indexCreate(index).run(connection, (error, result) => {
-            if (error) throw error
-          })
-        })
-      }
+async function up (r, connection, data) {
+  const query = await r.tableCreate(data.table)
+    .run(connection)
+  await tableInserter(r, data, connection)
+  resolver.resolveIt(query)
+}
 
-      // Create the compound index if they are defined.
-      if (typeof data.compoundIndexes !== "undefined") {
-        data.compoundIndexes.forEach((compoundIndex) => {
+async function tableInserter (r, data, connection) {
+  const query = await r.table(data.table)
+    .insert(data.seeder)
+    .run(connection)
+  resolver.resolveIt(query)
+  await indexCreate(r, data, connection)
+  // await compoundIndexCreate(r, data, connection)
+}
 
-          // Create the compound array
-          let compoundArray = []
-
-          compoundIndex.indexes.forEach((index) => {
-            compoundArray.push(r.row(index))
-          })
-
-          r.table(data.table).indexCreate(compoundIndex.name, compoundArray)
-            .run(connection, (error, results) => {
-              if (error) throw error
-            })
-        })
-      }
+async function indexCreate (r, data, connection) {
+  if (data.indexes.length > 0) {
+    data.indexes.forEach(async (index) => {
+      const query = await r.table(data.table)
+        .indexCreate(index)
+        .run(connection)
+      resolver.resolveIt(query)
     })
-  });
+  }
+}
+
+async function compoundIndexCreate (r, data, connection) {
+  if (data.compoundIndexes.length > 0) {
+    data.indexes.forEach((index) => {
+      data.compoundIndexes.forEach(async (compoundIndex) => {
+        let compoundArray = []
+        console.log(index)
+
+        compoundIndex.indexes.forEach((index) => {
+          compoundArray.push(r.row(index))
+        })
+
+        const query = await r.table(data.table)
+          .indexCreate(compoundIndex.name, compoundArray)
+          .run(connection)
+        resolver.resolveIt(query)
+      })
+    })
+  }
 }
 
 /**
@@ -50,8 +62,10 @@ function up(r, connection, data){
  * @param data
  * @returns {*}
  */
-function down(r, connection, data){
-  return r.tableDrop(data.table).run(connection);
+async function down (r, connection, data) {
+  const query = await r.tableDrop(data.table)
+    .run(connection)
+  resolver.resolveIt(query)
 }
 
-module.exports = {up, down}
+module.exports = { up, down }
