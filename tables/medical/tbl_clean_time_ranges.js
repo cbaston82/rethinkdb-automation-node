@@ -1,4 +1,4 @@
-const person = require('../person/person')
+const person = require('../person')
 
 // Seed data.
 const seeder = []
