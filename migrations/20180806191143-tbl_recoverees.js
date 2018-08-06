@@ -1,10 +1,17 @@
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
 const faker = require('faker')
-const random = require('../../helpers/random/index')
-const clientinfo = require('../clientinfo')
-const demographics = require('../demographics/demographics')
-const medical = require('../medical/medical')
+const random = require('../helpers/random/index')
 
-// Seed data
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').clientinfoConfig
+
+// Get any data needed for use in seeder.
+const clientinfo = require('../tables/clientinfo.json')
+const demographics = require('../tables/demographics/demographics.json')
+const medical = require('../tables/medical/medical.json')
+
+// Initial state of seeder data.
 const seeder = []
 const profileImages = ['businessman.jpg', 'businesswoman.jpg']
 
@@ -34,13 +41,13 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     'FIRST_DRUG': random.number(medical.tbl_drugs.types.length),
     'FirstDrugUsed': random.number(medical.tbl_drugs.types.length),
     'PICTURE': profileImages[Math.floor(Math.random() * profileImages.length)],
-    'RECOVEREE_ARC_DATE': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_ARC_DATE': random.date(surveyDate),
     'RECOVEREE_ARC_SCORE': random.number(100),
     'RECOVEREE_ATTACHMENTS': '',
     'RECOVEREE_BDATE': random.date(),
     'RECOVEREE_CAPITAL_DATE': '',
     'RECOVEREE_CAPITAL_SCORE': 0,
-    'RECOVEREE_CASE_CLOSED': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_CASE_CLOSED': random.date(surveyDate),
     'RECOVEREE_CASE_OPENED': "",
     'RECOVEREE_CERTIFICATION': [],
     'RECOVEREE_DATE_ADDED': random.date(),
@@ -56,20 +63,20 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     'RECOVEREE_NAME': faker.name.firstName() + ' ' + faker.name.lastName(),
     'RECOVEREE_NOTES': faker.lorem.sentences(2),
     'RECOVEREE_PREFERRED_LANGUAGE': random.number(demographics.tbl_language.types.length),
-    'RECOVEREE_QOL_DATE': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_QOL_DATE': random.date(surveyDate),
     'RECOVEREE_RACE': random.number(demographics.tbl_race.types.length),
-    'RECOVEREE_REFERRED_BY_DATE': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
+    'RECOVEREE_REFERRED_BY_DATE': random.date(SERVICES_INITIATED),
     'RECOVEREE_REFERRED_BY_source': random.number(demographics.tbl_referral_source.types.length),
-    'RECOVEREE_SCI_DATE': random.isoDateFormatTimeCreate(surveyDate),
+    'RECOVEREE_SCI_DATE': random.date(surveyDate),
     'RECOVEREE_SCI_SCORE': random.number(100),
     'RECOVEREE_SEX_ORIENT': '',
     'RECOVEREE_SSN': '000-00-0000',
     'RECOVEREE_TYPE': 0,
     'RECOVEREE_WELLNESS_SCORE': random.number(100),
-    'RECOVEREE_WELLNESS_SELF_ASSESS_DATE': random.isoDateFormatTimeCreate(surveyDate),
-    'SERVICES_INITIATED': random.isoDateFormatTimeCreate(SERVICES_INITIATED),
+    'RECOVEREE_WELLNESS_SELF_ASSESS_DATE': random.date(surveyDate),
+    'SERVICES_INITIATED': random.date(SERVICES_INITIATED),
     'TOTAL_CHILDREN': random.number(5),
-    'TREATMENT_DISCHARGE': random.isoDateFormatTimeCreate(TREATMENT_DISCHARGE),
+    'TREATMENT_DISCHARGE': random.date(TREATMENT_DISCHARGE),
     'TestDelete': '',
     'USERNAME_ADD': faker.internet.userName(),
     'USERNAME_UPD': faker.internet.userName(),
@@ -78,7 +85,8 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
   })
 }
 
-module.exports = {
+// Data to be seeded to db.
+const data = {
   'seeder': seeder,
   'indexes': [
     'FIRST_DRUG',
@@ -99,4 +107,18 @@ module.exports = {
   ],
   'compoundIndexes': [],
   'table': 'TBL_RECOVEREES'
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }

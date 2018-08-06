@@ -1,9 +1,16 @@
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
 const faker = require('faker')
-const random = require('../../helpers/random/index')
-const clientinfo = require('../clientinfo')
-const coaching = require('../coaching/coaching')
+const random = require('../helpers/random/index')
 
-// Seed data.
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').clientinfoConfig
+
+// Get any data needed for use in seeder.
+const clientinfo = require('../tables/clientinfo.json')
+const coaching = require('../tables/coaching/coaching.json')
+
+// Initial state of seeder data.
 const seeder = []
 
 // create seed data - total is set in tables-config.
@@ -28,15 +35,15 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     'BARRIERS': faker.lorem.words(5),
-    'DATE_ADD': random.isoDateFormatTimeCreate(DATE_ADD),
-    'DATE_GOAL_ANTICIPATED': random.isoDateFormatTimeCreate(DATE_ADD),
-    'DATE_GOAL_CANCELLED': random.isoDateFormatTimeCreate(DATE_UPD),
-    'DATE_GOAL_MET': random.isoDateFormatTimeCreate(DATE_UPD),
-    'DATE_GOAL_SET': random.isoDateFormatTimeCreate(DATE_ADD),
-    'DATE_UPD': random.isoDateFormatTimeCreate(DATE_UPD),
+    'DATE_ADD': random.date(DATE_ADD),
+    'DATE_GOAL_ANTICIPATED': random.date(DATE_ADD),
+    'DATE_GOAL_CANCELLED': random.date(DATE_UPD),
+    'DATE_GOAL_MET': random.date(DATE_UPD),
+    'DATE_GOAL_SET': random.date(DATE_ADD),
+    'DATE_UPD': random.date(DATE_UPD),
     'GOAL': faker.lorem.sentences(3),
     'GOAL_ID': i,
-    'INTAKE_DATE': random.isoDateFormatTimeCreate(DATE_ADD),
+    'INTAKE_DATE': random.date(DATE_ADD),
     'RECOVEREE_ID': i,
     'RECOVERY_COACH': COACHED_BY,
     'RNUM': i,
@@ -48,9 +55,24 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   })
 }
 
-module.exports = {
+// Data to be seeded to db.
+const data = {
   'seeder': seeder,
   'indexes': ['GOAL_ID', 'RECOVEREE_ID', 'RNUM'],
   'compoundIndexes': [],
   'table': 'TBL_REC_GOALS'
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }
