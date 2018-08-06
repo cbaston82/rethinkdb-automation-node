@@ -1,4 +1,4 @@
-const system = require('./system')
+const system = require('../system')
 
 // Seed data.
 const seeder = []
