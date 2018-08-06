@@ -1,9 +1,16 @@
-const random = require('../../helpers/random/index')
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
 const faker = require('faker')
-const clientinfo = require('./clientinfo')
-const demographics = require('../demographics/demographics')
+const random = require('../helpers/random')
 
-// Seed data.
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').clientinfoConfig
+
+// Get any data needed for use in seeder.
+const clientinfo = require('../tables/clientinfo.json')
+const demographics = require('../tables/demographics/demographics.json')
+
+// Initial state of seeder data.
 const seeder = []
 
 // create seed data - total is set in tables-config.
@@ -24,10 +31,10 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   let TOTAL_CHILDREN_INCUSTODY = TOTAL_CHILDREN - TOTAL_CHILDREN_CUSTOD
 
   seeder.push({
-    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
-    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
-    "EFF_DATE": random.isoDateFormatTimeCreate(DATE_UPD),
-    "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
+    "DATE_ADD": random.date(DATE_ADD),
+    "DATE_UPD": random.date(DATE_UPD),
+    "EFF_DATE": random.date(DATE_UPD),
+    "END_DATE": random.date(END_DATE),
     "RECOVEREE_FAMILY": random.number(demographics.tbl_family.types.length),
     "RECOVEREE_ID": i,
     "TOTAL_CHILDREN": TOTAL_CHILDREN,
@@ -40,9 +47,24 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   })
 }
 
-module.exports = {
+// Data to be seeded to db.
+const data = {
   "seeder": seeder,
   "indexes": ['DATE_ADD', 'RECOVEREE_FAMILY', 'RECOVEREE_ID'],
   "compoundIndexes": [],
   "table": "TBL_REC_FAMILY"
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }

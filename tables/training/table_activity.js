@@ -1,6 +1,6 @@
 const random = require('../../helpers/random')
 const faker = require('faker')
-const clientinfo = require('../clientinfo/clientinfo')
+const clientinfo = require('../clientinfo')
 const training = require('./training')
 
 // Seed data.

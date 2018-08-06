@@ -1,5 +1,5 @@
 const random = require('../../helpers/random/index')
-const clientinfo = require('../clientinfo/clientinfo')
+const clientinfo = require('../clientinfo')
 const contacts = require('./contacts')
 
 // Seed data.

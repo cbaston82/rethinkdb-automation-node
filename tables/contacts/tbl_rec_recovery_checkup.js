@@ -1,6 +1,6 @@
 const random = require('../../helpers/random/index')
 const faker = require('faker')
-const clientinfo = require('../clientinfo/clientinfo')
+const clientinfo = require('../clientinfo')
 const demographics = require('../demographics/demographics')
 const contacts = require('./contacts')
 

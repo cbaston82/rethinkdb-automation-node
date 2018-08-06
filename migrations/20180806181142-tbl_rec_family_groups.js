@@ -2,19 +2,19 @@ const migrate = require('../migrate-table')
 const resolver = require('../helpers/resolver')
 
 // Get automation configurations for this file.
-const config = require('../configuration/automate-config').billingConfig
+const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
-const billing = require('../tables/billing.json')
+const clientinfo = require('../tables/clientinfo.json')
 
 // Initial state of seeder data.
 const seeder = []
 
 // create seed data.
-billing.tbl_medical_ins.types.forEach((type, i) => {
+clientinfo.tbl_rec_family_groups.types.forEach((type, i) => {
   seeder.push({
-    "ID": i + 1,
-    "INSURANCE_CARRIER": type
+    "NAME": type,
+    "ID": i + 1
   })
 })
 
@@ -23,7 +23,7 @@ const data = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],
-  "table": 'TBL_MEDICAL_INS'
+  "table": "TBL_REC_FAMILY_GROUPS"
 }
 
 module.exports.up = async function (r, connection) {

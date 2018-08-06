@@ -1,5 +1,5 @@
 const random = require('../../helpers/random')
-const clientinfo = require('../clientinfo/clientinfo')
+const clientinfo = require('../clientinfo')
 const surveys = require('./surveys')
 
 

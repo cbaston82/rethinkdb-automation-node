@@ -1,8 +1,8 @@
 const random = require('../../helpers/random')
 const faker = require('faker')
-const clientinfo = require('../clientinfo/clientinfo')
+const clientinfo = require('../clientinfo')
 const coaching = require('../coaching/coaching')
-const billing = require('../billing/billing')
+const billing = require('../billing')
 const programs = require('./programs')
 
 // Seed data.

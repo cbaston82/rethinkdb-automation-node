@@ -1,6 +1,6 @@
 const r = require('rethinkdb')
 const moment = require('moment')
-const clientinfo = require('../../tables/clientinfo/clientinfo')
+const clientinfo = require('../../tables/clientinfo')
 
 /**
  * Return date in ISO Format.

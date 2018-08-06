@@ -1,7 +1,0 @@
-{
-  "host": "localhost",
-  "port": 28015,
-  "db": "ayy",
-  "discovery": true,
-  "timeout": 60
-}

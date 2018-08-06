@@ -1,5 +1,5 @@
 const random = require('../../helpers/random')
-const clientinfo = require('./clientinfo')
+const clientinfo = require('../clientinfo')
 const demographics = require('../demographics/demographics')
 
 // Seed data.
