@@ -17,6 +17,7 @@
     "install": "^0.11.0",
     "moment": "^2.22.1",
     "npm": "^6.0.0",
+    "ora": "^3.0.0",
     "rethinkdb": "^2.3.3",
     "rethinkdb-createtables": "^1.0.1",
     "rethinkdb-migrate": "^1.3.0",

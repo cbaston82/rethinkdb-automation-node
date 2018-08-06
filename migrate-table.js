@@ -1,11 +1,4 @@
-/**
- * Migrate table up. Add to DB.
- * @param r
- * @param connection
- * @param data
- * @returns {*}
- */
-
+const ora = require('ora')
 const resolver = require('./helpers/resolver')
 
 async function up (r, connection, data) {
