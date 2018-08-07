@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "up": "rethinkdb-migrate up --all --db=ayy -f config.js",
-    "down": "rethinkdb-migrate down --all --db=ayy -f config.js"
+    "down": "rethinkdb-migrate down --all --db=ayy -f config.js",
+    "drop": "node dropdb.js"
   },
   "author": "",
   "license": "ISC",
