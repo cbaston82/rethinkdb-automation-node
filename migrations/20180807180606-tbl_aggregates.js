@@ -8,7 +8,7 @@ const config = require('../configuration/automate-config').surveysConfig
 
 // Get any data needed for use in seeder.
 const clientinfo = require('../tables/clientinfo.json')
-const demographics = require('../tables/demographics/demographics.json')
+const demographics = require('../tables/demographics.json')
 const surveys = require('../tables/surveys.json')
 
 // Initial state of seeder data.

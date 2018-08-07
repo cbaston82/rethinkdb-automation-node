@@ -8,7 +8,7 @@ const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
 const clientinfo = require('../tables/clientinfo.json')
-const demographics = require('../tables/demographics/demographics.json')
+const demographics = require('../tables/demographics.json')
 const medical = require('../tables/medical.json')
 
 // Initial state of seeder data.
