@@ -24,7 +24,7 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 }
 
 // Data to be seeded to db.
-module.exports = {
+const data = {
   "seeder": seeder,
   "indexes": ['ID'],
   "compoundIndexes": [],

@@ -24,11 +24,11 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   TE_DATE.setDate(TE_DATE.getDate() + 7)
 
   seeder.push({
-    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
-    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_ADD),
+    "DATE_ADD": random.date(DATE_ADD),
+    "DATE_UPD": random.date(DATE_ADD),
     "RECOVEREE_ID": i,
     "TERecID": i,
-    "TE_DATE": random.isoDateFormatTimeCreate(TE_DATE),
+    "TE_DATE": random.date(TE_DATE),
     "TE_LOCATION": random.number(programs.tbl_rcc.types.length),
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName(),

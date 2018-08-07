@@ -1,5 +1,5 @@
 const faker = require('faker')
-const surveys = require('./surveys')
+const surveys = require('../surveys')
 
 // Seed data.
 const seeder = []

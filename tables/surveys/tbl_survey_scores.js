@@ -1,6 +1,6 @@
 const random = require('../../helpers/random/index')
 const clientinfo = require('../clientinfo')
-const surveys = require('./surveys')
+const surveys = require('../surveys')
 
 // Seed data.
 const seeder = []

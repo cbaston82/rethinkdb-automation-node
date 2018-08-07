@@ -1,4 +1,4 @@
-const surveys = require('./surveys')
+const surveys = require('../surveys')
 
 const seeder = []
 

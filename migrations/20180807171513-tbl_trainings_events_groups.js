@@ -13,7 +13,7 @@ const seeder = []
 // create seed data.
 training.tbl_trainings_events_groups.types.forEach((type, i) => {
   seeder.push({
-    "id": i + 1,
+    "ID": i + 1,
     "trainings_events_group": type
   })
 })
@@ -21,8 +21,8 @@ training.tbl_trainings_events_groups.types.forEach((type, i) => {
 // Data to be seeded to db.
 const data = {
   "seeder": seeder,
-  "indexes": ['id'],
-  "compoundindexes": [],
+  "indexes": ['ID'],
+  "compoundIndexes": [],
   "table": "tbl_trainings_events_groups"
 }
 
