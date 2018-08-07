@@ -1,5 +1,5 @@
 const random = require('../../helpers/random')
-const programs = require('../program/programs')
+const programs = require('../programs')
 
 // Seed data.
 const seeder = []
