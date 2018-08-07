@@ -1,10 +1,16 @@
-const random = require('../../helpers/random/index')
-const clientinfo = require('../clientinfo')
-const surveys = require('../surveys')
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
+const random = require('../helpers/random/index')
 
-// Seed data.
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').surveysConfig
+
+// Get any data needed for use in seeder.
+const surveys = require('../tables/surveys.json')
+const clientinfo = require('../tables/clientinfo.json')
+
+// Initial state of seeder data.
 const seeder = []
-const questions = [2, 3, 4]
 
 // #1 Only create survey scores for current recoverees.
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
@@ -38,17 +44,32 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
 }
 
-module.exports = {
+// Data to be seeded to db.
+const data = {
   "seeder": seeder,
   "indexes": ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
   "compoundIndexes": [{
-      "name": "rec_srv",
-      "indexes": ['RECOVEREE_ID', 'SURVEY']
-    },
+    "name": "rec_srv",
+    "indexes": ['RECOVEREE_ID', 'SURVEY']
+  },
     {
       "name": "rec_srv_qst",
       "indexes": ['RECOVEREE_ID', 'SURVEY', 'QUESTION_NBR']
     }
   ],
   "table": "TBL_SURVEY_SCORES"
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }

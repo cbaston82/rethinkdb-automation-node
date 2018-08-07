@@ -1,10 +1,17 @@
-const random = require('../../helpers/random')
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
 const faker = require('faker')
-const clientinfo = require('../clientinfo')
-const surveys = require('../surveys')
-const demographics = require('../demographics/demographics')
+const random = require('../helpers/random/index')
 
-// Seed data.
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').surveysConfig
+
+// Get any data needed for use in seeder.
+const clientinfo = require('../tables/clientinfo.json')
+const demographics = require('../tables/demographics/demographics.json')
+const surveys = require('../tables/surveys.json')
+
+// Initial state of seeder data.
 const seeder = []
 
 // Question: Not sure if the logic is correct for generting aggregates.
@@ -45,11 +52,24 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
 }
 
-
-
-module.exports = {
+// Data to be seeded to db.
+const data = {
   "seeder": seeder,
   "indexes": ['DOMAIN', 'SURVEY'],
   "compoundIndexes": [],
   "table": "TBL_AGGREGATES"
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }
