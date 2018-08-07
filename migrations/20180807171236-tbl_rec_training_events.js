@@ -1,9 +1,16 @@
-const random = require('../../helpers/random')
+const migrate = require('../migrate-table')
+const resolver = require('../helpers/resolver')
 const faker = require('faker')
-const clientinfo = require('../clientinfo')
-const programs = require('../programs')
+const random = require('../helpers/random/index')
 
-// Seed data.
+// Get automation configurations for this file.
+const config = require('../configuration/automate-config').trainingConfig
+
+// Get any data needed for use in seeder.
+const clientinfo = require('../tables/clientinfo.json')
+const programs = require('../tables/programs.json')
+
+// Initial state of seeder data.
 const seeder = []
 
 // create seed data.
@@ -29,7 +36,8 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   })
 }
 
-module.exports = {
+// Data to be seeded to db.
+const data = {
   "seeder": seeder,
   "indexes": ['RECOVEREE_ID', 'TE_DATE', 'TE_LOCATION', 'TERecID'],
   "compoundIndexes": [{
@@ -37,4 +45,18 @@ module.exports = {
     "indexes": ['TERecID', 'DATE_ADD']
   }],
   "table": "TBL_REC_TRAININGS_EVENTS"
+}
+
+module.exports.up = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.up(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
+}
+
+module.exports.down = async function (r, connection) {
+  if (config.automate && !config.exclude.includes(data.table)) {
+    const promiseThing = await migrate.down(r, connection, data)
+    resolver.resolveIt(promiseThing)
+  }
 }

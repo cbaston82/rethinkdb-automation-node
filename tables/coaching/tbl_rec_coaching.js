@@ -3,7 +3,7 @@ const faker = require('faker')
 const clientinfo = require('../clientinfo')
 const programs = require('../programs')
 const coaching = require('./coaching')
-const training = require('../training/training')
+const training = require('../training')
 
 // Seed data.
 const seeder = []
