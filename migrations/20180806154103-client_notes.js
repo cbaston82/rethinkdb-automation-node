@@ -7,7 +7,7 @@ const random = require('../helpers/random/index')
 const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
-const clientinfo = require('../tables/clientinfo')
+const clientinfo = require('../data/clientinfo')
 
 // Initial state of seeder data.
 const seeder = []

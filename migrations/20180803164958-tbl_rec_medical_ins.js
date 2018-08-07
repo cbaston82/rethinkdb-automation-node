@@ -7,8 +7,8 @@ const random = require('../helpers/random/index')
 const config = require('../configuration/automate-config').billingConfig
 
 // Get any data needed for use in seeder.
-const billing = require('../tables/billing.json')
-const clientinfo = require('../tables/clientinfo.json')
+const billing = require('../data/billing.json')
+const clientinfo = require('../data/clientinfo.json')
 
 // Initial state of seeder data.
 const seeder = []

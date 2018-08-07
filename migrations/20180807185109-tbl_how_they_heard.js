@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').demographicsConfig
 
 // Get any data needed for use in seeder.
-const demographics = require('../tables/demographics.json')
+const demographics = require('../data/demographics.json')
 
 // Initial state of seeder data.
 const seeder = []

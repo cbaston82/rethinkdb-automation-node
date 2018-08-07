@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').employmentConfig
 
 // Get any data needed for use in seeder.
-const employment = require('../tables/employment.json')
+const employment = require('../data/employment.json')
 
 // Initial state of seeder data.
 const seeder = []

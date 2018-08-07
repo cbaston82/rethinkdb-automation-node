@@ -6,7 +6,7 @@ const faker = require('faker')
 const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
-const clientinfo = require('../tables/clientinfo.json')
+const clientinfo = require('../data/clientinfo.json')
 
 // Seed data.
 const seeder = []

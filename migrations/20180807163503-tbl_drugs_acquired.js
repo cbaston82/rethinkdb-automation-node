@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').medicalConfig
 
 // Get any data needed for use in seeder.
-const medical = require('../tables/medical.json')
+const medical = require('../data/medical.json')
 
 // Initial state of seeder data.
 const seeder = []

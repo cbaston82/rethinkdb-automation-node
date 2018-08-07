@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').billingConfig
 
 // Get any data needed for use in seeder.
-const billing = require('../tables/billing.json')
+const billing = require('../data/billing.json')
 
 // Initial state of seeder data.
 const seeder = []

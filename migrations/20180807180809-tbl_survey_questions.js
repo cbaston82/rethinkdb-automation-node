@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').surveysConfig
 
 // Get any data needed for use in seeder.
-const surveys = require('../tables/surveys.json')
+const surveys = require('../data/surveys.json')
 
 // Initial state of seeder data.
 const seeder = []

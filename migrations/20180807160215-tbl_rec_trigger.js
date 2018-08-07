@@ -7,8 +7,8 @@ const random = require('../helpers/random/index')
 const config = require('../configuration/automate-config').ffrConfig
 
 // Get any data needed for use in seeder.
-const ffr = require('../tables/ffr.json')
-const clientinfo = require('../tables/clientinfo.json')
+const ffr = require('../data/ffr.json')
+const clientinfo = require('../data/clientinfo.json')
 
 // Initial state of seeder data.
 const seeder = []

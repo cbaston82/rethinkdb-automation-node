@@ -7,8 +7,8 @@ const random = require('../helpers/random/index')
 const config = require('../configuration/automate-config').trainingConfig
 
 // Get any data needed for use in seeder.
-const training = require('../tables/training.json')
-const clientinfo = require('../tables/clientinfo.json')
+const training = require('../data/training.json')
+const clientinfo = require('../data/clientinfo.json')
 
 // Initial state of seeder data.
 const seeder = []

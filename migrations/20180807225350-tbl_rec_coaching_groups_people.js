@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').coachingConfig
 
 // Get any data needed for use in seeder.
-// const coaching = require('../tables/coaching.json')
+// const coaching = require('../data/coaching.json')
 
 // Initial state of seeder data.
 const seeder = []

@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').programConfig
 
 // Get any data needed for use in seeder.
-const programs = require('../tables/programs.json')
+const programs = require('../data/programs.json')
 
 // Initial state of seeder data.
 const seeder = []

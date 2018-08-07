@@ -5,7 +5,7 @@ const resolver = require('../helpers/resolver')
 const config = require('../configuration/automate-config').contactsConfig
 
 // Get any data needed for use in seeder.
-const contacts = require('../tables/contacts.json')
+const contacts = require('../data/contacts.json')
 
 // Initial state of seeder data.
 const seeder = []
