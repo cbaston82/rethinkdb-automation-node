@@ -72,7 +72,8 @@
     ]
   },
   "tbl_coaching_status": {
-    "types": [{
+    "types": [
+      {
         "DESC": "Status 1: New to Peer Recovery Coaching during the reporting period",
         "DESC_SHORT": "New to Coaching in Rpt Period"
       },
@@ -147,7 +148,8 @@
     ]
   },
   "tbl_wellness_survey_responses": {
-    "types": [{
+    "types": [
+      {
         "DESCRIPTION": "Never",
         "VISUAL": "|||||"
       },

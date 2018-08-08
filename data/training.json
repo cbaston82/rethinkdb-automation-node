@@ -8,14 +8,7 @@
   "tbl_training_event_locations": {
     "types": [
       "Communities For Recovery",
-      "Austin Recovery",
-      "Trinity Center",
-      "Texas Star Recovery",
-      "Austin State Hospital - CAP",
-      "Austin State Hospital - Adult",
-      "Seton Shoal Creek",
       "Community Drug Court",
-      "Travis County Drug Court - The Short Program",
       "Family Drug Court"
     ]
   }

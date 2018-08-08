@@ -1,15 +1,28 @@
 {
   "tbl_checkup_referral_source": {
-    "types": ["self", "Mother", "Father", "Sister", "Friend"]
+    "types": [
+      "self",
+      "Mother",
+      "Father",
+      "Sister",
+      "Friend"
+    ]
   },
   "tbl_call_times": {
-    "types": ["AM", "8am - 10am", "10am - 12pm", "Afternoon", "PM"]
+    "types": [
+      "AM",
+      "8am - 10am",
+      "10am - 12pm",
+      "Afternoon",
+      "PM"
+    ]
   },
   "tbl_cell_provider": {
-    "types": [{
-      "CELLULAR_PROVIDER": "AT&T",
-      "EMAIL_TEXT_SUFFIX": "@txt.att.net"
-    },
+    "types": [
+      {
+        "CELLULAR_PROVIDER": "AT&T",
+        "EMAIL_TEXT_SUFFIX": "@txt.att.net"
+      },
       {
         "CELLULAR_PROVIDER": "Verizon",
         "EMAIL_TEXT_SUFFIX": "@vtext.com"
@@ -41,10 +54,11 @@
     ]
   },
   "tbl_checkup_discharge_reasons": {
-    "types": [{
-      "ATTEMPTS": 10,
-      "DISCHARGE_REASON": "D10"
-    },
+    "types": [
+      {
+        "ATTEMPTS": 10,
+        "DISCHARGE_REASON": "D10"
+      },
       {
         "ATTEMPTS": 15,
         "DISCHARGE_REASON": "LOST CONTACT"
@@ -52,9 +66,17 @@
     ]
   },
   "tbl_checkup_services": {
-    "types": ["Text", "Phone", "email"]
+    "types": [
+      "Text",
+      "Phone",
+      "email"
+    ]
   },
   "tbl_phone_types": {
-    "types": ["Mobile", "Home", "Office"]
+    "types": [
+      "Mobile",
+      "Home",
+      "Office"
+    ]
   }
 }

@@ -6,11 +6,12 @@
     "total": 6
   },
   "tbl_clean_time_ranges": {
-    "types": [{
-      "DESC": "01. <= 6 Months",
-      "LOW_NBR_OFDAYS": 0,
-      "HIGH_NBR_OFDAYS": 180
-    },
+    "types": [
+      {
+        "DESC": "01. <= 6 Months",
+        "LOW_NBR_OFDAYS": 0,
+        "HIGH_NBR_OFDAYS": 180
+      },
       {
         "DESC": "02. >6 and <= 12 Months",
         "LOW_NBR_OFDAYS": 181,
