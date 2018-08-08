@@ -45,22 +45,24 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 // Data to be seeded to db.
 const data = {
   "seeder": seeder,
-  "indexes": ['DATE_ADD', 'EFF_DATE', 'RECOVEREE_ID', 'RECOVEREE_INS'],
+  "indexes": ['date_add', 'eff_date', 'recoveree_id', 'recoveree_ins'],
   "compoundIndexes": [],
   "table": 'TBL_REC_MEDICAL_INS'
 }
 
-module.exports.up = async function (r, connection) {
+async function test (r, connection, data, direction) {
   if (config.automate && !config.exclude.includes(data.table)) {
-    const promiseThing = await migrate.up(r, connection, data)
+    const promiseThing = (direction === 'up')
+      ? await migrate.up(r, connection, data)
+      : await migrate.down(r, connection, data)
     resolver.resolveIt(promiseThing)
   }
 }
 
+module.exports.up = async function (r, connection) {
+  await test(r, connection, data, 'up')
+}
 
 module.exports.down = async function (r, connection) {
-  if (config.automate && !config.exclude.includes(data.table)) {
-    const promiseThing = await migrate.down(r, connection, data)
-    resolver.resolveIt(promiseThing)
-  }
+  await test(r, connection, data, 'down')
 }
