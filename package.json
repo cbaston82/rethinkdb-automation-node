@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "up": "rethinkdb-migrate up --all --db=ayy -f config.js",
-    "down": "rethinkdb-migrate down --all --db=ayy -f config.js",
-    "drop": "node dropdb.js"
+    "up": "rethinkdb-migrate up --all --db=ayy -f configuration/config.js",
+    "down": "rethinkdb-migrate down --all --db=ayy -f configuration/config.js",
+    "drop": "node helpers/dropdb.js"
   },
   "author": "",
   "license": "ISC",

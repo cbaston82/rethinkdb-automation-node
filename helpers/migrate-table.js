@@ -1,5 +1,4 @@
-const ora = require('ora')
-const resolver = require('./helpers/resolver')
+const resolver = require('./resolver')
 
 async function up (r, connection, data) {
   const query = await r.tableCreate(data.table)

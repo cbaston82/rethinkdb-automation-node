@@ -1,5 +1,4 @@
-const migrate = require('../migrate-table')
-const resolver = require('../helpers/resolver')
+const upDown = require('../helpers/updown')
 const faker = require('faker')
 const random = require('../helpers/random')
 
@@ -55,19 +54,10 @@ const data = {
   "table": "TBL_REC_FAMILY"
 }
 
-async function migrateNow (r, connection, data, direction) {
-  if (config.automate && !config.exclude.includes(data.table)) {
-    const promiseThing = (direction === 'up')
-      ? await migrate.up(r, connection, data)
-      : await migrate.down(r, connection, data)
-    resolver.resolveIt(promiseThing)
-  }
-}
-
 module.exports.up = async function (r, connection) {
-  await migrateNow(r, connection, data, 'up')
+  await upDown(r, connection, data, config, 'up')
 }
 
 module.exports.down = async function (r, connection) {
-  await migrateNow(r, connection, data, 'down')
+  await upDown(r, connection, data, config, 'down')
 }
