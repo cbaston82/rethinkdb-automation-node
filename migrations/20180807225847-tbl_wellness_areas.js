@@ -30,7 +30,7 @@ const data = {
 }
 
 
-async function test (r, connection, data, direction) {
+async function migrateNow (r, connection, data, direction) {
   if (config.automate && !config.exclude.includes(data.table)) {
     const promiseThing = (direction === 'up')
       ? await migrate.up(r, connection, data)
@@ -40,9 +40,9 @@ async function test (r, connection, data, direction) {
 }
 
 module.exports.up = async function (r, connection) {
-  await test(r, connection, data, 'up')
+  await migrateNow(r, connection, data, 'up')
 }
 
 module.exports.down = async function (r, connection) {
-  await test(r, connection, data, 'down')
+  await migrateNow(r, connection, data, 'down')
 }
