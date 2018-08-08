@@ -1,23 +1,50 @@
 {
   "tbl_rec_family_groups": {
-    "types": [ "Biological Mother", "Biological Father", "Biological Siblings"]
+    "types": [
+      "Biological Mother",
+      "Biological Father",
+      "Biological Siblings"
+    ]
   },
   "tbl_participation_influences": {
-    "types": [ "Religious or spiritual beliefs", "Cultural needs or concerns", "Sexual preferences or orientation", "Language"]
+    "types": [
+      "Religious or spiritual beliefs",
+      "Cultural needs or concerns",
+      "Sexual preferences or orientation",
+      "Language"
+    ]
   },
   "tbl_rec_family_groups_children": {
     "types": [
       {
         "group": 1,
-        "children": ["Grandmother", "Grandfather", "Mother", "Aunt", "Uncle"]
+        "children": [
+          "Grandmother",
+          "Grandfather",
+          "Mother",
+          "Aunt",
+          "Uncle"
+        ]
       },
       {
         "group": 2,
-        "children": ["Grandmother", "Grandfather", "Mother", "Aunt", "Uncle"]
+        "children": [
+          "Grandmother",
+          "Grandfather",
+          "Mother",
+          "Aunt",
+          "Uncle"
+        ]
       },
       {
         "group": 3,
-        "children": ["Bother #1", "Bother #2", "Sister #1", "Sister #2", "Other"]
+        "children": [
+          "Bother #1",
+          "Bother #2",
+          "Sister #1",
+          "Sister #2",
+          "Other"
+        ]
       }
     ]
   },

@@ -1,6 +1,7 @@
 {
   "tbl_survey_names": {
-    "types": [{
+    "types": [
+      {
         "ID": 1,
         "ABREV_NAME": null,
         "FREQUENCY": 30,
@@ -38,7 +39,8 @@
     ]
   },
   "tbl_domain_information": {
-    "types": [{
+    "types": [
+      {
         "DOMAIN": 1,
         "DOMAIN_FACETS_A": null,
         "DOMAIN_FACETS_B": null,
@@ -160,7 +162,8 @@
     ]
   },
   "tbl_recovery_capital_survey_responses": {
-    "types": [{
+    "types": [
+      {
         "DESCRIPTION": "Not at all true",
         "VISUAL": "|||||"
       },
@@ -183,7 +186,8 @@
     ]
   },
   "tbl_survey_questions": {
-    "types": [{
+    "types": [
+      {
         "DESCRIPTION": "Have you enough money to meet your needs?",
         "DESCRIPTION_SP": "¿Tiene suficiente dinero para cubrir sus necesidades?",
         "DOMAIN": 4,

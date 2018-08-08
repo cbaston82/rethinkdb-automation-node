@@ -1,19 +1,29 @@
 const r = require('rethinkdb')
+const config = require('../configuration/config.js')
+const resolver = require('./resolver')
+
+let connection = null
 
 // Simply drop the entire database.
-r.connect({
-  host: 'localhost',
-  port: 28015,
-  authKey: '',
-  db: 'ayy'
-
-}, function (err, conn) {
-  if (err) throw err
-  r.dbDrop('ayy').run(conn, (err, result) => {
-    if (err) throw err
-    console.log(result)
-    conn.close((err) => {
-      if (err) throw err
-    })
-  })
+const conn = r.connect({
+  host: config.servers.host,
+  port: config.servers.port,
+  db: config.db
 })
+
+conn
+  .then((conn) => {
+    connection = conn
+  })
+  .catch((reject) => {
+    console.log(reject)
+  })
+
+function doWork (conn) {
+  const query = r.dbDrop(config.db)
+    .run(conn)
+  resolver.resolveIt(query)
+  conn.close()
+}
+
+doWork(connection)
