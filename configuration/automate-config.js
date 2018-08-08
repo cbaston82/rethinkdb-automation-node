@@ -7,11 +7,11 @@ module.exports = {
   clientinfoConfig: {
     "directory": "./tables/clientinfo",
     "automate": true,
-    "exclude": ['tbl_participation_influences.js']
+    "exclude": []
   },
   coachingConfig: {
     "directory": "./tables/coaching",
-    "automate": false,
+    "automate": true,
     "exclude": []
   },
   contactsConfig: {
@@ -36,7 +36,7 @@ module.exports = {
   },
   medicalConfig: {
     "directory": "./tables/medical",
-    "automate": false,
+    "automate": true,
     "exclude": []
   },
   personConfig: {

@@ -31,11 +31,11 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   }
 
   seeder.push({
-    "ASSIGNED_DATE": random.isoDateFormatTimeCreate(DATE_ADD),
+    "ASSIGNED_DATE": random.date(DATE_ADD),
     "COACHED_BY": COACHED_BY,
-    "DATE_ADD": random.isoDateFormatTimeCreate(DATE_ADD),
-    "DATE_UPD": random.isoDateFormatTimeCreate(DATE_UPD),
-    "END_DATE": random.isoDateFormatTimeCreate(END_DATE),
+    "DATE_ADD": random.date(DATE_ADD),
+    "DATE_UPD": random.date(DATE_UPD),
+    "END_DATE": random.date(END_DATE),
     "RECOVEREE_ID": i,
     "USERNAME_ADD": faker.internet.userName(),
     "USERNAME_UPD": faker.internet.userName()
