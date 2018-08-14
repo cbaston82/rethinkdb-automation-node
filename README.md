@@ -16,7 +16,6 @@ The following packages are required to successfully automate and seed the databa
 ```json
 {
   "dependencies": {
-    "async":
     "faker": "^4.1.0",
     "moment": "^2.22.1",
     "npm": "^6.0.0",
