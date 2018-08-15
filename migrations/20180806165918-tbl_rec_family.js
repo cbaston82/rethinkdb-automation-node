@@ -15,7 +15,7 @@ const seeder = []
 // create seed data - total is set in tables-config.
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
-  let DATE_ADD = new Date();
+  let DATE_ADD = new Date()
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
 
   let DATE_UPD = new Date(DATE_ADD)
@@ -30,28 +30,28 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   let TOTAL_CHILDREN_INCUSTODY = TOTAL_CHILDREN - TOTAL_CHILDREN_CUSTOD
 
   seeder.push({
-    "DATE_ADD": random.date(DATE_ADD),
-    "DATE_UPD": random.date(DATE_UPD),
-    "EFF_DATE": random.date(DATE_UPD),
-    "END_DATE": random.date(END_DATE),
-    "RECOVEREE_FAMILY": random.number(demographics.tbl_family.types.length),
-    "RECOVEREE_ID": i,
-    "TOTAL_CHILDREN": TOTAL_CHILDREN,
-    "TOTAL_CHILDREN_CUSTOD": TOTAL_CHILDREN_CUSTOD,
-    "TOTAL_CHILDREN_NONCUSTOD": TOTAL_CHILDREN_INCUSTODY,
-    "MINOR_CHILDREN": random.number(TOTAL_CHILDREN),
-    "WELFARE_SERVICES": faker.random.boolean(),
-    "USERNAME_ADD": faker.internet.userName(),
-    "USERNAME_UPD": faker.internet.userName()
+    DATE_ADD: random.date(DATE_ADD),
+    DATE_UPD: random.date(DATE_UPD),
+    EFF_DATE: random.date(DATE_UPD),
+    END_DATE: random.date(END_DATE),
+    RECOVEREE_FAMILY: random.number(demographics.tbl_family.types.length),
+    RECOVEREE_ID: i,
+    TOTAL_CHILDREN: TOTAL_CHILDREN,
+    TOTAL_CHILDREN_CUSTOD: TOTAL_CHILDREN_CUSTOD,
+    TOTAL_CHILDREN_NONCUSTOD: TOTAL_CHILDREN_INCUSTODY,
+    MINOR_CHILDREN: random.number(TOTAL_CHILDREN),
+    WELFARE_SERVICES: faker.random.boolean(),
+    USERNAME_ADD: faker.internet.userName(),
+    USERNAME_UPD: faker.internet.userName()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['DATE_ADD', 'RECOVEREE_FAMILY', 'RECOVEREE_ID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_FAMILY"
+  seeder: seeder,
+  indexes: ['DATE_ADD', 'RECOVEREE_FAMILY', 'RECOVEREE_ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_FAMILY'
 }
 
 module.exports.up = async function (r, connection) {

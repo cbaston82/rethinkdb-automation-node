@@ -15,18 +15,18 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "Itemserviceid": i,
-    "fk_recoverycheckupid": i,
-    "fk_serviceid": random.number(contacts.tbl_checkup_services.types.length)
+    Itemserviceid: i,
+    fk_recoverycheckupid: i,
+    fk_serviceid: random.number(contacts.tbl_checkup_services.types.length)
   })
 }
 
 //Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['Itemserviceid', 'fk_recoverycheckupid', 'fk_serviceid'],
-  "compoundIndexes": [],
-  "table": "tbl_rec_recovery_checkup_services"
+  seeder: seeder,
+  indexes: ['Itemserviceid', 'fk_recoverycheckupid', 'fk_serviceid'],
+  compoundIndexes: [],
+  table: 'tbl_rec_recovery_checkup_services'
 }
 
 module.exports.up = async function (r, connection) {

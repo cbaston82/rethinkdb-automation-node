@@ -19,30 +19,30 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "DATE_ADD": random.date(),
-    "DATE_UPD": random.date(),
-    "RECOVEREE_ID": i,
-    "USERNAME_ADD": faker.internet.userName(),
-    "USERNAME_UPD": faker.internet.userName(),
-    "VOL_ACTIVITY": random.number(coaching.tbl_volunteer_activities.types.length),
-    "VOL_BILLTO": random.number(billing.tbl_billto.types.length),
-    "VOL_CATEGORY": random.number(coaching.tbl_volunteer_category.types.length),
-    "VOL_DATE": random.date(),
-    "VOL_HOURS": random.number(8),
-    "VOL_LOCATION": random.number(programs.tbl_rcc.types.length),
-    "VOL_MIN": random.number(59)
+    DATE_ADD: random.date(),
+    DATE_UPD: random.date(),
+    RECOVEREE_ID: i,
+    USERNAME_ADD: faker.internet.userName(),
+    USERNAME_UPD: faker.internet.userName(),
+    VOL_ACTIVITY: random.number(coaching.tbl_volunteer_activities.types.length),
+    VOL_BILLTO: random.number(billing.tbl_billto.types.length),
+    VOL_CATEGORY: random.number(coaching.tbl_volunteer_category.types.length),
+    VOL_DATE: random.date(),
+    VOL_HOURS: random.number(8),
+    VOL_LOCATION: random.number(programs.tbl_rcc.types.length),
+    VOL_MIN: random.number(59)
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVEREE_ID', 'VOL_DATE', 'VOL_LOCATION'],
-  "compoundIndexes": [{
-    "name": "VOL_info",
-    "indexes": ['VOL_DATE', 'VOL_LOCATION']
+  seeder: seeder,
+  indexes: ['RECOVEREE_ID', 'VOL_DATE', 'VOL_LOCATION'],
+  compoundIndexes: [{
+    name: 'VOL_info',
+    indexes: ['VOL_DATE', 'VOL_LOCATION']
   }],
-  "table": "TBL_REC_VOLUNTEER"
+  table: 'TBL_REC_VOLUNTEER'
 }
 
 module.exports.up = async function (r, connection) {

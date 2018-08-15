@@ -26,21 +26,21 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   attributesArray = Array.from(new Set(Attributes))
 
   seeder.push({
-    'Attributes': attributesArray,
-    'DATE_ADD': random.date(),
-    'DATE_UPD': random.date(),
-    'RCCID': 0, // Todo: Need to get program ID.
-    'RECOVEREE_ID': i,
-    'SERVICES_INITIATED': faker.random.words(5)
+    Attributes: attributesArray,
+    DATE_ADD: random.date(),
+    DATE_UPD: random.date(),
+    RCCID: 0, // Todo: Need to get program ID.
+    RECOVEREE_ID: i,
+    SERVICES_INITIATED: faker.random.words(5)
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  'seeder': seeder,
-  'indexes': ['Attributes', 'RCCID', 'RECOVEREE_ID'],
-  'compoundIndexes': [],
-  'table': 'tbl_Recoveree_Attributes'
+  seeder: seeder,
+  indexes: ['Attributes', 'RCCID', 'RECOVEREE_ID'],
+  compoundIndexes: [],
+  table: 'tbl_Recoveree_Attributes'
 }
 
 module.exports.up = async function (r, connection) {

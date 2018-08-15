@@ -19,10 +19,10 @@ for (let i = 1; i <= 0; i++) { // Set to seed 0 for now
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": [],
-  "compoundIndexes": [],
-  "table": "TBL_EVENTS"
+  seeder: seeder,
+  indexes: [],
+  compoundIndexes: [],
+  table: 'TBL_EVENTS'
 }
 
 module.exports.up = async function (r, connection) {

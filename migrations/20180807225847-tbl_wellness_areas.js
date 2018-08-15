@@ -13,21 +13,20 @@ const seeder = []
 coaching.tbl_wellness_areas.types.forEach((type, i) => {
 
   seeder.push({
-    "DROPDOWN_DISPLAY": `${i + 1}. ${type}`,
-    "ID": i + 1,
-    "WELLNESS_AREA": type,
-    "WELLNESS_AREA_NBR": i + 1
+    DROPDOWN_DISPLAY: `${i + 1}. ${type}`,
+    ID: i + 1,
+    WELLNESS_AREA: type,
+    WELLNESS_AREA_NBR: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID', 'WELLNESS_AREA_NBR'],
-  "compoundIndexes": [],
-  "table": "TBL_WELLNESS_AREAS"
+  seeder: seeder,
+  indexes: ['ID', 'WELLNESS_AREA_NBR'],
+  compoundIndexes: [],
+  table: 'TBL_WELLNESS_AREAS'
 }
-
 
 module.exports.up = async function (r, connection) {
   await upDown(r, connection, data, config, 'up')

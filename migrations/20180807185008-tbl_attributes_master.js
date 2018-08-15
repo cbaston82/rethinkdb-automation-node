@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 demographics.tbl_attributes_master.types.forEach((type, i) => {
   seeder.push({
-    "AttributeID": i + 1,
-    "AttributeName": type
+    AttributeID: i + 1,
+    AttributeName: type
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['AttributeID', 'ReportSelection'],
-  "compoundIndexes": [],
-  "table": "tbl_Attributes_master"
+  seeder: seeder,
+  indexes: ['AttributeID', 'ReportSelection'],
+  compoundIndexes: [],
+  table: 'tbl_Attributes_master'
 }
 
 module.exports.up = async function (r, connection) {

@@ -18,7 +18,7 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // some dates to make dates flow correctly.
-  let DATE_ADD = new Date();
+  let DATE_ADD = new Date()
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
 
   let DATE_UPD = new Date(DATE_ADD)
@@ -28,59 +28,59 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   NEXT_MTG_DATE.setDate(NEXT_MTG_DATE.getDate() + 7)
 
   // Added this to make sure a recoveree is not assigned to them self as a coach.
-  let COACHED_BY =  random.personType(2)
+  let COACHED_BY = random.personType(2)
   while (COACHED_BY === i) {
     COACHED_BY = random.personType(2)
   }
 
   seeder.push({
-    "ACTION_PLAN_RECOVEREE": "",
-    "ACTION_PLAN_STAFF": "",
-    "BILLABLE": random.number(),
-    "CHECK_IN": faker.lorem.words(3),
-    "COACHED_BY": COACHED_BY,
-    "COACHING_DATE": random.date(DATE_UPD),
-    "COACHING_LOCATION": random.number(programs.tbl_rcc.types.length),
-    "COACHING_MINUTES": random.number(programs.tbl_time_intervals.total),
-    "COACHING_NOTES": faker.lorem.sentences(3),
-    "COACHING_SESSION_TYPE": random.number(coaching.tbl_coaching_session_type.types.length),
-    "COMMUNITY_LOCATION": faker.lorem.words(3),
-    "CONNECTING": faker.lorem.words(4),
-    "CoachingRecID": i, // Question: is this incremental.
-    "DATE_ADD": random.date(DATE_ADD),
-    "DATE_UPD": random.date(DATE_UPD),
-    "DISCUSSION_ITEMS": faker.random.words(4),
-    "DOMAIN_GOAL": "",
-    "END_TIME": "12:00 PM",
-    "GOALS": faker.lorem.sentences(3),
-    "NEEDS_AND_CONCERNS": faker.lorem.sentences(2),
-    "NEXT_MTG_DATE": random.date(NEXT_MTG_DATE),
-    "NEXT_MTG_TIME": "8:00 AM",
-    "OTHER_DISCUSSION_ITEM": faker.lorem.words(4),
-    "RECOVEREE_ID": i,
-    "REC_COACHING_ACTIVITY": "",
-    "RNUM": i,
-    "SELF_CARE": "",
-    "SERVICE_LOCATION": random.number(training.tbl_training_event_locations.types.length),
-    "START_TIME": "11:00 AM",
-    "TBD": random.number(),
-    "USERNAME_ADD": faker.internet.userName(),
-    "USERNAME_UPD": faker.internet.userName()
+    ACTION_PLAN_RECOVEREE: '',
+    ACTION_PLAN_STAFF: '',
+    BILLABLE: random.number(),
+    CHECK_IN: faker.lorem.words(3),
+    COACHED_BY: COACHED_BY,
+    COACHING_DATE: random.date(DATE_UPD),
+    COACHING_LOCATION: random.number(programs.tbl_rcc.types.length),
+    COACHING_MINUTES: random.number(programs.tbl_time_intervals.total),
+    COACHING_NOTES: faker.lorem.sentences(3),
+    COACHING_SESSION_TYPE: random.number(coaching.tbl_coaching_session_type.types.length),
+    COMMUNITY_LOCATION: faker.lorem.words(3),
+    CONNECTING: faker.lorem.words(4),
+    CoachingRecID: i, // Question: is this incremental.
+    DATE_ADD: random.date(DATE_ADD),
+    DATE_UPD: random.date(DATE_UPD),
+    DISCUSSION_ITEMS: faker.random.words(4),
+    DOMAIN_GOAL: '',
+    END_TIME: '12:00 PM',
+    GOALS: faker.lorem.sentences(3),
+    NEEDS_AND_CONCERNS: faker.lorem.sentences(2),
+    NEXT_MTG_DATE: random.date(NEXT_MTG_DATE),
+    NEXT_MTG_TIME: '8:00 AM',
+    OTHER_DISCUSSION_ITEM: faker.lorem.words(4),
+    RECOVEREE_ID: i,
+    REC_COACHING_ACTIVITY: '',
+    RNUM: i,
+    SELF_CARE: '',
+    SERVICE_LOCATION: random.number(training.tbl_training_event_locations.types.length),
+    START_TIME: '11:00 AM',
+    TBD: random.number(),
+    USERNAME_ADD: faker.internet.userName(),
+    USERNAME_UPD: faker.internet.userName()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ["COACHED_BY", "COACHING_DATE", "COACHING_LOCATION", "RECOVEREE_ID", "RNUM"],
-  "compoundIndexes": [{
-    "name": "rec_coaching_info",
-    "indexes": [
-      "RECOVEREE_ID",
-      "RNUM"
+  seeder: seeder,
+  indexes: ['COACHED_BY', 'COACHING_DATE', 'COACHING_LOCATION', 'RECOVEREE_ID', 'RNUM'],
+  compoundIndexes: [{
+    name: 'rec_coaching_info',
+    indexes: [
+      'RECOVEREE_ID',
+      'RNUM'
     ]
   }],
-  "table": "TBL_REC_COACHING"
+  table: 'TBL_REC_COACHING'
 }
 
 module.exports.up = async function (r, connection) {

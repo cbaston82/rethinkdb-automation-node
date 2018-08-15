@@ -14,19 +14,19 @@ const seeder = []
 // Question: does this make sense. just creating a mapping for each survey name?.
 surveys.tbl_survey_names.types.forEach((type, i) => {
   seeder.push({
-    "ID": type.ID,
-    "MAP": faker.lorem.word(),
-    "NAME": type.ABREV_NAME,
-    "FULL": type.SURVEY_NAME
+    ID: type.ID,
+    MAP: faker.lorem.word(),
+    NAME: type.ABREV_NAME,
+    FULL: type.SURVEY_NAME
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": 'SURVEY_MAPPING'
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'SURVEY_MAPPING'
 }
 
 module.exports.up = async function (r, connection) {

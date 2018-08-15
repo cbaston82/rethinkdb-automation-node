@@ -12,19 +12,18 @@ const seeder = []
 // create seed data.
 demographics.tbl_ethnicity.types.forEach((type, i) => {
   seeder.push({
-    "ETHNICITY": type,
-    "ID": i + 1
+    ETHNICITY: type,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_ETHNICITY"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_ETHNICITY'
 }
-
 
 module.exports.up = async function (r, connection) {
   await upDown(r, connection, data, config, 'up')

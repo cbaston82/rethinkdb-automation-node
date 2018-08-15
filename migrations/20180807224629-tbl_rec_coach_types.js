@@ -14,18 +14,18 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "RecovereeAttributeID": i,
-    "fk_AttributeID": i, // Question: should this be incremental?.
-    "fk_RecovereeID": i
+    RecovereeAttributeID: i,
+    fk_AttributeID: i, // Question: should this be incremental?.
+    fk_RecovereeID: i
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RecovereeAttributeID', 'fk_RecovereeID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_COACH_TYPES"
+  seeder: seeder,
+  indexes: ['RecovereeAttributeID', 'fk_RecovereeID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_COACH_TYPES'
 }
 
 module.exports.up = async function (r, connection) {

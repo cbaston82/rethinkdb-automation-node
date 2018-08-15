@@ -18,10 +18,10 @@ const seeder = []
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": [],
-  "compoundIndexes": [],
-  "table": "TBL_REC_COACHING_GROUPS"
+  seeder: seeder,
+  indexes: [],
+  compoundIndexes: [],
+  table: 'TBL_REC_COACHING_GROUPS'
 }
 
 module.exports.up = async function (r, connection) {

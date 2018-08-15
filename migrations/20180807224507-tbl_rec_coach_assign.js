@@ -15,7 +15,7 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   // some dates to make dates flow correctly.
-  let DATE_ADD = new Date();
+  let DATE_ADD = new Date()
   DATE_ADD.setDate(DATE_ADD.getDate() - random.number(365))
 
   let DATE_UPD = new Date(DATE_ADD)
@@ -25,29 +25,29 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   END_DATE.setDate(END_DATE.getDate() + 7)
 
   // Added this to make sure a recoveree is not assigned to them self as a coach.
-  let COACHED_BY =  random.personType(2)
+  let COACHED_BY = random.personType(2)
   while (COACHED_BY === i) {
     COACHED_BY = random.personType(2)
   }
 
   seeder.push({
-    "ASSIGNED_DATE": random.date(DATE_ADD),
-    "COACHED_BY": COACHED_BY,
-    "DATE_ADD": random.date(DATE_ADD),
-    "DATE_UPD": random.date(DATE_UPD),
-    "END_DATE": random.date(END_DATE),
-    "RECOVEREE_ID": i,
-    "USERNAME_ADD": faker.internet.userName(),
-    "USERNAME_UPD": faker.internet.userName()
+    ASSIGNED_DATE: random.date(DATE_ADD),
+    COACHED_BY: COACHED_BY,
+    DATE_ADD: random.date(DATE_ADD),
+    DATE_UPD: random.date(DATE_UPD),
+    END_DATE: random.date(END_DATE),
+    RECOVEREE_ID: i,
+    USERNAME_ADD: faker.internet.userName(),
+    USERNAME_UPD: faker.internet.userName()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVEREE_ID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_COACH_ASSIGN"
+  seeder: seeder,
+  indexes: ['RECOVEREE_ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_COACH_ASSIGN'
 }
 
 module.exports.up = async function (r, connection) {

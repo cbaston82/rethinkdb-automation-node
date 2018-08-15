@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 contacts.tbl_call_times.types.forEach((type, i) => {
   seeder.push({
-    "CALL_TIMES": type,
-    "ID": i + 1,
+    CALL_TIMES: type,
+    ID: i + 1,
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_CALL_TIMES"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_CALL_TIMESi'
 }
 
 module.exports.up = async function (r, connection) {

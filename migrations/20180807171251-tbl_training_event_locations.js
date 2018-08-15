@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 training.tbl_training_event_locations.types.forEach((type, i) => {
   seeder.push({
-    "ID": i + 1,
-    "LOCATION": type
+    ID: i + 1,
+    LOCATION: type
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_TRAINING_EVENT_LOCATIONS"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_TRAINING_EVENT_LOCATIONS'
 }
 
 module.exports.up = async function (r, connection) {

@@ -12,16 +12,16 @@ const seeder = []
 // create seed data.
 system.tblrole.types.forEach((type, i) => {
   seeder.push({
-    "RoleID": i + 1,
-    "Rolename": type
+    RoleID: i + 1,
+    Rolename: type
   })
 })
 
 const data = {
-  "seeder": seeder,
-  "indexes": ['RoleID'],
-  "compoundIndexes": [],
-  "table": "tblRole"
+  seeder: seeder,
+  indexes: ['RoleID'],
+  compoundIndexes: [],
+  table: 'tblRole'
 }
 
 module.exports.up = async function (r, connection) {

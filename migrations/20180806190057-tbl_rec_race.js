@@ -13,15 +13,15 @@ const seeder = []
 for (let i = 1; i <= 0; i++) { // set to 0 for the moment.
 
   seeder.push({
-  // Todo: Figure out what data will be seeded.
+    // Todo: Figure out what data will be seeded.
   })
 }
 
 const data = {
-  "seeder": seeder,
-  "indexes": ['fk_RecovereeID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_RACE"
+  seeder: seeder,
+  indexes: ['fk_RecovereeID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_RACE'
 }
 
 module.exports.up = async function (r, connection) {

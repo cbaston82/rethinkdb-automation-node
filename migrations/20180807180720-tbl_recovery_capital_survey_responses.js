@@ -12,18 +12,18 @@ const seeder = []
 // create seed data.
 surveys.tbl_recovery_capital_survey_responses.types.forEach((type, i) => {
   seeder.push({
-    "DESCRIPTION": type.DESCRIPTION,
-    "ID": i + 1,
-    "VISUAL": type.VISUAL
+    DESCRIPTION: type.DESCRIPTION,
+    ID: i + 1,
+    VISUAL: type.VISUAL
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": [],
-  "compoundIndexes": [],
-  "table": "TBL_RECOVERY_CAPITAL_SURVEY_RESPONSES"
+  seeder: seeder,
+  indexes: [],
+  compoundIndexes: [],
+  table: 'TBL_RECOVERY_CAPITAL_SURVEY_RESPONSES'
 }
 
 module.exports.up = async function (r, connection) {

@@ -14,7 +14,7 @@ const seeder = []
 // create seed data.
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
-  let AS_OF = new Date();
+  let AS_OF = new Date()
   AS_OF.setDate(AS_OF.getDate() - random.number(365))
 
   let END_DATE = new Date(AS_OF)
@@ -37,10 +37,10 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVERY_ID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_RECOVERY_STATUS"
+  seeder: seeder,
+  indexes: ['RECOVERY_ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_RECOVERY_STATUS'
 }
 
 module.exports.up = async function (r, connection) {

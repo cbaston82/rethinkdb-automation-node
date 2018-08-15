@@ -14,17 +14,17 @@ for (let i = 1; i <= 6; i++) {
 
   // just creating time intervals by 5.
   seeder.push({
-    'ID': i,
-    'INTERVALS': i * 5,
+    ID: i,
+    INTERVALS: i * 5,
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  'seeder': seeder,
-  'indexes': ['ID'],
-  'compoundIndexes': [],
-  'table': 'TBL_TIME_INTERVALS'
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_TIME_INTERVALS'
 }
 
 module.exports.up = async function (r, connection) {

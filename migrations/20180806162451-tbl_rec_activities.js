@@ -19,10 +19,10 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": [],
-  "compoundIndexes": [],
-  "table": 'TBL_REC_ACTIVITIES'
+  seeder: seeder,
+  indexes: [],
+  compoundIndexes: [],
+  table: 'TBL_REC_ACTIVITIES'
 }
 
 module.exports.up = async function (r, connection) {

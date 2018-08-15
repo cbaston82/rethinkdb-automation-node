@@ -27,36 +27,33 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
         let randomNumber = random.number(5)
         seeder.push({
-          "ADJ_RESPONSE": randomNumber,
-          "QUESTION_NBR": question.QUESTION,
-          "RECOVEREE_ID": i,
-          "RESPONSE": randomNumber,
-          "SURVEY": survey.ID,
-          "SURVEY_DATE": randomDate
+          ADJ_RESPONSE: randomNumber,
+          QUESTION_NBR: question.QUESTION,
+          RECOVEREE_ID: i,
+          RESPONSE: randomNumber,
+          SURVEY: survey.ID,
+          SURVEY_DATE: randomDate
         })
 
       }
-
     })
-
   })
-
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
-  "compoundIndexes": [{
-    "name": "rec_srv",
-    "indexes": ['RECOVEREE_ID', 'SURVEY']
+  seeder: seeder,
+  indexes: ['RECOVEREE_ID', 'SURVEY', 'SURVEY_DATE'],
+  compoundIndexes: [{
+    name: 'rec_srv',
+    indexes: ['RECOVEREE_ID', 'SURVEY']
   },
     {
-      "name": "rec_srv_qst",
-      "indexes": ['RECOVEREE_ID', 'SURVEY', 'QUESTION_NBR']
+      name: 'rec_srv_qst',
+      indexes: ['RECOVEREE_ID', 'SURVEY', 'QUESTION_NBR']
     }
   ],
-  "table": "TBL_SURVEY_SCORES"
+  table: 'TBL_SURVEY_SCORES'
 }
 
 module.exports.up = async function (r, connection) {

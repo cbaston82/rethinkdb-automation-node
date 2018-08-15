@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 medical.tbl_drugs.types.forEach((type, i) => {
   seeder.push({
-    "DESC": type,
-    "ID": i + 1
+    DESC: type,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_DRUGS"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_DRUGS'
 }
 
 module.exports.up = async function (r, connection) {

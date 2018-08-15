@@ -14,18 +14,18 @@ const seeder = []
 // Looping through tlb_rcc to create unit conversion for each program.
 programs.tbl_rcc.types.forEach((type, i) => {
   seeder.push({
-    "ID": i + 1,
-    "MINUTES_PER_UNIT": random.number(59),
-    "PROGRAM": i + 1,
+    ID: i + 1,
+    MINUTES_PER_UNIT: random.number(59),
+    PROGRAM: i + 1,
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_COACHING_UNITS_CONVERSION"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_COACHING_UNITS_CONVERSION'
 }
 
 module.exports.up = async function (r, connection) {

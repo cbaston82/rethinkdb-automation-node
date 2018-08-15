@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 clientinfo.tbl_rec_family_groups.types.forEach((type, i) => {
   seeder.push({
-    "NAME": type,
-    "ID": i + 1
+    NAME: type,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_REC_FAMILY_GROUPS"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_FAMILY_GROUPS'
 }
 
 module.exports.up = async function (r, connection) {

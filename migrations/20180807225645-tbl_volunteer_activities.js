@@ -13,18 +13,18 @@ const seeder = []
 // create seed data.
 coaching.tbl_volunteer_activities.types.forEach((type, i) => {
   seeder.push({
-    "ACTIVITY": type,
-    "ID": i + 1,
-    "BILLABLE": faker.random.boolean()
+    ACTIVITY: type,
+    ID: i + 1,
+    BILLABLE: faker.random.boolean()
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_VOLUNTEER_ACTIVITIES"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_VOLUNTEER_ACTIVITIES'
 }
 
 module.exports.up = async function (r, connection) {

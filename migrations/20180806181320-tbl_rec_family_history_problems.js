@@ -14,18 +14,18 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "RECOVEREE_ID": i,
-    "ID": i,
-    "FAMILY": random.arrayOfNumbers(15)
+    RECOVEREE_ID: i,
+    ID: i,
+    FAMILY: random.arrayOfNumbers(15)
   })
 }
 
 // Data to be seeced to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": 'TBL_REC_FAMILY_HISTORY_PROBLEMS'
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_FAMILY_HISTORY_PROBLEMS'
 }
 
 module.exports.up = async function (r, connection) {

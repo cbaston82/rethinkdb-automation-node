@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 billing.tbl_billto.types.forEach((type, i) => {
   seeder.push({
-    'BILLTO_NAME': type,
-    'ID': i + 1
+    BILLTO_NAME: type,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  'seeder': seeder,
-  'indexes': ['ID', 'BILLTO_NAME'],
-  'compoundIndexes': [],
-  'table': 'TBL_BILLTO'
+  seeder: seeder,
+  indexes: ['ID', 'BILLTO_NAME'],
+  compoundIndexes: [],
+  table: 'TBL_BILLTO'
 }
 
 module.exports.up = async function (r, connection) {

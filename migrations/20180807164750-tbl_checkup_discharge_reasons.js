@@ -12,18 +12,18 @@ const seeder = []
 // create seed data.
 contacts.tbl_checkup_discharge_reasons.types.forEach((type, i) => {
   seeder.push({
-    "ATTEMPTS": type.ATTEMPTS,
-    "DISCHARGE_REASON": type.DISCHARGE_REASON,
-    "ID": i + 1
+    ATTEMPTS: type.ATTEMPTS,
+    DISCHARGE_REASON: type.DISCHARGE_REASON,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_CHECKUP_DISCHARGE_REASONS"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_CHECKUP_DISCHARGE_REASONS'
 }
 
 module.exports.up = async function (r, connection) {

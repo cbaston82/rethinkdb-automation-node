@@ -1,55 +1,55 @@
 module.exports = {
   billingConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   clientinfoConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   coachingConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   contactsConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   demographicsConfig: {
-  "automate": true,
-  "exclude": []
+   automate : true,
+   exclude : []
   },
   employmentConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   ffrConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   medicalConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   personConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   programConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   surveysConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   systemConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   },
   trainingConfig: {
-    "automate": true,
-    "exclude": []
+     automate : true,
+     exclude : []
   }
 }
 

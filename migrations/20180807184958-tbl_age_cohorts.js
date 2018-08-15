@@ -13,20 +13,20 @@ const seeder = []
 // create seed data.
 demographics.tbl_age_cohort.types.forEach((type, i) => {
   seeder.push({
-    "DESCRIPTION": type.DESCRIPTION,
-    "END_AGE": type.END_AGE,
-    "ID": i + 1,
-    "START_AGE": type.START_AGE,
-    "USERNAME": faker.internet.userName()
+    DESCRIPTION: type.DESCRIPTION,
+    END_AGE: type.END_AGE,
+    ID: i + 1,
+    START_AGE: type.START_AGE,
+    USERNAME: faker.internet.userName()
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID', 'START_AGE', 'END_AGE'],
-  "compoundIndexes": [],
-  "table": "TBL_AGE_COHORT"
+  seeder: seeder,
+  indexes: ['ID', 'START_AGE', 'END_AGE'],
+  compoundIndexes: [],
+  table: 'TBL_AGE_COHORT'
 }
 
 module.exports.up = async function (r, connection) {

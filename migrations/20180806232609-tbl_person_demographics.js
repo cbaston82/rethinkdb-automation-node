@@ -13,16 +13,16 @@ const seeder = []
 for (let i = 1; i <= 0; i++) {
 
   seeder.push({
-    "ID": i
+    ID: i
     // Todo: Figure out what data this will take.
   })
 }
 
 const data = {
-  "seeder": seeder,
-  "indexes": [],
-  "compoundIndexes": [],
-  "table": "TBL_PERSON_DEMOGRAPHICS"
+  seeder: seeder,
+  indexes: [],
+  compoundIndexes: [],
+  table: 'TBL_PERSON_DEMOGRAPHICS'
 }
 
 module.exports.up = async function (r, connection) {

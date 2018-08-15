@@ -15,24 +15,24 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "ANTECEDENTS":  faker.lorem.sentence(),
-    "BARRIERS":  faker.lorem.sentence(),
-    "CONTACT":  faker.name.firstName() + ' ' + faker.name.lastName(),
-    "DATE":  random.date(),
-    "RECOVEREE_ID": i,
-    "STEPS":  faker.lorem.sentence(),
-    "STRENGTHS":  faker.lorem.sentence(),
-    "SUPPORTS":  faker.lorem.sentence(),
-    "WARNING":  faker.lorem.sentence()
+    ANTECEDENTS: faker.lorem.sentence(),
+    BARRIERS: faker.lorem.sentence(),
+    CONTACT: faker.name.firstName() + ' ' + faker.name.lastName(),
+    DATE: random.date(),
+    RECOVEREE_ID: i,
+    STEPS: faker.lorem.sentence(),
+    STRENGTHS: faker.lorem.sentence(),
+    SUPPORTS: faker.lorem.sentence(),
+    WARNING: faker.lorem.sentence()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVEREE_ID', 'DATE'],
-  "compoundIndexes": [],
-  "table": 'TBL_REC_RELAPSE'
+  seeder: seeder,
+  indexes: ['RECOVEREE_ID', 'DATE'],
+  compoundIndexes: [],
+  table: 'TBL_REC_RELAPSE'
 }
 
 module.exports.up = async function (r, connection) {

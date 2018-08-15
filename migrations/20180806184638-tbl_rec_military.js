@@ -14,20 +14,20 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "RECOVEREE_ID": i,
-    "EVER_SERVED": faker.random.boolean(),
-    "VETERAN": faker.random.boolean(),
-    "VA_BENEFITS": faker.random.boolean(),
-    "VA_SERVICES": faker.random.boolean()
+    RECOVEREE_ID: i,
+    EVER_SERVED: faker.random.boolean(),
+    VETERAN: faker.random.boolean(),
+    VA_BENEFITS: faker.random.boolean(),
+    VA_SERVICES: faker.random.boolean()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['RECOVEREE_ID'],
-  "compoundIndexes": [],
-  "table": 'TBL_REC_MILITARY'
+  seeder: seeder,
+  indexes: ['RECOVEREE_ID'],
+  compoundIndexes: [],
+  table: 'TBL_REC_MILITARY'
 }
 
 module.exports.up = async function (r, connection) {

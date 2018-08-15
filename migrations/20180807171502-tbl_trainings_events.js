@@ -16,19 +16,19 @@ const seeder = []
 for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
-    "ID": i,
-    "GROUP": random.number(training.tbl_trainings_events_groups.types.length),
-    "IS_THIS_A_TRAINING": 0, // Question: All set to 0 by default in db.
-    "TRAININGS_EVENTS_NAME": faker.random.word()
+    ID: i,
+    GROUP: random.number(training.tbl_trainings_events_groups.types.length),
+    IS_THIS_A_TRAINING: 0, // Question: All set to 0 by default in db.
+    TRAININGS_EVENTS_NAME: faker.random.word()
   })
 }
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID', 'GROUP', 'TRAININGS_EVENTS_NAME'],
-  "compoundIndexes": [],
-  "table": "TBL_TRAININGS_EVENTS"
+  seeder: seeder,
+  indexes: ['ID', 'GROUP', 'TRAININGS_EVENTS_NAME'],
+  compoundIndexes: [],
+  table: 'TBL_TRAININGS_EVENTS'
 }
 
 module.exports.up = async function (r, connection) {

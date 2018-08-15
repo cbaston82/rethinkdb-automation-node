@@ -12,21 +12,21 @@ const seeder = []
 // create seed data.
 surveys.tbl_survey_questions.types.forEach((type, i) => {
   seeder.push({
-    "DESCRIPTION": type.DESCRIPTION,
-    "DESCRIPTION_SP": type.DESCRIPTION_SP,
-    "DOMAIN": type.DOMAIN,
-    "GROUP": type.GROUP,
-    "QUESTION": type.QUESTION,
-    "SURVEY": type.SURVEY
+    DESCRIPTION: type.DESCRIPTION,
+    DESCRIPTION_SP: type.DESCRIPTION_SP,
+    DOMAIN: type.DOMAIN,
+    GROUP: type.GROUP,
+    QUESTION: type.QUESTION,
+    SURVEY: type.SURVEY
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['QUESTION', 'SURVEY'],
-  "compoundIndexes": [],
-  "table": "TBL_SURVEY_QUESTIONS"
+  seeder: seeder,
+  indexes: ['QUESTION', 'SURVEY'],
+  compoundIndexes: [],
+  table: 'TBL_SURVEY_QUESTIONS'
 }
 
 module.exports.up = async function (r, connection) {

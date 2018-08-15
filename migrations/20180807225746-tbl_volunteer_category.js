@@ -12,17 +12,17 @@ const seeder = []
 // create seed data.
 coaching.tbl_volunteer_category.types.forEach((type, i) => {
   seeder.push({
-    "CATEGORY": type,
-    "ID": i + 1
+    CATEGORY: type,
+    ID: i + 1
   })
 })
 
 // Data to be seeded to db.
 const data = {
-  "seeder": seeder,
-  "indexes": ['ID'],
-  "compoundIndexes": [],
-  "table": "TBL_VOLUNTEER_CATEGORY"
+  seeder: seeder,
+  indexes: ['ID'],
+  compoundIndexes: [],
+  table: 'TBL_VOLUNTEER_CATEGORY'
 }
 
 module.exports.up = async function (r, connection) {
