@@ -26,7 +26,7 @@ The following packages are required to successfully automate and seed the databa
   }
 }
 ```
-You can install all packages with Yarn or NPM
+You can install all packages with Yarn or NPM.
 ``` sh
 # install using npm
 npm install
