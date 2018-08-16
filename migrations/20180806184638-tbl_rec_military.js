@@ -18,7 +18,10 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     EVER_SERVED: faker.random.boolean(),
     VETERAN: faker.random.boolean(),
     VA_BENEFITS: faker.random.boolean(),
-    VA_SERVICES: faker.random.boolean()
+    VA_SERVICES: faker.random.boolean(),
+    MILITARY_STATUS: faker.lorem.word(),
+    MILITARY_BRANCH: faker.lorem.word(),
+    MILITARY_DISCHARGE_STATUS: faker.lorem.word()
   })
 }
 

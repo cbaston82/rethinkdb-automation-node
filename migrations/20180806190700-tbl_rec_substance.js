@@ -27,12 +27,23 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     TOBACCO_NICOTINE: faker.random.boolean(),
     TOBACCO_NICOTINE_INFORMATION: faker.random.boolean(),
     SUBSTANCE_DISORDER_TREATMENT: faker.random.boolean(),
+    SUBSTANCE_DISORDER_TREATMENT_EXPLANATION: faker.random.boolean(),
     SUBSTANCE_DISORDER_TREATMENT_DETOX: random.number(5),
     EVER_ABSTINENT: faker.random.boolean(),
     EVER_ABSTINENT_LONGEST_TIME: faker.random.words(),
     DRUGS_ACQUIRED: random.arrayOfNumbers(medical.tbl_drugs_acquired.types.length),
     ATTENDED_SUPPORT: faker.random.boolean(),
-    ATTENDING_SUPPORT: faker.random.boolean()
+    ATTENDING_SUPPORT: faker.random.boolean(),
+    SUBSTANCE_ABUSE_PROBLEMS: faker.random.boolean(),
+    SUBSTANCE_ABUSE_PROBLEMS_SERVICES: faker.random.boolean(),
+    LONG_TERM_SUBSTANCE_PROBLEMS: faker.random.boolean(),
+    LONGEST_ABSTINENCE_PERIOD: faker.lorem.words(),
+    LONGEST_RECOVERY_PERIOD: faker.lorem.words(),
+    CURRENTLY_IN_OR_SEEKING_RECOVERY:  faker.random.boolean(),
+    IN_RECOVERY_MEETINGS: faker.random.boolean(),
+    IN_RECOVERY_MEETINGS_FREQUENCY: faker.lorem.words(),
+    IN_RECOVERY_MEETINGS_LAST_MEETING: faker.lorem.words(),
+    WANT_MORE_INFO: faker.random.boolean()
   })
 }
 

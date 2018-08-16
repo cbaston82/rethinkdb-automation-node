@@ -80,7 +80,11 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     USERNAME_ADD: faker.internet.userName(),
     USERNAME_UPD: faker.internet.userName(),
     archived: false,
-    id: id
+    id: id,
+    BEING_HERE: faker.lorem.words(),
+    MAIN_GOAL: faker.lorem.words(),
+    INTERESTS: faker.lorem.words(),
+    ID_FORMS: random.arrayOfNumbers(3)
   })
 }
 

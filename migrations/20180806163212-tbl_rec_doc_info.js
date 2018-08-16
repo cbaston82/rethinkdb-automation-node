@@ -45,7 +45,8 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     VAGRANCY: random.number(),
     CHARGES_PENDING: random.number(),
     CHARGES_PENDING_EXPLANATION: faker.lorem.sentence(),
-    CRIMES_LIST: faker.lorem.sentence()
+    CRIMES_LIST: faker.lorem.sentence(),
+    DESCRIPTION: faker.lorem.sentence()
   })
 }
 

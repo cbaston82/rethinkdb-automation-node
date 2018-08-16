@@ -42,7 +42,10 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     MINOR_CHILDREN: random.number(TOTAL_CHILDREN),
     WELFARE_SERVICES: faker.random.boolean(),
     USERNAME_ADD: faker.internet.userName(),
-    USERNAME_UPD: faker.internet.userName()
+    USERNAME_UPD: faker.internet.userName(),
+    ANY_CHILDREN: faker.random.boolean(),
+    REASON_NONCUSTOD: faker.lorem.words(),
+    NEED_HELP: faker.random.boolean()
   })
 }
 

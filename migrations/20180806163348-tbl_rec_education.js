@@ -35,7 +35,9 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     RECOVEREE_EFF_DATE: random.date(),
     RECOVEREE_ID: i,
     USERNAME_ADD: faker.internet.userName(),
-    USERNAME_UPD: faker.internet.userName()
+    USERNAME_UPD: faker.internet.userName(),
+    SCHOOL_STATUS: faker.lorem.words(),
+    NAME_OF_SCHOOL: faker.lorem.words()
   })
 }
 
