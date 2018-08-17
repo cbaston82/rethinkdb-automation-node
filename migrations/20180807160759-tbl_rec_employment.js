@@ -39,7 +39,14 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     RECOVEREE_EMPLOYMENT: random.number(employment.tbl_employment.types.length),
     RECOVEREE_ID: i,
     USERNAME_ADD: faker.internet.userName(),
-    USERNAME_UPD: faker.internet.userName()
+    USERNAME_UPD: faker.internet.userName(),
+    DESCRIBE_UNEMPLOYMENT: faker.lorem.words(),
+    WANT_HELP: faker.random.boolean(),
+    WANT_HELP_TYPE: faker.lorem.word(),
+    INCOME_SOURCE: faker.lorem.word(),
+    NON_CASh_BENEFITS: faker.random.boolean(),
+    NON_CASH_BENEFITS_TYPE: faker.lorem.word()
+
   })
 }
 
