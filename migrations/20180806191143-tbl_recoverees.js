@@ -81,11 +81,11 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     USERNAME_UPD: faker.internet.userName(),
     archived: false,
     id: id,
-    BEING_HERE: faker.lorem.words(),
+    BEING_HERE: random.number(demographics.tbl_feeling_types.types.length),
     MAIN_GOAL: faker.lorem.words(),
     INTERESTS: faker.lorem.words(),
-    ID_FORMS: random.arrayOfNumbers(3),
-    RELIGION: faker.lorem.word(),
+    ID_FORMS: random.arrayOfNumbers(demographics.tbl_identification_types.types.length),
+    RELIGION: random.number(demographics.tbl_religion_types.types.length),
     OTHER: faker.lorem.words()
   })
 }
@@ -95,6 +95,7 @@ const data = {
   seeder: seeder,
   indexes: [
     'FIRST_DRUG',
+    'ALTERNATE_ID',
     'FirstDrugUsed',
     'NEWVISITOR',
     'RECOVEREE_BOARD',

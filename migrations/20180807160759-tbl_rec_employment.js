@@ -44,7 +44,7 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     WANT_HELP: faker.random.boolean(),
     WANT_HELP_TYPE: faker.lorem.word(),
     INCOME_SOURCE: faker.lorem.word(),
-    NON_CASh_BENEFITS: faker.random.boolean(),
+    NON_CASH_BENEFITS: faker.random.boolean(),
     NON_CASH_BENEFITS_TYPE: faker.lorem.word()
 
   })

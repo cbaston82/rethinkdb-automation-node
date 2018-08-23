@@ -61,18 +61,28 @@
   },
   "tbl_referral_source": {
     "types": [
+      "Court Corrections",
+      "Family",
+      "Friend",
+      "Child Welfare",
+      "School",
+      "Employer",
+      "Physician",
+      "Treatment Program",
+      "Recovery Support Services Provider",
+      "Church/Congregation",
       "Walk-In",
       "Austin Recovery Center",
-      "Courts",
       "Probation",
       "Community Service Program/Court",
-      "Treatment Program",
       "DCYF",
       "Self-Referred",
       "Member",
       "Other Human Service Provider",
-      "Family/Friends",
-      "Child Welfare"
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected",
+      "Oteher (Specify)"
     ]
   },
   "tbl_gender": {
@@ -80,6 +90,11 @@
       "Male",
       "Female",
       "Transgender",
+      "Transgender: Male to Female",
+      "Transgender: Female to Male",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected",
       "Other"
     ]
   },
@@ -127,7 +142,10 @@
       "Living as married",
       "Separated",
       "Divorced",
-      "Widowed"
+      "Widowed",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
     ]
   },
   "tbl_ethnicity": {
@@ -143,17 +161,67 @@
       "Unknown"
     ]
   },
+  "tbl_religion_types": {
+    "types": [
+      "Catholic",
+      "Christian",
+      "Jewish",
+      "Seven-Day Evangelist",
+      "Mormon",
+      "Jehovah's Witness",
+      "Paganism",
+      "Muslim",
+      "Buddhist",
+      "Spiritual",
+      "Agnostic",
+      "Atheist",
+      "None",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected",
+      "Other (specify):"
+    ]
+  },
+  "tbl_identification_types": {
+   "types": [
+     "Valid Nevada Driver's License",
+     "Valid Nevada ID",
+     "Social Security Card",
+     "Birth Certificate",
+     "Peer does not know",
+     "Peer refused",
+     "Data not collected"
+   ]
+  },
+  "tbl_feeling_types": {
+    "types": [
+      "Anxious",
+      "Angry",
+      "Uncertain",
+      "Hopeful",
+      "Excited",
+      "Resigned",
+      "Determined",
+      "Other",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
+    ]
+  },
   "tbl_race": {
     "types": [
       "Black/African American\"",
-      "White",
-      "Native Hawaiian or other Pacific Islander",
+      "White/Caucasian",
+      "Hawaiian/Pacific Islander",
       "Asian",
-      "American Indian",
-      "Hispanic or Latino",
+      "American Indian / Alaskan Native",
+      "Hispanic/Latino",
       "Other",
       "Refused to answer",
-      "Alaska Native"
+      "Alaska Native",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
     ]
   },
   "tbl_family": {
