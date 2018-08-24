@@ -8,6 +8,7 @@ const clientinfo = require('../data/clientinfo.json')
 
 // Initial state of seeder data.
 const seeder = []
+let ID = 1
 
 // create seed data.
 clientinfo.tbl_rec_family_groups_children.types.forEach((type, i) => {
@@ -15,8 +16,9 @@ clientinfo.tbl_rec_family_groups_children.types.forEach((type, i) => {
     seeder.push({
       GROUP_ID: type.group,
       NAME: child,
-      ID: i + 1
+      ID: ID
     })
+    ID++
   })
 })
 
