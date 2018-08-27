@@ -84,8 +84,6 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     BEING_HERE: random.number(demographics.tbl_feeling_types.types.length),
     MAIN_GOAL: faker.lorem.words(),
     INTERESTS: faker.lorem.words(),
-    ID_FORMS: random.arrayOfNumbers(demographics.tbl_identification_types.types.length),
-    RELIGION: random.number(demographics.tbl_religion_types.types.length),
     OTHER: faker.lorem.words()
   })
 }
