@@ -17,7 +17,7 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
   seeder.push({
     RECOVEREE_ID: i,
     ID: i,
-    IDENTIFICATIONS_TYPES: random.arrayOfNumbers(demographics.tbl_identification_types.types.length),
+    IDENTIFICATION_TYPES: random.arrayOfNumbers(demographics.tbl_identification_types.types.length),
   })
 }
 
