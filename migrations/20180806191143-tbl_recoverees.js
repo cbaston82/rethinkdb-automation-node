@@ -83,8 +83,7 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     id: id,
     BEING_HERE: random.number(demographics.tbl_feeling_types.types.length),
     MAIN_GOAL: faker.lorem.words(),
-    INTERESTS: faker.lorem.words(),
-    OTHER: faker.lorem.words()
+    INTERESTS: faker.lorem.words()
   })
 }
 
