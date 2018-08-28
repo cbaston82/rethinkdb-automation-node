@@ -1,11 +1,13 @@
 const upDown = require('../helpers/updown')
 const faker = require('faker')
+const random = require('../helpers/random')
 
 // Get automation configurations for this file.
 const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
 const clientinfo = require('../data/clientinfo.json')
+const demographics = require('../data/demographics.json')
 
 // Seed data.
 const seeder = []
@@ -20,8 +22,8 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     VA_BENEFITS: faker.random.boolean(),
     VA_SERVICES: faker.random.boolean(),
     MILITARY_STATUS: faker.lorem.word(),
-    MILITARY_BRANCH: faker.lorem.word(),
-    MILITARY_DISCHARGE_STATUS: faker.lorem.word()
+    MILITARY_BRANCH: random.number(demographics.tbl_military_branches.types.length),
+    MILITARY_DISCHARGE_STATUS: random.number(demographics.tbl_military_discharge_types.types.length)
   })
 }
 
