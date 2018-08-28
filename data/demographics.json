@@ -8,6 +8,32 @@
       "No Response"
     ]
   },
+  "tbl_military_branches": {
+    "types": [
+      "Army",
+      "Air force",
+      "National Guard",
+      "Navy",
+      "Marines",
+      "Coast Guard",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
+    ]
+  },
+  "tbl_military_discharge_types": {
+    "types": [
+      "Honorable",
+      "General Under Honorable",
+      "Other Than Honorable",
+      "Bad Conduct",
+      "Dishonorable",
+      "Uncharacterized",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
+    ]
+  },
   "tbl_referred_by": {
     "types": [
       "SAMHSA"
