@@ -7,7 +7,8 @@ const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
 const clientinfo = require('../data/clientinfo.json')
-const medical = require('../data/medical')
+const medical = require('../data/medical.json')
+const demographics = require('../data/demographics.json')
 
 // Initial state of seeder data.
 const seeder = []
@@ -27,14 +28,14 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     TOBACCO_NICOTINE: faker.random.boolean(),
     TOBACCO_NICOTINE_INFORMATION: faker.random.boolean(),
     SUBSTANCE_DISORDER_TREATMENT: faker.random.boolean(),
-    SUBSTANCE_DISORDER_TREATMENT_EXPLANATION: faker.random.boolean(),
+    SUBSTANCE_DISORDER_TREATMENT_EXPLANATION: faker.lorem.words(),
     SUBSTANCE_DISORDER_TREATMENT_DETOX: random.number(5),
     EVER_ABSTINENT: faker.random.boolean(),
     EVER_ABSTINENT_LONGEST_TIME: faker.random.words(),
     DRUGS_ACQUIRED: random.arrayOfNumbers(medical.tbl_drugs_acquired.types.length),
     ATTENDED_SUPPORT: faker.random.boolean(),
     ATTENDING_SUPPORT: faker.random.boolean(),
-    SUBSTANCE_ABUSE_PROBLEMS: faker.random.boolean(),
+    SUBSTANCE_ABUSE_PROBLEMS: random.number(demographics.tbl_substance_abuse_types.types.length),
     SUBSTANCE_ABUSE_PROBLEMS_SERVICES: faker.random.boolean(),
     LONG_TERM_SUBSTANCE_PROBLEMS: faker.random.boolean(),
     LONGEST_ABSTINENCE_PERIOD: faker.lorem.words(),

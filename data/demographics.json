@@ -8,6 +8,16 @@
       "No Response"
     ]
   },
+  "tbl_substance_abuse_types": {
+   "types": [
+     "Alcohol abuse",
+     "Drug abuse",
+     "Both alcohol and drug abuse",
+     "Peer does not know",
+     "Peer refused",
+     "Data not collected"
+   ]
+  },
   "tbl_military_branches": {
     "types": [
       "Army",
