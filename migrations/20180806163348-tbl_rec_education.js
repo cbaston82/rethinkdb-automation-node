@@ -27,7 +27,7 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
 
   seeder.push({
     AS_OF: random.date(AS_OF),
-    COLLEGE: Math.floor(Math.random()),
+    COLLEGE: faker.lorem.word(),
     DATE_ADD: random.date(AS_OF),
     DATE_UPD: random.date(DATE_UPD),
     END_DATE: random.date(END_DATE),
@@ -36,7 +36,6 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     RECOVEREE_ID: i,
     USERNAME_ADD: faker.internet.userName(),
     USERNAME_UPD: faker.internet.userName(),
-    SCHOOL_STATUS: faker.lorem.words(),
     NAME_OF_SCHOOL: faker.lorem.words()
   })
 }
