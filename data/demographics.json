@@ -8,6 +8,56 @@
       "No Response"
     ]
   },
+  "tbl_unemployment_help_types": {
+   "types": [
+     "Vocational Assessment",
+     "Help finding a job/or maintaining employment was fired",
+     "Employment barriers related to a felony conviction",
+     "Developing a resume",
+     "Arranging jobinterviews",
+     "Interviewing skills",
+     "Disability evaluation",
+     "Disability-work rehabilitation"
+   ]
+  },
+  "tbl_unemployment_types": {
+   "types": [
+     "I was laid off",
+     "I was fired",
+     "I quit my job",
+     "I have been out of work for 3 - months or more",
+     "I am actively looking for work",
+     "I want to work but have given up on finding a job",
+     "I choose not to work",
+     "I am a full-time student",
+     "Someone supports me",
+     "I am retired"
+   ]
+  },
+  "tbl_income_source_types": {
+   "types": [
+     "Earned income",
+     "Unemployment Insurance",
+     "Supplemental Security Income (SSI)",
+     "VA Service Connected Disability Comp.",
+     "Private Disability Insurance",
+     "Workers Compensation",
+     "TANF (Temporary Assistance to Families)",
+     "General assistance (GA)"
+   ]
+  },
+  "tbl_non_cash_benefit_types": {
+   "types": [
+     "Special Supplemental Nutrition Program for woman and Children",
+     "WIC",
+     "TANF Childcare (Temporary assistance to Families)",
+     "TANF Transportation",
+     "Other TANF benefit",
+     "Section 8",
+     "Temporary Rental Assistance",
+     "Other Source"
+   ]
+  },
   "tbl_substance_abuse_types": {
    "types": [
      "Alcohol abuse",
