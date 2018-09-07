@@ -8,6 +8,7 @@ const config = require('../configuration/automate-config').employmentConfig
 // Get any data needed for use in seeder.
 const employment = require('../data/employment.json')
 const clientinfo = require('../data/clientinfo.json')
+const demographics = require('../data/demographics.json')
 
 // Initial state of seeder data.
 const seeder = []
@@ -40,12 +41,12 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     RECOVEREE_ID: i,
     USERNAME_ADD: faker.internet.userName(),
     USERNAME_UPD: faker.internet.userName(),
-    DESCRIBE_UNEMPLOYMENT: faker.lorem.words(),
+    DESCRIBE_UNEMPLOYMENT: random.number(demographics.tbl_unemployment_types.types.length),
     WANT_HELP: faker.random.boolean(),
-    WANT_HELP_TYPE: faker.lorem.word(),
-    INCOME_SOURCE: faker.lorem.word(),
+    WANT_HELP_TYPE: random.number(demographics.tbl_unemployment_help_types.types.length),
+    INCOME_SOURCE: random.number(demographics.tbl_income_source_types.types.length),
     NON_CASH_BENEFITS: faker.random.boolean(),
-    NON_CASH_BENEFITS_TYPE: faker.lorem.word()
+    NON_CASH_BENEFITS_TYPE: random.number(demographics.tbl_non_cash_benefit_types.types.length)
 
   })
 }
