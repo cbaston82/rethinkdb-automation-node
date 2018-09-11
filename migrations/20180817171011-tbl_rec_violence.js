@@ -19,7 +19,7 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
     ANYONE_BEING_HARMED_EXPLANATION: faker.lorem.words(),
     EXPERIENCED_DOMESTIC_VIOLENCE: faker.random.boolean(),
     EXPERIENCED_DOMESTIC_VIOLENCE_EXPLANATION: faker.lorem.words(),
-    EXPERIENCED_DOMESTIC_VIOLENCE_LAST_OCCURRENCE: random.date()
+    EXPERIENCED_DOMESTIC_VIOLENCE_LAST_OCCURRENCE: faker.lorem.words()
   })
 }
 
