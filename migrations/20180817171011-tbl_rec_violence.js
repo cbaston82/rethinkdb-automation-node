@@ -2,7 +2,7 @@ const upDown = require('../helpers/updown')
 const faker = require('faker')
 const random = require('../helpers/random')
 
-// Get automation configurations for this file.
+// Get automation configurations for this file..
 const config = require('../configuration/automate-config').billingConfig
 
 // Get any data needed for use in seeder.
