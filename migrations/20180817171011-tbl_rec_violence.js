@@ -14,19 +14,20 @@ const seeder = []
 // create seed data.
 for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
   seeder.push({
+    RECOVEREE_ID: i + 1,
     ID: i + 1,
     ANYONE_BEING_HARMED: faker.random.boolean(),
     ANYONE_BEING_HARMED_EXPLANATION: faker.lorem.words(),
     EXPERIENCED_DOMESTIC_VIOLENCE: faker.random.boolean(),
     EXPERIENCED_DOMESTIC_VIOLENCE_EXPLANATION: faker.lorem.words(),
-    EXPERIENCED_DOMESTIC_VIOLENCE_LAST_OCCURRENCE: random.date()
+    EXPERIENCED_DOMESTIC_VIOLENCE_LAST_OCCURRENCE: faker.lorem.words()
   })
 }
 
 // Data to be seeded to db.
 const data = {
   seeder: seeder,
-  indexes: ['ID'],
+  indexes: ['ID', 'RECOVEREE_ID'],
   compoundIndexes: [],
   table: 'TBL_REC_VIOLENCE'
 }
