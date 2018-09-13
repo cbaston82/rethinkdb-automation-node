@@ -7,6 +7,7 @@ const config = require('../configuration/automate-config').clientinfoConfig
 
 // Get any data needed for use in seeder.
 const clientinfo = require('../data/clientinfo.json')
+const demographics = require('../data/demographics.json')
 
 // Initial state of seeder data.
 const seeder = []
@@ -23,7 +24,7 @@ for (let i = 1; i <= clientinfo.tbl_recoverees.total; i++) {
     RECOVEREE_CITY: faker.address.city(),
     RECOVEREE_COUNTY: faker.address.country(),
     RECOVEREE_EFF_DATE: random.date(),
-    RECOVEREE_HOUSING: faker.random.words(3),
+    RECOVEREE_HOUSING: random.number(demographics.tbl_housing_options.types.length),
     RECOVEREE_ST: faker.address.state(),
     RECOVEREE_ZIP: faker.address.zipCode(),
     RECOVERY_ID: i,

@@ -16,6 +16,7 @@ for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
   seeder.push({
     RECOVEREE_ID: i + 1,
     ID: i + 1,
+    RECOVEREE_ID: i + 1,
     ANYONE_BEING_HARMED: faker.random.boolean(),
     ANYONE_BEING_HARMED_EXPLANATION: faker.lorem.words(),
     EXPERIENCED_DOMESTIC_VIOLENCE: faker.random.boolean(),
