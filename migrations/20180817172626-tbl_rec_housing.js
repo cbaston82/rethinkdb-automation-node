@@ -15,20 +15,20 @@ const seeder = []
 for (let i = 0; i < clientinfo.tbl_recoverees.total; i++) {
   seeder.push({
     ID: i + 1,
-    RESIDENT_STATUS: faker.lorem.words(),
+    RECOVEREE_ID: 1 + i,
     PREVIOUS_RESIDENCE_LENGTH: faker.lorem.words(),
     SHELTER_SAFE_HAVEN_LENGTH: faker.lorem.words(),
     HOMELESS_FOR_ONE_YEAR: faker.random.boolean(),
-    TRANSITIONAL_LIVING_ENVIRONMENT: random.date()
+    TRANSITIONAL_LIVING_ENVIRONMENT: faker.random.boolean()
   })
 }
 
 // Data to be seeded to db.
 const data = {
   seeder: seeder,
-  indexes: ['ID'],
+  indexes: ['ID', 'RECOVEREE_ID'],
   compoundIndexes: [],
-  table: 'TBL_REC_HOMELESS'
+  table: 'TBL_REC_HOUSING'
 }
 
 module.exports.up = async function (r, connection) {
