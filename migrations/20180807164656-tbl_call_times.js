@@ -22,7 +22,7 @@ const data = {
   seeder: seeder,
   indexes: ['ID'],
   compoundIndexes: [],
-  table: 'TBL_CALL_TIMESi'
+  table: 'TBL_CALL_TIMES'
 }
 
 module.exports.up = async function (r, connection) {
