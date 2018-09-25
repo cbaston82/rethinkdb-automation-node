@@ -369,6 +369,17 @@
       "Car"
     ]
   },
+  "tbl_time_ranges": {
+    "types": [
+      "0 to 3 months",
+      "3 months to 6 months",
+      "6 months to 1 year",
+      "1 year +",
+      "Peer does not know",
+      "Peer refused",
+      "Data not collected"
+    ]
+  },
   "tbl_age_cohort": {
     "types": [
       {
